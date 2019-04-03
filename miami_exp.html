@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Miami Experience</title>
+    <link rel="stylesheet" href="../css/uikit.min.css" />
+    <link rel="stylesheet" href="../css/customcss.css" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Hind:light,regular,semi-bold,bold">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/uikit.min.js"></script>
+    <script src="../js/customjs.js"></script>
+</head>
+<body>
+    <!--Navbar-->
+    <div class="navbar-container" uk-sticky="show-on-up: true; animation: uk-animation-slide-top; bottom: #bottom">
+        <nav class="uk-navbar-container custom-navbar" uk-navbar>
+            <div class="uk-navbar-left">
+                <div class="uk-logo uk-margin-small-left">
+                    <a class="uk-link-reset" href="index.html">Jon De Heus</a>
+                </div>
+            </div>
+            <!--Shows on screens 640px & up-->
+            <div class="uk-visible@s uk-navbar-right">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-parent"><a href="resume.html">Resume</a></li>
+                    <li class="uk-parent"><a href="about_me.html">About Me</a></li>
+                </ul>
+            </div>
+            <!--Shows on screens 640px & down-->
+            <div class="uk-hidden@s uk-navbar-right">
+                <a class="uk-navbar-toggle" href="#" uk-toggle="target: #modal">
+                    <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+    <!--Modal shows on clicking the menu button-->
+    <div id="modal" class="uk-modal-full" uk-modal>
+        <div class="uk-modal-dialog uk-background-muted">
+            <button class="uk-modal-close-full uk-background-muted" type="button" uk-close></button>
+            <div class="uk-grid-match uk-grid-collapse" uk-grid>
+                <div class="uk-flex-middle uk-flex-center" style="min-width: 100vw; width: 100vw;" uk-height-viewport>
+                    <div class="uk-container"></div>
+                    <div class="uk-card uk-card-body uk-text-center uk-align-center">
+                        <a class="uk-link-reset" href="index.html"><h2 class="uk-modal-title">Home</h2></a>
+                        <a class="uk-link-reset" href="resume.html"><h2 class="uk-modal-title">Resume</h2></a>
+                        <a class="uk-link-reset" href="about_me.html"><h2 class="uk-modal-title">About Me</h2></a>
+                    </div>
+                    <div class="container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Portfolio piece begins here-->
+    <div class="uk-section uk-section-media uk-section-slarge uk-background-cover" style="background-image: url(../images/cover_photos/ford_overlay.jpg)">
+        <div class="uk-container uk-small">
+            <h1 class="uk-text-center uk-text-bold hero-text">Miami Experience</h1>
+            <h4 class="uk-text-center hero-text">Methods used: usability testing, screen flows.</h4>
+        </div>
+    </div>
+    <div class="uk-container uk-container-small uk-margin-large-top">
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Project Overview</h2>
+        <hr class="uk-margin-remove-top"/>
+        <p class="uk-text-left">
+          Placeholder
+          <br/><br/>Once the location was selected, the card carousel would immediately scroll so that the selected card was at the center of the screen, and then expand upwards so that it covered the carousel, but would show additional details like the initial address, distance from the current location, as well as the closest attraction (a restaurant, public park, etc) to the dropoff location. Once the user selected the destination, they were taken to a screen where they could edit both their pickup and dropoff location, as well as view their estimated arrival time.
+        </p>
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Starting The Project</h2>
+        <hr class="uk-margin-remove-top"/>
+        <p class="uk-text-left">
+          Initially, there weren’t many requirements given to me. I did know that there was a fixed list of locations that users could be picked up to and dropped off at, and that users needed to see their current location whenever possible. I initially based this ridehailing app on an internal shuttle app, but scrapped my initial effort (screens 1 & 2) due to the fact that I wanted to try creating a UI that would be a significant departure from an existing ridehailing app. I ended up coming up with a system that (defaulted to the destination selection scree. On this screen, I let the user select a dropoff location by either clicking on a pin on the map, or by tapping a card at the bottom of the screen.
+          <br/><br/>Once the location was selected, the card carousel would immediately scroll so that the selected card was at the center of the screen, and then expand upwards so that it covered the carousel, but would show additional details like the initial address, distance from the current location, as well as the closest attraction (a restaurant, public park, etc) to the dropoff location. Once the user selected the destination, they were taken to a screen where they could edit both their pickup and dropoff location, as well as view their estimated arrival time.
+        </p>
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Testing &#38; Revisions</h2>
+        <hr class="uk-margin-remove-top"/>
+        <p class="uk-text-left">
+          After showing stakeholders the initial wireframes in order to get their buy in, I redid them in higher fidelity, uploaded the screens into Invision, and started wiring up some basic interactions. Originally there were more tasks that we wanted to test for, however they had to be descoped due to time constraints. I had 3 goals for these user testing sessions:
+          <ul class="uk-list uk-list-bullet">
+              <li>
+                  Determine if users were able to edit their pickup and dropoff locations before they hailed the AV.
+              </li>
+              <li>
+                Identify how long it would take for them to get to their selected destination.
+                </li>
+              <li>
+                Determine if users would be able to cancel the ride once they were on it.
+              </li>
+          </ul>
+          Testing revealed that while users were quickly able to identify how long it would take to get to their selected destination, there were 2 issues that needed to be rectified:
+          <ul class="uk-list uk-list-bullet">
+            <li>
+              Users had issues changing the pickup location even when they were on the review ride screen. They kept going back to earlier screens in hope of finding a card that corresponded to selecting the pickup location.
+              </li>
+            <li>
+              Users had trouble finding the cancel button due to the fact that it was initially hidden from view, and they had to click on the bottom cards arrow to show the cancel button. However, once it was found, they were quickly able to cancel the ride.
+              </li>
+          </ul>
+          After getting this feedback, I decided to make two major changes. The first change was to make the initial screen after loading resemble a more traditional ridehailing app, with an area that would show both the pickup and dropoff locations. This is what the internal Ford shuttle ridehailing app did, and while I wanted to move away from that interface, it turns out that it was simply a better experience for the user. The second major change was to reduce the information on the bottom card when the user was waiting for the AV to pick them up. This was done in order to show the Cancel button without requiring the user to expand the card and show the cancel option.
+          <br /><br />While I was conducting the user testing, a new requirement for adding the ability to switch languages was added to our backlog. When I worked on the mockups to resolve the issues that testing brought out, I also added a floating settings button that when pressed would bring up a small menu that allowed the user to switch between English and Spanish on the fly. For the second round of testing, I added a task that required the user to change the language settings of the app from English to Spanish. This round of testing proved not only that my changes were able to solve the users problems, but also that the language settings were easy to access.
+        </p>
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">During The Event</h2>
+        <hr class="uk-margin-remove-top"/>
+        <p class="uk-text-left">
+          During the week of the event, multiple journalists, business people, and government officials took part in the Miami Experience. <a href="https://www.theverge.com/2018/11/15/18096338/ford-self-driving-car-miami-argo-av">The Verge</a>, <a href="https://qz.com/1464564/ready-or-not-ford-has-a-plan-for-turning-self-driving-cars-into-a-real-business/">Quartz</a>, and <a href="https://www.pcmag.com/news/364969/riding-around-miami-in-fords-self-driving-test-cars">PC Mag</a> all ran articles on the event in which they mentioned the app as being Uber-like. CNet also produced a video where the app can be seen from 1:42 to 1:52.
+        </p>
+        <iframe class="uk-align-center" width="560" height="315" src="https://www.youtube.com/embed/vmDhLEopurI?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Project Summary</h2>
+        <hr class="uk-margin-remove-top"/>
+        <p class="uk-text-left">
+          Overall, I’m pleased with how this project went. It was great to see that the participants of the event were able to use the app without any issue, and that it was compared to the leading ride hailing apps in a positive light. If I could have done anything differently, I would have done additional usability testing. The one round of usability testing that I did was very helpful, and I believe that a second round could have not only identified areas of the app that could have been improved, but would have also identified features that users may have wanted it to have.
+        </p>
+      </div>
+      <div class="uk-container">
+        <a class="uk-button uk-button-default uk-float-right uk-margin-medium-top uk-margin-remove-bottom uk-width-1-1 uk-width-auto@s article-button" id="next" href="bosch_contract.html">Bosch (contract)</a>
+        <a class="uk-button uk-button-default uk-float-left uk-margin-medium-top uk-text-middle uk-width-1-1 uk-width-auto@s article-button" id="prev" href="ford.html">Ford (contract)</a>
+      </div>
+      <div uk-grid>
+          <div class="uk-width-auto uk-align-center uk-margin-top">
+              <div class="uk-card uk-margin-top">
+                  <a class="uk-link-reset" href="skype:jdeheus?call">
+                      <i class="fa fa-skype fa-2x uk-margin-small-right"></i>
+                  </a>
+                  <a class="uk-link-reset" href="https://twitter.com/jdeheus">
+                      <i class="fa fa-twitter fa-2x uk-margin-small-right"></i>
+                  </a>
+                  <a class="uk-link-reset" href="mailto:someone@example.com">
+                      <i class="fa fa-envelope fa-2x uk-margin-small-right"></i>
+                  </a>
+                  <a class="uk-link-reset" href="https://www.linkedin.com/in/jdeheus">
+                      <i class="fa fa-linkedin fa-2x uk-margin-small-right"></i>
+                  </a>
+                  <a class="uk-link-reset" href="https://github.com/jdeheus">
+                      <i class="fa fa-github fa-2x"></i>
+                  </a>
+                  <hr />
+                  <p class="uk-margin-small-top uk-text-center">
+                      &copy; 2017 Jonathan De Heus
+                  </p>
+              </div>
+          </div>
+      </div>
+  </body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GE AMSTC Co-op</title>
+    <link rel="stylesheet" href="../css/uikit.min.css" />
+    <link rel="stylesheet" href="../css/customcss.css" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Hind:light,regular,semi-bold,bold">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/uikit.min.js"></script>
+    <script src="../js/customjs.js"></script>
+</head>
+
+<body>
+    <!--Navbar-->
+    <div class="navbar-container" uk-sticky="show-on-up: true; animation: uk-animation-slide-top; bottom: #bottom">
+        <nav class="uk-navbar-container custom-navbar" uk-navbar>
+            <div class="uk-navbar-left">
+                <div class="uk-logo uk-margin-small-left">
+                    <a class="uk-link-reset" href="index.html">Jon De Heus</a>
+                </div>
+            </div>
+            <!--Shows on screens 640px & up-->
+            <div class="uk-visible@s uk-navbar-right">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-parent"><a href="resume.html">Resume</a></li>
+                    <li class="uk-parent"><a href="about_me.html">About Me</a></li>
+                </ul>
+            </div>
+            <!--Shows on screens 640px & down-->
+            <div class="uk-hidden@s uk-navbar-right">
+                <a class="uk-navbar-toggle" href="#" uk-toggle="target: #modal">
+                    <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+    <!--Modal shows on clicking the menu button-->
+    <div id="modal" class="uk-modal-full" uk-modal>
+        <div class="uk-modal-dialog uk-background-muted">
+            <button class="uk-modal-close-full uk-background-muted" type="button" uk-close></button>
+            <div class="uk-grid-match uk-grid-collapse" uk-grid>
+                <div class="uk-flex-middle uk-flex-center" style="min-width: 100vw; width: 100vw;" uk-height-viewport>
+                    <div class="uk-container"></div>
+                    <div class="uk-card uk-card-body uk-text-center uk-align-center">
+                        <a class="uk-link-reset" href="index.html"><h2 class="uk-modal-title">Home</h2></a>
+                        <a class="uk-link-reset" href="resume.html"><h2 class="uk-modal-title">Resume</h2></a>
+                        <a class="uk-link-reset" href="about_me.html"><h2 class="uk-modal-title">About Me</h2></a>
+                    </div>
+                    <div class="container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Portfolio piece begins here-->
+    <!--Section image here-->
+    <div class="uk-section uk-section-media uk-section-slarge uk-background-cover" style="background-image: url(../images/cover_photos/ge_overlay.jpg)">
+        <div class="uk-container uk-small">
+            <h1 class="uk-text-center uk-text-bold hero-text">GE AMSTC Co-op</h1>
+            <h4 class="uk-text-center hero-text">Methods used: User interface analytics, contextual inquiry, wireframing, and user interviews.</h4>
+        </div>
+    </div>
+    <!--Text section begins-->
+    <div class="uk-container uk-container-small uk-margin-large-top">
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Overview</h3>
+        <hr class="uk-margin-remove-top"/>
+        <p class="uk-text-left">
+          I began interning at General Electric in January 2014. I was brought on as a user experience/simplification intern to analyze the forms that were used by over 500,000 GE employees, and provide recommendations on how the usability of the forms could be increased. I was also asked to look at determining which forms were underutilized, and seeing if they could be rolled into another form or deleted entirely. Over time my work has progressed beyond its original scope, however I welcome this as an additional learning opportunity.
+        </p>
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Process</h3>
+        <hr class="uk-margin-remove-top"/>
+        <p class="uk-text-left">
+          I began my internship by pulling over 6 month's worth of data to determine what forms were used by what business. After determining which forms were heavily used and which ones were underutilized, I began reviewing the heavily used forms for usability issues. I then prepared a report detailing my findings and recommendations, and then presented it to the GE business that I was working with that week. I was able to perform usability testing in order to determine which aspects of the forms gave users the most trouble when they attempted to fill out a help ticket. I also recommended ways to achieve simplification either by eliminating underutilized forms, or by merging them with forms that are more heavily utilized. At the end of my internship I was able to take my requirements and write functional requirements for software development team to implement my recommended UX upgrades and modifications.
+        </p>
+        <p class="uk-text-left">
+          After analyzing multiple forms, I determined that two forms could be merged together due to their similarities. I looked at the fields in common between Form A and Form B, and recommended creating Form C which combined similar questions from each form as well as unique questions.
+        </p>
+        <div class="uk-text-center uk-child-width-auto uk-flex uk-flex-center" uk-grid>
+          <div class="uk-card">
+            <div class="uk-card-media-top">
+              <a href="#"><img src="../images/GE/forms.png" alt="" uk-toggle="target: #1"/></a>
+            </div>
+            <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom">
+              <p>
+                Form 1, Form 2, and the combined result.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--Modal-->
+        <div id="1" uk-modal="center: true">
+            <div class="uk-modal-dialog uk-modal-body" uk-responsive>
+              <img class="uk-align-center" src="../images/GE/forms.png" alt="" />
+              <p class="uk-text-center uk-margin-remove-bottom">
+                Form 1, Form 2, and the combined result.
+              </p>
+              <button class="uk-modal-close-default" type="button" uk-close></button>
+            </div>
+        </div>
+        <p class="uk-text-left">
+          While I was analyzing the forms, my co-intern was making modifications to the existing support ticket system. I was inspired by her work, so I created a mockup of what a visually updated form could look like using Illustrator and GE visual guidelines.
+        </p>
+        <div class="uk-text-center uk-child-width-1-1 uk-child-width-1-3@s" uk-grid>
+          <div class="uk-card">
+            <div class="uk-card-media-top">
+              <a href="#"><img src="../images/GE/Transportation-generic-ticket.png" alt="" uk-toggle="target: #2"/></a>
+            </div>
+            <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom">
+              <p>
+                What the user would first see.
+              </p>
+            </div>
+          </div>
+          <div class="uk-card">
+            <div class="uk-card-media-top">
+              <a href="#"><img src="../images/GE/Transportation-Generic-Ticket-Information-Incorrect_thumb.png" alt="" uk-toggle="target: #3"/></a>
+            </div>
+            <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom">
+              <p>
+                What the user would see when correcting information.
+              </p>
+            </div>
+          </div>
+          <div class="uk-card">
+            <div class="uk-card-media-top">
+              <a href="#"><img src="../images/GE/Transportation-generic-ticket-error.png" alt="" uk-toggle="target: #4"/></a>
+            </div>
+            <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom">
+              <p>
+                Error given when uncompleted form is submitted.
+              </p>
+            </div>
+          </div>
+          <!--Modals-->
+          <div id="2" uk-modal="center: true">
+              <div class="uk-modal-dialog uk-modal-body" uk-responsive>
+                <img class="uk-align-center" src="../images/GE/Transportation-generic-ticket.png" alt="" />
+                <p class="uk-text-center uk-margin-remove-bottom">
+                  What the user would first see.
+                </p>
+                <button class="uk-modal-close-default" type="button" uk-close></button>
+              </div>
+          </div>
+          <div id="3" uk-modal="center: true">
+              <div class="uk-modal-dialog uk-modal-body" uk-responsive>
+                <img class="uk-align-center" src="../images/GE/Transportation-Generic-Ticket-Information-Incorrect_thumb.png" alt="" />
+                <p class="uk-text-center uk-margin-remove-bottom">
+                  What the user would see when correcting information.
+                </p>
+                <button class="uk-modal-close-default" type="button" uk-close></button>
+              </div>
+          </div>
+          <div id="4" uk-modal="center: true">
+              <div class="uk-modal-dialog uk-modal-body" uk-responsive>
+                <img class="uk-align-center" src="../images/GE/Transportation-generic-ticket-error.png" alt="" />
+                <p class="uk-text-center uk-margin-remove-bottom">
+                  Error given when uncompleted form is submitted.
+                </p>
+                <button class="uk-modal-close-default" type="button" uk-close></button>
+              </div>
+          </div>
+        </div>
+        <p class="uk-text-left">
+          I was asked by a GE sub-business to analyze the information architecture of a portion of their Helpdesk website, which is the portal that GE employees when they go to file a ticket. While I was not expecting to do this, I was excited to do it anyways as I had wanted to analyze information architecture in previous classes, but never got the chance. In order to determine what the most efficient architecture would be, I analyzed existing IA, looked at the forms contained in this portion of Helpdesk, and interviewed stakeholders. I then wrote up a proposed IA layout and sent it to stakeholders for review.
+        </p>
+        <div class="uk-text-center uk-child-width-1-1 uk-child-width-1-2@s" uk-grid>
+          <div class="uk-card">
+            <div class="uk-card-media-top" >
+              <a href="#"><img src="../images/GE/Old IA.jpg" alt="" uk-toggle="target: #5"/></a>
+            </div>
+            <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom">
+              <p>
+                Diagram of the original IA.
+              </p>
+            </div>
+          </div>
+          <div class="uk-card">
+            <div class="uk-card-media-top" >
+              <a href="#"><img src="../images/GE/Revised IA.jpg" alt="" uk-toggle="target: #6"/></a>
+            </div>
+            <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom">
+              <p>
+                Diagram of the revised IA.
+              </p>
+            </div>
+          </div>
+          <!--Modals-->
+          <div id="5" uk-modal="center: true">
+              <div class="uk-modal-dialog uk-modal-body" uk-responsive>
+                <img class="uk-align-center" src="../images/GE/Old IA.jpg" alt="" />
+                <p class="uk-text-center uk-margin-remove-bottom">
+                  Diagram of the original IA.
+                </p>
+                <button class="uk-modal-close-default" type="button" uk-close></button>
+              </div>
+          </div>
+          <div id="6" uk-modal="center: true">
+              <div class="uk-modal-dialog uk-modal-body" uk-responsive>
+                <img class="uk-align-center" src="../images/GE/Revised IA.jpg" alt="" />
+                <p class="uk-text-center uk-margin-remove-bottom">
+                  Diagram of the revised IA.
+                </p>
+                <button class="uk-modal-close-default" type="button" uk-close></button>
+              </div>
+          </div>
+        </div>
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Takeaway</h3>
+        <hr class="uk-margin-remove-top"/>
+        <p class="uk-text-left">
+          This was a great experience where I got to have hands on experience analyzing and revising forms that are used by over 500,000 people. I also enjoyed being able to work on information architecture, as I have never done that before. Getting to submit requests to the developers to ensure that my suggestions would be implemented was also a key part of my experience at GE.
+        </p>
+      </div>
+      <div class="uk-container">
+        <a class="uk-button uk-button-default uk-float-right uk-margin-medium-top uk-margin-remove-bottom uk-width-1-1 uk-width-auto@s article-button" id="next" href="alstom.html">Alstom Grid Internship</a>
+        <a class="uk-button uk-button-default uk-float-left uk-margin-medium-top uk-text-middle uk-width-1-1 uk-width-auto@s article-button" id="prev" href="form_revision.html">GE AMSTC Co-op</a>
+      </div>
+      <div uk-grid>
+          <div class="uk-width-auto uk-align-center uk-margin-top">
+              <div class="uk-card uk-margin-top">
+                  <a class="uk-link-reset" href="skype:jdeheus?call">
+                      <i class="fa fa-skype fa-2x uk-margin-small-right"></i>
+                  </a>
+                  <a class="uk-link-reset" href="https://twitter.com/jdeheus">
+                      <i class="fa fa-twitter fa-2x uk-margin-small-right"></i>
+                  </a>
+                  <a class="uk-link-reset" href="mailto:someone@example.com">
+                      <i class="fa fa-envelope fa-2x uk-margin-small-right"></i>
+                  </a>
+                  <a class="uk-link-reset" href="https://www.linkedin.com/in/jdeheus">
+                      <i class="fa fa-linkedin fa-2x uk-margin-small-right"></i>
+                  </a>
+                  <a class="uk-link-reset" href="https://github.com/jdeheus">
+                      <i class="fa fa-github fa-2x"></i>
+                  </a>
+                  <hr />
+                  <p class="uk-margin-small-top uk-text-center">
+                      &copy; 2017 Jonathan De Heus
+                  </p>
+              </div>
+          </div>
+      </div>
+    </body>
+    </html>

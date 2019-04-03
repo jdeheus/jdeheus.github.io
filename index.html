@@ -1,1 +1,259 @@
-Hello World
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jonathan De Heus's portfolio</title>
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <link rel="stylesheet" href="css/uikit.rtl.min.css" />
+    <link rel="stylesheet" href="css/customcss.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Hind:light,regular,semi-bold,bold">
+</head>
+
+<body>
+    <!--Navbar-->
+    <div class="navbar-container" uk-sticky="show-on-up: true; animation: uk-animation-slide-top; bottom: #bottom">
+        <nav class="uk-navbar-container custom-navbar" uk-navbar>
+            <div class="uk-navbar-left">
+                <div class="uk-logo uk-margin-small-left">
+                    <a class="uk-link-reset" href="index.html">Jon De Heus</a>
+                </div>
+            </div>
+            <!--Shows on screens 640px & up-->
+            <div class="uk-visible@s uk-navbar-right">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-parent"><a href="resume.html">Resume</a></li>
+                    <li class="uk-parent"><a href="about_me.html">About Me</a></li>
+                </ul>
+            </div>
+            <!--Shows on screens 640px & down-->
+            <div class="uk-hidden@s uk-navbar-right">
+                <a class="uk-navbar-toggle" href="#" uk-toggle="target: #modal">
+                    <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+    <!--Modal shows on clicking the menu button-->
+    <div id="modal" class="uk-modal-full" uk-modal>
+        <div class="uk-modal-dialog uk-background-muted">
+            <button class="uk-modal-close-full uk-background-muted" type="button" uk-close></button>
+            <div class="uk-grid-match uk-grid-collapse" uk-grid>
+                <div class="uk-flex-middle uk-flex-center" style="min-width: 100vw; width: 100vw;" uk-height-viewport>
+                    <div class="uk-container"></div>
+                    <div class="uk-card uk-card-body uk-text-center uk-align-center">
+                        <a href="index.html"><h2 class="uk-modal-title uk-text-bold uk-active">Home</h2></a>
+                        <a class="uk-link-reset" href="resume.html"><h2 class="uk-modal-title">Resume</h2></a>
+                        <a class="uk-link-reset" href="about_me.html"><h2 class="uk-modal-title">About Me</h2></a>
+                    </div>
+                    <div class="container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Portfolio pieces begins here-->
+    <div class="uk-container uk-small portfolio-pieces">
+        <div class="uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m uk-flex uk-flex-center" uk-grid>
+            <div class="portfolio-piece padding-bottom">
+                <div class="uk-card uk-card-body uk-transition-toggle card-padding uk-overflow-hidden">
+                  <a href="ford.html">
+                    <img class="uk-transition-scale-up uk-transition-opaque portfolio-image" src="../images/portfolio_covers/ford_office.jpg" alt="" />
+                    <div class="uk-transition-fade uk-position-cover uk-overlay-primary">
+                        <h3 class="uk-margin-small-left uk-margin-small-top">Job</h3>
+                        <p class="uk-margin-small-left uk-margin-small-right">
+                            Details about the work that I've done while at Ford.
+                        </p>
+                    </div>
+                  </a>
+                </div>
+                <a href="ford.html" class="uk-button uk-button-default uk-width-1-1 uk-text-capitalize portfolio-buttons">Ford (contract)</a>
+            </div>
+            <div class="portfolio-piece">
+                <div class="uk-card uk-card-body uk-transition-toggle card-padding uk-overflow-hidden">
+                  <a href="miami_exp.html">
+                    <img class="uk-transition-scale-up uk-transition-opaque portfolio-image" src="../images/portfolio_covers/ford_av.jpg" alt="" />
+                    <div class="uk-transition-fade uk-position-cover uk-overlay-primary">
+                        <h3 class="uk-margin-small-left uk-margin-small-top">Job</h3>
+                        <p class="uk-margin-small-left uk-margin-small-right">
+                            How I helped create the rider app for Ford's Miami Experience event.
+                        </p>
+                    </div>
+                  </a>
+                </div>
+                <a href="miami_exp.html" class="uk-button uk-button-default uk-width-1-1 uk-text-capitalize portfolio-buttons">Miami Experience</a>
+            </div>
+            <div class="portfolio-piece">
+                <div class="uk-card uk-card-body uk-transition-toggle card-padding uk-overflow-hidden">
+                  <a href="bosch_contract.html">
+                    <img class="uk-transition-scale-up uk-transition-opaque portfolio-image" src="../images/portfolio_covers/bosch_contract.png" alt="" />
+                    <div class="uk-transition-fade uk-position-cover uk-overlay-primary">
+                        <h3 class="uk-margin-small-left uk-margin-small-top">Job</h3>
+                        <p class="uk-margin-small-left uk-margin-small-right">
+                            Details about my time as a UX contractor at Bosch.
+                        </p>
+                    </div>
+                  </a>
+                </div>
+                <a href="bosch_contract.html" class="uk-button uk-button-default uk-width-1-1 uk-text-capitalize portfolio-buttons">Bosch (contract)</a>
+            </div>
+            <div class="portfolio-piece">
+                <div class="uk-card uk-card-body uk-transition-toggle card-padding uk-overflow-hidden">
+                  <a href="greenlancer.html">
+                    <img class="uk-transition-scale-up uk-transition-opaque portfolio-image" src="../images/portfolio_covers/greenlancer.png" alt="" />
+                    <div class="uk-transition-fade uk-position-cover uk-overlay-primary">
+                        <h3 class="uk-margin-small-left uk-margin-small-top">Job</h3>
+                        <p class="uk-margin-small-left uk-margin-small-right">
+                            I'm currently the Lead UX architect at Greenlancer, which is a solar startup in Detroit.
+                        </p>
+                    </div>
+                  </a>
+                </div>
+                <a href="greenlancer.html" class="uk-button uk-button-default uk-width-1-1 uk-text-capitalize portfolio-buttons">Greenlancer</a>
+            </div>
+            <div class="padding-bottom">
+                <div class="uk-card uk-card-body uk-transition-toggle card-padding uk-overflow-hidden">
+                    <a href="greenlancer_research.html">
+                        <img class="uk-transition-scale-up uk-transition-opaque portfolio-image" src="../images/portfolio_covers/gl_research.png" alt="" />
+                        <div class="uk-transition-fade uk-position-cover uk-overlay-primary">
+                            <h3 class="uk-margin-small-left uk-margin-small-top">Job</h3>
+                            <p class="uk-margin-small-left uk-margin-small-right">
+                                Details about the research that I've been able to conduct while I've been at Greenlancer.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <button class="uk-button uk-button-default uk-width-1-1 uk-text-capitalize portfolio-buttons">Greenlancer Research</button>
+            </div>
+            <div>
+                <div class="uk-card uk-card-body uk-transition-toggle card-padding uk-overflow-hidden">
+                    <a href="steam_project.html">
+                        <img class="uk-transition-scale-up uk-transition-opaque" src="../images/portfolio_covers/steam.png" alt="" />
+                        <div class="uk-transition-fade uk-position-cover uk-overlay-primary">
+                            <h3 class="uk-margin-small-left uk-margin-small-top">Sideproject</h3>
+                            <p class="uk-margin-small-left uk-margin-small-right">
+                                Sideproject where I revised the Steam iOS app to be more chat &amp; video oriented, and then made multiple interactive prototypes.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+              <button class="uk-button uk-button-default uk-width-1-1 uk-text-capitalize portfolio-buttons">Steam Revision Project</button>
+            </div>
+            <div>
+                <div class="uk-card uk-card-body uk-transition-toggle card-padding uk-overflow-hidden">
+                    <a href="ge_bently.html">
+                        <img class="uk-transition-scale-up uk-transition-opaque" src="../images/portfolio_covers/Bently.jpg" alt="" />
+                        <div class="uk-transition-fade uk-position-cover uk-overlay-primary">
+                            <h3 class="uk-margin-small-left uk-margin-small-top">Job</h3>
+                            <p class="uk-margin-small-left uk-margin-small-right">
+                                Explains my design process as well as one of the design challenges I faced while working at GE Bently Nevada.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <button class="uk-button uk-button-default uk-width-1-1 uk-text-capitalize portfolio-buttons">GE Bently Nevada</button>
+            </div>
+            <div>
+                <div class="uk-card uk-card-body uk-transition-toggle card-padding uk-overflow-hidden">
+                    <a href="bently_research.html">
+                        <img class="uk-transition-scale-up uk-transition-opaque" src="../images/portfolio_covers/bently_research.jpg" alt="" />
+                        <div class="uk-transition-fade uk-position-cover uk-overlay-primary">
+                            <h3 class="uk-margin-small-left uk-margin-small-top">Job</h3>
+                            <p class="uk-margin-small-left uk-margin-small-right">
+                                Goes into detail about the usability research I was able to conduct while I was at GE Bently Nevada.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <button class="uk-button uk-button-default uk-width-1-1 uk-text-capitalize portfolio-buttons">GE Bently Research</button>
+            </div>
+            <!--<div>
+                <div class="uk-card uk-card-body uk-transition-toggle card-padding uk-overflow-hidden">
+                    <a href="form_revision.html">
+                        <img class="uk-transition-scale-up uk-transition-opaque" src="../images/portfolio_covers/form_sideproject.png" alt="" />
+                        <div class="uk-transition-fade uk-position-cover uk-overlay-primary">
+                            <h3 class="uk-margin-small-left uk-margin-small-top">Sideproject</h3>
+                            <p class="uk-margin-small-left">
+                                I analyzed a form that had been posted online, and revised it to increase its usability.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <button class="uk-button uk-button-default uk-width-1-1 uk-text-capitalize portfolio-buttons">Form Revision Project</button>
+            </div>
+            <div>
+                <div class="uk-card uk-card-body uk-transition-toggle card-padding uk-overflow-hidden">
+                    <a href="pixate.html">
+                        <img class="uk-transition-scale-up uk-transition-opaque" src="../images/portfolio_covers/pixate.png" alt="" />
+                        <div class="uk-transition-fade uk-position-cover uk-overlay-primary">
+                            <h3 class="uk-margin-small-left uk-margin-small-top">Sideproject</h3>
+                            <p class="uk-margin-small-left uk-margin-small-right">
+                                I made multiple artboards in Illustrator, and then turned them into interactive prototypes using Pixate.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <button class="uk-button uk-button-default uk-width-1-1 uk-text-capitalize portfolio-buttons">Pixate Project</button>
+            </div>
+            <div>
+                <div class="uk-card uk-card-body uk-transition-toggle card-padding uk-overflow-hidden">
+                    <a href="ge_coop.html">
+                        <img class="uk-transition-scale-up uk-transition-opaque portfolio-image" src="../images/portfolio_covers/ge_logo.png" alt="" />
+                        <div class="uk-transition-fade uk-position-cover uk-overlay-primary">
+                            <h3 class="uk-margin-small-left uk-margin-small-top">Internship</h3>
+                            <p class="uk-margin-small-left">
+                                This documents the work that I did for my co-op when I was at GE's AMSTC facility.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <button class="uk-button uk-button-default uk-width-1-1 uk-text-capitalize portfolio-buttons">General Electric co-op</button>
+            </div>
+            <div>
+                <div class="uk-card uk-card-body uk-transition-toggle card-padding uk-overflow-hidden">
+                    <a href="alstom.html">
+                        <img class="uk-transition-scale-up uk-transition-opaque portfolio-image" src="../images/portfolio_covers/Alstom.png" alt="" />
+                        <div class="uk-transition-fade uk-position-cover uk-overlay-primary">
+                            <h3 class="uk-margin-small-left uk-margin-small-top">Internship</h3>
+                            <p class="uk-margin-small-left">
+                                This documents the work that I did for my usability research internship when I was at Alstom Grid.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <button class="uk-button uk-button-default uk-width-1-1 uk-text-capitalize portfolio-buttons">Alstom Grid</button>
+            </div>-->
+        </div>
+    </div>
+    <!--Footer w/social media links-->
+    <div uk-grid>
+        <div class="uk-width-auto uk-align-center uk-margin-top">
+            <div class="uk-card uk-margin-top">
+                <a class="uk-link-reset" href="skype:jdeheus?call">
+                    <i class="fa fa-skype fa-2x uk-margin-small-right"></i>
+                </a>
+                <a class="uk-link-reset" href="https://twitter.com/jdeheus">
+                    <i class="fa fa-twitter fa-2x uk-margin-small-right"></i>
+                </a>
+                <a class="uk-link-reset" href="mailto:someone@example.com">
+                    <i class="fa fa-envelope fa-2x uk-margin-small-right"></i>
+                </a>
+                <a class="uk-link-reset" href="https://www.linkedin.com/in/jdeheus">
+                    <i class="fa fa-linkedin fa-2x uk-margin-small-right"></i>
+                </a>
+                <a class="uk-link-reset" href="https://github.com/jdeheus">
+                    <i class="fa fa-github fa-2x"></i>
+                </a>
+                <hr />
+                <p class="uk-margin-small-top uk-text-center">
+                    &copy; 2017 Jonathan De Heus
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/uikit.min.js"></script>
+    <script src="js/customjs.js"></script>
+</body>
+
+</html>

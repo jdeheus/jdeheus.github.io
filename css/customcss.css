@@ -1,0 +1,174 @@
+/* Overrides padding on cards so pics fit the full area */
+.card-padding {
+  padding: 0px 0px;
+}
+
+/* Applies custom settings to navbar */
+.custom-navbar {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar-container {
+  border-bottom:1px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-color:#979797;
+  border-style:solid;
+}
+
+/*Sets the font size in buttons*/
+.uk-button {
+  font-size: 1rem;
+}
+
+/* Sets the hover color for the Skype icon */
+.fa-skype:hover {
+  color: #009FE3;
+}
+
+.fa-twitter:hover {
+  color: #1DA1F3;
+}
+
+.fa-envelope:hover {
+  color: #9A9CF3;
+}
+
+.fa-linkedin:hover {
+  color: #007AB6;
+}
+
+.fa-github:hover {
+  color: #000000;
+}
+
+.article-button{
+  border-width: 3px;
+}
+
+.hero-text {
+  color: #FFFFFF;
+}
+
+hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-color: #979797;
+}
+
+html,body {
+  background-color: #f8f8f8;
+}
+
+.breadcrumb {
+  background-color: #f8f8f8;
+}
+
+* {
+    font-family: "Hind", "Times New Roman"
+}
+
+.uk-logo {
+  font-size: 2rem;
+  font-family: "Hind", "Times New Roman";
+}
+
+.uk-link {
+  text-decoration: underline;
+}
+
+.resume-separator {
+  margin-top: 5px;
+}
+
+.uk-list>li:nth-child(n+2), .uk-list>li>ul {
+  margin-top: 0px;
+}
+
+.navbar-container {
+  background-color: #f8f8f8;
+}
+
+.portfolio-buttons {
+  border: 1px solid #e5e5e5;
+  border-top-style: none;
+}
+
+.portfolio-image {
+  box-sizing: border-box;
+  border: 1px solid #e5e5e5;
+}
+
+.uk-section-slarge {
+  padding-top: 175px;
+  padding-bottom: 175px;
+}
+
+
+.job-weight {
+  font-weight: 100;
+}
+
+.job-title {
+  font-weight: 600;
+}
+
+/*-Sets custom margin to the custom-navbar class when the screen is in between 960 & 1199 px */
+@media (min-width: 1200px) {
+  .portfolio-pieces {
+    margin-top: 40px;
+  }
+}
+
+/*-Sets custom margin to the custom-navbar class when the screen is in between 640 & 1199 px */
+@media (min-width: 640px) and (max-width: 1199px) {
+  .portfolio-pieces {
+    margin-top: 30px;
+  }
+}
+
+/*-Sets custom margin to the custom-navbar class when the screen is below 640px */
+@media (max-width: 639px){
+  .portfolio-pieces {
+    margin-top: 20px;
+  }
+  .padding-bottom {
+    padding-bottom: 10px;
+  }
+}
+
+/*Sets custom top & bottom padding for the resume when the user is on mobile*/
+@media (max-width: 639px) {
+  .mobile-margin-correct, .uk-grid-margin, .uk-grid+.uk-grid, .uk-grid>.uk-grid-margin, .uk-list .uk-list-bullet {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 0px;
+  }
+}
+
+/*Adds padding on top of job title when screen is below @s sizes*/
+@media (max-width: 639px) {
+  .job-title {
+    font-weight: 600;
+    margin-top: 10px;
+  }
+}
+
+/*Removes margin in bullet lists that is equal in height to an additional line of text*/
+@media (max-width: 639px) {
+  address, dl, fieldset, figure, ol, p, pre, ul {
+    margin-bottom: 0px;
+  }
+}
+
+/*Sets padding for .uk-section-slarge to 140px when below 640px; */
+@media (max-width: 639px) {
+  .uk-section-slarge {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+}

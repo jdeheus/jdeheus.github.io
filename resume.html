@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Resume</title>
+    <link rel="stylesheet" href="../css/uikit.min.css" />
+    <link rel="stylesheet" href="../css/customcss.css" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Hind:light,regular,semi-bold,bold">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/uikit.min.js"></script>
+    <script src="../js/customjs.js"></script>
+</head>
+
+<body>
+    <!--Navbar-->
+    <div class="navbar-container" uk-sticky="show-on-up: true; animation: uk-animation-slide-top; bottom: #bottom">
+        <nav class="uk-navbar-container custom-navbar" uk-navbar>
+            <div class="uk-navbar-left">
+                <div class="uk-logo uk-margin-small-left">
+                    <a class="uk-link-reset" href="index.html">Jon De Heus</a>
+                </div>
+            </div>
+            <!--Shows on screens 640px & up-->
+            <div class="uk-visible@s uk-navbar-right">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active uk-link"><a href="resume.html">Resume</a></li>
+                    <li class="uk-parent"><a href="about_me.html">About Me</a></li>
+                </ul>
+            </div>
+            <!--Shows on screens 640px & down-->
+            <div class="uk-hidden@s uk-navbar-right">
+                <a class="uk-navbar-toggle" href="#" uk-toggle="target: #modal">
+                    <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+    <!--Modal shows on clicking the menu button-->
+    <div id="modal" class="uk-modal-full" uk-modal>
+        <div class="uk-modal-dialog uk-background-muted">
+            <button class="uk-modal-close-full uk-background-muted" type="button" uk-close></button>
+            <div class="uk-grid-match uk-grid-collapse" uk-grid>
+                <div class="uk-flex-middle uk-flex-center" style="min-width: 100vw; width: 100vw;" uk-height-viewport>
+                    <div class="uk-container"></div>
+                    <div class="uk-card uk-card-body uk-text-center uk-align-center">
+                        <a class="uk-link-reset" href="index.html"><h2 class="uk-modal-title">Home</h2></a>
+                        <a href="resume.html"><h2 class="uk-modal-title uk-text-bold uk-active">Resume</h2></a>
+                        <a class="uk-link-reset" href="about_me.html"><h2 class="uk-modal-title">About Me</h2></a>
+                    </div>
+                    <div class="container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Resume portion begins-->
+    <div class="uk-container uk-margin-top">
+      <div class="uk-flex uk-flex-center">
+        <a class="uk-button uk-button-default uk-text-center uk-width-auto article-button" href="../resume.pdf"><i class="fa fa-eye uk-margin-small-right"></i>View resume as PDF</a>
+      </div>
+        <div class="uk-child-width-auto" uk-grid>
+            <div class="uk-card uk-card-body uk-width-expand@s mobile-margin-correct">
+                <h2 class="uk-margin-remove-bottom uk-text-bold">Education</h2>
+                <hr class="uk-margin-remove-top" />
+                <h3 class="resume-subheader uk-margin-small-top uk-margin-remove-bottom" style="font-weight: 600;">University of Michigan</h3>
+                <p class="resume-separator">
+                    MS in Information Science, Human Computer Information specialization, May 2014<br /><span style="font-weight: bold;">GPA: </span>3.6
+                </p>
+            </div>
+            <div class="uk-card uk-card-body uk-width-auto@s mobile-margin-correct">
+                <h2 class="uk-margin-remove-bottom uk-text-bold">UX Methods</h2>
+                <hr class="uk-margin-remove-top" />
+                <div class="uk-column-1-1@s uk-column-1-2@m">
+                    <ul class="uk-list uk-list-bullet">
+                        <li>
+                            Affinity diagramming
+                        </li>
+                        <li>
+                            Contextual inquiry
+                        </li>
+                        <li>
+                            Cultural probes
+                        </li>
+                        <li>
+                            Paper prototyping
+                        </li>
+                        <li>
+                            Personas
+                        </li>
+                        <li>
+                            Screen flows
+                        </li>
+                        <li>
+                            Survey creation &amp; analysis
+                        </li>
+                        <li>
+                            Usability testing
+                        </li>
+                        <li>
+                            User interface analytics
+                        </li>
+                        <li>
+                            User interviews
+                        </li>
+                        <li>
+                            Wireframing
+                        </li>
+                        <li>
+                            Workflow modeling
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="uk-card uk-card-body uk-width-expand@s mobile-margin-correct">
+                <h2 class="uk-margin-remove-bottom uk-text-bold">Systems Used</h2>
+                <hr class="uk-margin-remove-top" />
+                <div class="uk-column-1-1 uk-column-1-2@m">
+                    <ul class="uk-list uk-list-bullet">
+                        <li>
+                            Axure
+                        </li>
+                        <li>
+                          Adobe Creative Suite
+                        </li>
+                        <li>
+                            Balsamiq
+                        </li>
+                        <li>
+                            Sketch
+                        </li>
+                        <li>
+                            SurveyMonkey
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-margin-remove-top uk-text-bold">Experience</h2>
+        <hr class="uk-margin-remove-top" />
+        <div class="uk-child-width-1-1 uk-child-width-1-2@s" uk-grid>
+            <h3 class="uk-float-left" style="font-weight: 600">Product designer at Ford (contract)</h3>
+            <h3 class="uk-float-right uk-text-right@s job-weight" style="padding-top:5px;">January 2018 - Present</h3>
+        </div>
+        <div class="uk-column-1-1 uk-margin-remove-bottom">
+            <ul class="uk-list uk-list-bullet">
+                <li>
+                    Designed the initial customer caring website, billing portal, &amp; email templates for GoRide, Ford’s non-emergency medical transportation service.
+                </li>
+                <li>
+                    Was the lead designer for the Miami Experience and employee ride shuttle (ERS) rider apps.
+                </li>
+                <li>
+                  For all projects, I’ve conducted usability testing and revised screens based on feedback from testers.
+                </li>
+                <li>
+                  I utilized shuttle ridealongs in order to get feedback on the driver and rider apps for GoRide & ERS.
+                </li>
+                <li>
+                  Work directly with developers in order to ensure that the designs for the rider apps matched the designs in Invision.
+                </li>
+                <li>
+                  Work in conjunction with product owners to order upcoming features by priority.
+                </li>
+                <li>
+                  Currently collaborating with a group of designers to create a style guide that can be used across multiple AV LLC platforms and products.
+                </li>
+            </ul>
+        </div>
+        <div class="uk-child-width-1-1 uk-child-width-1-2@s" uk-grid>
+            <h3 class="uk-float-left" style="font-weight: 600">UX Designer at Bosch (contract)</h3>
+            <h3 class="uk-float-right uk-text-right@s job-weight" style="padding-top:5px;">March 2017 - November 2017</h3>
+        </div>
+        <div class="uk-column-1-1 uk-margin-remove-bottom">
+            <ul class="uk-list uk-list-bullet">
+                <li>
+                    Conducted heuristic analyses of existing products &amp; provide recommendations as to how they can be improved.
+                </li>
+                <li>
+                  Documented task flows for the various Bosch software products, &amp; identified overlapping functionality between each product.
+                </li>
+                <li>
+                    Identified personas who use Bosch&#39;s current &amp; next generation products.
+                </li>
+                <li>
+                    Conducted user interviews in order to determine usability issues with current &amp; next generation products.
+                </li>
+                <li>
+                    Designed wireframes &amp; high fidelity mockups based off of feedback from users &amp; heuristic evaluations.
+                </li>
+                <li>
+                    Gathered feedback from previously interviewed users in regards to the high fidelity mockups.
+                </li>
+                <li>
+                  Led UX Focus Talks which featured presenters from different Bosch verticals talking about varied UX topics such as research methods, or how utilizing UX methods were able to improve the end product.
+                </li>
+                <li>
+                  Managed the transition between UX managers by documenting all UX projects, &amp; ensuring that files pertaining to each project were easily accessible.
+                </li>
+            </ul>
+        </div>
+        <div class="uk-child-width-1-1 uk-child-width-1-2@s" uk-grid>
+            <h3 class="uk-float-left" style="font-weight: 600">Lead UX Architect at Greenlancer</h3>
+            <h3 class="uk-float-right uk-text-right@s job-weight" style="padding-top:5px;">July 2016 - March 2017</h3>
+        </div>
+        <div class="uk-column-1-1 uk-margin-remove-bottom">
+            <ul class="uk-list uk-list-bullet">
+                <li>
+                    Develop a new UI in Sketch for the customer and administrative portions of the Greenlancer website.
+                </li>
+                <li>
+                    Hold participatory design meetings with stakeholders &amp; subject matter experts to gather feedback.
+                </li>
+                <li>
+                    Develop &amp; maintain a design repository that details website elements as well as best practices that designers and developers should follow when designing new screens.
+                </li>
+                <li>
+                    Produce interactive prototypes in order to get feedback from stakeholders.
+                </li>
+                <li>
+                    Create &amp; maintain a UX backlog that consists of feature requests from customers as well as the sales &amp; production teams.
+                </li>
+                <li>
+                    Conduct usability testing on workflow automation software to determine useful features &amp; pain points.
+                </li>
+            </ul>
+        </div>
+        <div class="uk-child-width-1-1 uk-child-width-1-2@s" uk-grid>
+            <h3 class="uk-float-left job-title">UX Designer at GE Oil &amp; Gas</h3>
+            <h3 class="uk-float-right uk-text-right@s job-weight" style="padding-top:5px;">August 2014 - June 2016</h3>
+        </div>
+        <div class="uk-column-1-1">
+            <ul class="uk-list uk-list-bullet">
+                <li>
+                    Developed &amp; executed a research plan that was used to determine what features users wanted to see in future releases of our product.
+                </li>
+                <li>
+                    Utilized contextual inquiry in order to gather findings for GE&#39;s Brilliant Factory initiative, then used those findings to design an interface that would be used by factory floor planners to lay out manufacturing lines.
+                </li>
+                <li>
+                    Created high fidelity prototypes in Axure in order to receive feedback from stakeholders.
+                </li>
+                <li>
+                    Held participatory design sessions in order to give stakeholders the chance to visualize their ideas.
+                </li>
+                <li>
+                    Worked in conjunction with subject matter experts to write UX requirements.
+                </li>
+                <li>
+                    Acted as an advisor to the India based UX team.
+                </li>
+            </ul>
+        </div>
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-margin-small-top uk-margin-remove-top@s uk-text-bold">Conference presentation</h2>
+        <hr class="uk-margin-remove-top" />
+        <div class="uk-column-1-1">
+            <ul class="uk-list uk-list-bullet">
+                <li>
+                    Analyzing employment technologies for economically distressed individuals. Extended abstracts on Human factors in computing systems, CHI Conference, Toronto, April-May 2014
+                </li>
+            </ul>
+        </div>
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-margin-small-top uk-margin-remove-top@s uk-text-bold">Publication</h2>
+        <hr class="uk-margin-remove-top" />
+        <div class="uk-column-1-1">
+            <ul class="uk-list uk-list-bullet">
+                <li>
+                    Jen, B., Kaur, J., De Heus, J., Dillahunt, T. (2014). Analyzing employment technologies for economically distressed individuals. Extended abstracts on Human factors in computing systems, 2014. <a href="http://dl.acm.org/citation.cfm?id=2581290">View paper</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--Footer w/social media links-->
+    <div uk-grid>
+        <div class="uk-width-auto uk-align-center uk-margin-top">
+            <div class="uk-card uk-margin-top">
+                <a class="uk-link-reset" href="skype:jdeheus?call">
+                    <i class="fa fa-skype fa-2x uk-margin-small-right"></i>
+                </a>
+                <a class="uk-link-reset" href="https://twitter.com/jdeheus">
+                    <i class="fa fa-twitter fa-2x uk-margin-small-right"></i>
+                </a>
+                <a class="uk-link-reset" href="mailto:someone@example.com">
+                    <i class="fa fa-envelope fa-2x uk-margin-small-right"></i>
+                </a>
+                <a class="uk-link-reset" href="https://www.linkedin.com/in/jdeheus">
+                    <i class="fa fa-linkedin fa-2x uk-margin-small-right"></i>
+                </a>
+                <a class="uk-link-reset" href="https://github.com/jdeheus">
+                    <i class="fa fa-github fa-2x"></i>
+                </a>
+                <hr />
+                <p class="uk-margin-small-top uk-text-center">
+                    &copy; 2017 Jonathan De Heus
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

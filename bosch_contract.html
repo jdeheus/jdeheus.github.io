@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Greenlancer</title>
+    <link rel="stylesheet" href="../css/uikit.min.css" />
+    <link rel="stylesheet" href="../css/customcss.css" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Hind:light,regular,semi-bold,bold">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/uikit.min.js"></script>
+    <script src="../js/customjs.js"></script>
+</head>
+
+<body>
+    <!--Navbar-->
+    <div class="navbar-container" uk-sticky="show-on-up: true; animation: uk-animation-slide-top; bottom: #bottom">
+        <nav class="uk-navbar-container custom-navbar" uk-navbar>
+            <div class="uk-navbar-left">
+                <div class="uk-logo uk-margin-small-left">
+                    <a class="uk-link-reset" href="index.html">Jon De Heus</a>
+                </div>
+            </div>
+            <!--Shows on screens 640px & up-->
+            <div class="uk-visible@s uk-navbar-right">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-parent"><a href="resume.html">Resume</a></li>
+                    <li class="uk-parent"><a href="about_me.html">About Me</a></li>
+                </ul>
+            </div>
+            <!--Shows on screens 640px & down-->
+            <div class="uk-hidden@s uk-navbar-right">
+                <a class="uk-navbar-toggle" href="#" uk-toggle="target: #modal">
+                    <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+    <!--Modal shows on clicking the menu button-->
+    <div id="modal" class="uk-modal-full" uk-modal>
+        <div class="uk-modal-dialog uk-background-muted">
+            <button class="uk-modal-close-full uk-background-muted" type="button" uk-close></button>
+            <div class="uk-grid-match uk-grid-collapse" uk-grid>
+                <div class="uk-flex-middle uk-flex-center" style="min-width: 100vw; width: 100vw;" uk-height-viewport>
+                    <div class="uk-container"></div>
+                    <div class="uk-card uk-card-body uk-text-center uk-align-center">
+                        <a class="uk-link-reset" href="index.html"><h2 class="uk-modal-title">Home</h2></a>
+                        <a class="uk-link-reset" href="resume.html"><h2 class="uk-modal-title">Resume</h2></a>
+                        <a class="uk-link-reset" href="about_me.html"><h2 class="uk-modal-title">About Me</h2></a>
+                    </div>
+                    <div class="container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Portfolio piece begins here-->
+    <!--Section image here-->
+    <div class="uk-section uk-section-media uk-section-slarge uk-background-cover" style="background-image: url(../images/cover_photos/greenlancer_overlay.jpg)">
+        <div class="uk-container uk-small">
+            <h1 class="uk-text-center uk-text-bold hero-text">Greenlancer</h1>
+            <h4 class="uk-text-center hero-text">Methods used: sketching, participatory design, &#38; high fidelity prototypes.</h4>
+        </div>
+    </div>
+    <!--Text section begins-->
+    <div class="uk-container uk-container-small uk-margin-large-top">
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Work Overview</h3>
+        <hr class="uk-margin-remove-top"/>
+        <p class="uk-text-left">
+          I was a user experience designer at Bosch from April 2017 to November 2017. I was hired by Bosch in order to identify personas, conduct heuristic analyses on legacy programs, make recommendations as to how existing product functionality could be combined into a next generation product, develop wireframes, and perform user testing to validate my hypotheses. After I completed those initial tasks, my contract was extended by 2 months in order for me to act as a UX reference for other groups within Bosch.
+        </p>
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Legacy Programs &#38; Persona Creation</h3>
+        <hr class="uk-margin-remove-top"/>
+        <p class="uk-text-left">
+          During my first cycle, I spent the bulk of my time learning about the legacy programs, identifying personas, and creating workflow maps that would represent all possible paths that different users could take in said legacy programs. First, I worked with a subject matter expert who was able to identify all of our users and give me some background on them. Next, he walked me through Bosch's existing products so I could become familiar with their functionality, as well as point out how one program could be used in different ways by different personas.
+          <br />
+          <br />
+          Afterwards, I began to work on building out the personas in connection with workflow map creation. For the workflow maps, I first created a folder for a persona, and then created a map in that folder that would correspond to an existing program. While I was reviewing the legacy systems, I also conducted heuristic analyses on them. Some of the issues that I identified were lack of verification, inconsistency, multiple databases that contain duplicate information, and two different types of tables being used in a single application.
+        </p>
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Analyzing New Software Platforms</h3>
+        <hr class="uk-margin-remove-top"/>
+        <p class="uk-text-left">
+          After developing the personas and conducting the heuristic analyses on the legacy programs, I began analyzing the usability of the software platform that was developed in order to combine all of the legacy software. The analysis of this new software platform revealed a number of issues across all three versions of the product. For example, many of the same errors that were committed in the legacy programs, such as lack of verification and different types of tables, were carried over.
+          <br /><br />
+          New usability issues were introduced as well, such as having different methods of alerting the user to errors. For example, in the customer facing version of the product, a modal was utilized in one section of the product to display errors, but then toasts were utilized in another section to alert users to their errors. Even worse, after alerting the users via toasts or modal, the offending fields weren't even highlighted after closing the toasts or modals.
+          <br /><br />
+          These new issues weren't just limited to the customer facing version of the application. In the admin panel, one of the most glaring usability issues was the newsletter functionality. The implementation of the newsletter functionality was that the user could type in plaintext messages, however, the user could also type in raw HTML, and have it compiled upon clicking the send button. The major issue with this is that there was no way to preview the message before sending it, so it relied on users typing in the code with zero errors. My recommendation for this was to implement a markdown editor that at the very least had preview functionality.
+        </p>
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Creating Screens For The New Platform</h2>
+        <hr class="uk-margin-remove-top" />
+        <p class="uk-text-left">
+          Once I conducted the heuristic analysis on the new software platform and its three main components (customer, agent, and admin), I began modifying the look & feel of the platform. I mainly focused on improving the administrative experience as my supervisor was responsible for overseeing a group of administrators. I started by making sketches, and after I was satisfied with them, I began recreating the sketches on the computer. While I was creating the sketches, I also began to create a style guide. This was done for 2 reasons. The first reason was that I wanted to have a set of reusable components, and the second reason was that I wanted to have a place to detail the CSS properties for each item.
+          <br /><br />
+          After transferring all of my work from paper to the computer, I then presented it to a group of stakeholders that included the product manager, as well as individuals from sales & marketing. While I would have loved to do user testing to verify my design, there was unfortunately no chance to talk with users.There was also no chance to review the style guide with the developers as they had been pulled off onto another project.
+        </p>
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Additional Work</h3>
+        <hr class="uk-margin-remove-top"/>
+
+        <p class="uk-text-left">
+          After I finished working on the new software platform, Bosch extended my contract in order to have me act as a consultant to other areas within the company. During this period, I worked on some of Bosch’s e-commerce sites, a tablet application that helped diagnose potential issues in car entertainment systems, and a desktop application that controlled certain ECU programmers. For the e-commerce sites, I created a PowerPoint that walked through the major components of the sites, called out usability issues, and then presented 5 quick fixes that could easily be implemented by developers. For the desktop ECU application, I did a heuristic analysis, created a new interface in Sketch, and then uploaded it to UX Pin so I could solicit feedback from stakeholders.
+        </p>
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Lessons Learned</h3>
+        <hr class="uk-margin-remove-top"/>
+        <p class="uk-text-left">
+          This contract was very educational as to how important it is to get user feedback at multiple stages throughout the creation process. While I am proud of the work that I did, I felt that I was slightly hamstrung by the inability to talk with end users of the product who were located in physical locations other than my office. This was highlighted when one of the groups of users invited me to come out to interview them, but the company was either not able or not willing to have me go out to their location. It was also frustrating to focus only on the administrative aspect of the project instead of all 3 portions (administrative, agent, and customer) of the project. I estimate that if I was able to do proper research &#38; design for all 3 portions, it would have taken me over a year to successfully complete. That being said, I don’t regret my time at Bosch, and would do it again if there were substantial improvements to the UX process.
+        </p>
+      </div>
+      <div class="uk-container">
+        <a class="uk-button uk-button-default uk-float-right uk-margin-medium-top uk-margin-remove-bottom uk-width-1-1 uk-width-auto@s article-button" id="next" href="greenlancer.html">Greenlancer</a>
+        <a class="uk-button uk-button-default uk-float-left uk-margin-medium-top uk-text-middle uk-width-1-1 uk-width-auto@s article-button" id="prev" href="index.html">Back Home</a>
+      </div>
+      <div uk-grid>
+          <div class="uk-width-auto uk-align-center uk-margin-top">
+              <div class="uk-card uk-margin-top">
+                  <a class="uk-link-reset" href="skype:jdeheus?call">
+                      <i class="fa fa-skype fa-2x uk-margin-small-right"></i>
+                  </a>
+                  <a class="uk-link-reset" href="https://twitter.com/jdeheus">
+                      <i class="fa fa-twitter fa-2x uk-margin-small-right"></i>
+                  </a>
+                  <a class="uk-link-reset" href="mailto:jdeheus2@gmail.com">
+                      <i class="fa fa-envelope fa-2x uk-margin-small-right"></i>
+                  </a>
+                  <a class="uk-link-reset" href="https://www.linkedin.com/in/jdeheus">
+                      <i class="fa fa-linkedin fa-2x uk-margin-small-right"></i>
+                  </a>
+                  <a class="uk-link-reset" href="https://github.com/jdeheus">
+                      <i class="fa fa-github fa-2x"></i>
+                  </a>
+                  <hr />
+                  <p class="uk-margin-small-top uk-text-center">
+                      &copy; 2018 Jonathan De Heus
+                  </p>
+              </div>
+          </div>
+      </div>
+</body>
+</html>

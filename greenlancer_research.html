@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Greenlancer Research</title>
+    <link rel="stylesheet" href="../css/uikit.min.css" />
+    <link rel="stylesheet" href="../css/customcss.css" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Hind:light,regular,semi-bold,bold">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/uikit.min.js"></script>
+    <script src="../js/customjs.js"></script>
+</head>
+
+<body>
+    <!--Navbar-->
+    <div class="navbar-container" uk-sticky="show-on-up: true; animation: uk-animation-slide-top; bottom: #bottom">
+        <nav class="uk-navbar-container custom-navbar" uk-navbar>
+            <div class="uk-navbar-left">
+                <div class="uk-logo uk-margin-small-left">
+                    <a class="uk-link-reset" href="index.html">Jon De Heus</a>
+                </div>
+            </div>
+            <!--Shows on screens 640px & up-->
+            <div class="uk-visible@s uk-navbar-right">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-parent"><a href="resume.html">Resume</a></li>
+                    <li class="uk-parent"><a href="about_me.html">About Me</a></li>
+                </ul>
+            </div>
+            <!--Shows on screens 640px & down-->
+            <div class="uk-hidden@s uk-navbar-right">
+                <a class="uk-navbar-toggle" href="#" uk-toggle="target: #modal">
+                    <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+    <!--Modal shows on clicking the menu button-->
+    <div id="modal" class="uk-modal-full" uk-modal>
+        <div class="uk-modal-dialog uk-background-muted">
+            <button class="uk-modal-close-full uk-background-muted" type="button" uk-close></button>
+            <div class="uk-grid-match uk-grid-collapse" uk-grid>
+                <div class="uk-flex-middle uk-flex-center" style="min-width: 100vw; width: 100vw;" uk-height-viewport>
+                    <div class="uk-container"></div>
+                    <div class="uk-card uk-card-body uk-text-center uk-align-center">
+                        <a class="uk-link-reset" href="index.html"><h2 class="uk-modal-title">Home</h2></a>
+                        <a class="uk-link-reset" href="resume.html"><h2 class="uk-modal-title">Resume</h2></a>
+                        <a class="uk-link-reset" href="about_me.html"><h2 class="uk-modal-title">About Me</h2></a>
+                    </div>
+                    <div class="container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Portfolio piece begins here-->
+    <!--Section image here-->
+    <div class="uk-section uk-section-media uk-section-slarge uk-background-cover" style="background-image: url(../images/cover_photos/gl_research_overlay.jpg)">
+        <div class="uk-container uk-small">
+            <h1 class="uk-text-center uk-text-bold hero-text">Workflow Automation Research</h1>
+            <h4 class="uk-text-center hero-text">Methods used: Usability testing.</h4>
+        </div>
+    </div>
+    <!--Text section begins-->
+    <div class="uk-container uk-container-small uk-margin-large-top">
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Project Overview</h3>
+        <hr class="uk-margin-remove-top"/>
+        <p class="uk-text-left">
+          In November 2016, I was tasked with creating the UI for an in house workflow automation system. As I had never worked with workflow automation software before, I wanted to determine what aspects of existing workflow automation services users liked, disliked, or could be improved upon. In order to do this, I conducted a heuristic evaluation of four services, as well as developed a series of tasks that I wanted potential users to complete in order to determine how usable existing workflow automation systems were. In order to conduct my testing, I recruited five internal users of varying technological skill levels whom I thought were good representatives of our customer base.
+        </p>
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Research &#38 Development</h3>
+        <hr class="uk-margin-remove-top"/>
+        <p class="uk-text-left">
+          I first started off by selecting which workflow automation applications I wanted to analyze. After looking over my choices, I settled on four applications. They were <a href="https://flow.microsoft.com/">Microsoft Flow</a>, <a href="https://zapier.com/">Zapier</a>, <a href="https://scratch.mit.edu/">Scratch</a>, and <a href="https://www.built.io/">Built.io</a>. I chose Microsoft Flow and Zapier because they presented the workflow as a linear system, and I chose Scratch and Built.io because they allow the user to generate the desired workflow through the use of dragging and dropping predefined items. As part of my heuristic evaluation, I made sure to create sample workflows in each system. While I was creating these workflows, I made sure to create workflows of varying complexity. After I completed the heuristic analysis, I went back and looked at the workflows that I had created. I then sorted them into two different categories (simple and complicated), and chose one task from each category for users to do.
+        </p>
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Execution &#38 Results</h3>
+        <hr class="uk-margin-remove-top"/>
+        <p class="uk-text-left">
+          The users response to these tasks were mostly positive. Users enjoyed being exposed to the different types of workflow <???> systems, and they also enjoyed that they were being consulted on a project that we will be working on in the future. They also noted that having a simple task with fairly linear instructions, and a more complicated task with conditional statements was representational of real life use among our customers. Feedback on the first system (Microsoft Flow) was quite positive, with User 2 indicating that dynamic content was easy to understand, and User 3 noting that its visual similarity to other Microsoft products made it easy to pick up and use. However, other users noted that while it was easy to use, the terminology used made some of the options unclear.
+          <br><br>Feedback on the second system (MIT Scratch) was almost as positive as Microsoft Flow. Multiple users liked how Scratch utilized colors &amp; shapes to alert the user to the purpose of the individual widgets, and User 1 noted that &quot;having an ability to test your workflow in real time is great&quot;. However, more than half of the users noted that the terminology was very confusing, with User 3 noting that &quot;this isn’t a tool for people that are unfamiliar with code, but I would use this to teach my kids how to code&quot;.
+          <br><br>The third system that was tested (Zapier) is a linear workflow creation system, much like Microsoft Flow, and reactions to it were very similar as well. User 3 thought that Zapier had very similar usage patterns to Flow, and that Zapier was &quot;super intuitive&quot; to use. User 1 & User 2 liked how the system indicated the status of each major step and associated substeps. However, User 4 was not a fan of Zapier, and noted that it seemed &quot;pretty complicated&quot;, and that there were an &quot;almost overwhelming abundance of options&quot;. After Zapier, the last system tested was Built.io.
+          <br /><br />Built.io takes a more freeform approach to workflow assembly by letting users drag out blocks onto a canvas, and then having the user drag connecting lines between the blocks in order to set up the flow. Each block represents a different activity, such as uploading a file to Dropbox, or posting on Facebook. This is the one service that had more negative responses than positive responses. One user failed to complete both tasks, giving up halfway through the simple task. Terminology was called out by Users 1 & 3 as being very confusing, and Users 2 & 4 noted that it was initially complex. User 3 was unable to find out how to apply filters, and was unable to successfully complete the more complicated exercise.
+          <br /><br />Overall, users preferred the systems that had a more linear flow and more plainly worded language. In this case, this means that Zapier and Microsoft Flow were the winners.They also liked systems that had well defined methods of applying filters, as well as being able to test individual steps.
+        </p>
+      </div>
+      <div class="uk-container">
+        <a class="uk-button uk-button-default uk-float-right uk-margin-medium-top uk-margin-remove-bottom uk-width-1-1 uk-width-auto@s article-button" id="next" href="steam_project.html">Steam chat project</a>
+        <a class="uk-button uk-button-default uk-float-left uk-margin-medium-top uk-text-middle uk-width-1-1 uk-width-auto@s article-button" id="prev" href="greenlancer.html">Greenlancer</a>
+      </div>
+      <div uk-grid>
+          <div class="uk-width-auto uk-align-center uk-margin-top">
+              <div class="uk-card uk-margin-top">
+                  <a class="uk-link-reset" href="skype:jdeheus?call">
+                      <i class="fa fa-skype fa-2x uk-margin-small-right"></i>
+                  </a>
+                  <a class="uk-link-reset" href="https://twitter.com/jdeheus">
+                      <i class="fa fa-twitter fa-2x uk-margin-small-right"></i>
+                  </a>
+                  <a class="uk-link-reset" href="mailto:someone@example.com">
+                      <i class="fa fa-envelope fa-2x uk-margin-small-right"></i>
+                  </a>
+                  <a class="uk-link-reset" href="https://www.linkedin.com/in/jdeheus">
+                      <i class="fa fa-linkedin fa-2x uk-margin-small-right"></i>
+                  </a>
+                  <a class="uk-link-reset" href="https://github.com/jdeheus">
+                      <i class="fa fa-github fa-2x"></i>
+                  </a>
+                  <hr />
+                  <p class="uk-margin-small-top uk-text-center">
+                      &copy; 2017 Jonathan De Heus
+                  </p>
+              </div>
+          </div>
+      </div>
+    </body>
+    </html>

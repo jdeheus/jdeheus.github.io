@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Revision Sideproject</title>
+    <link rel="stylesheet" href="../css/uikit.min.css" />
+    <link rel="stylesheet" href="../css/customcss.css" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Hind:light,regular,semi-bold,bold">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/uikit.min.js"></script>
+    <script src="../js/customjs.js"></script>
+</head>
+
+<body>
+    <!--Navbar-->
+    <div class="navbar-container" uk-sticky="show-on-up: true; animation: uk-animation-slide-top; bottom: #bottom">
+        <nav class="uk-navbar-container custom-navbar" uk-navbar>
+            <div class="uk-navbar-left">
+                <div class="uk-logo uk-margin-small-left">
+                    <a class="uk-link-reset" href="index.html">Jon De Heus</a>
+                </div>
+            </div>
+            <!--Shows on screens 640px & up-->
+            <div class="uk-visible@s uk-navbar-right">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-parent"><a href="resume.html">Resume</a></li>
+                    <li class="uk-parent"><a href="about_me.html">About Me</a></li>
+                </ul>
+            </div>
+            <!--Shows on screens 640px & down-->
+            <div class="uk-hidden@s uk-navbar-right">
+                <a class="uk-navbar-toggle" href="#" uk-toggle="target: #modal">
+                    <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+    <!--Modal shows on clicking the menu button-->
+    <div id="modal" class="uk-modal-full" uk-modal>
+        <div class="uk-modal-dialog uk-background-muted">
+            <button class="uk-modal-close-full uk-background-muted" type="button" uk-close></button>
+            <div class="uk-grid-match uk-grid-collapse" uk-grid>
+                <div class="uk-flex-middle uk-flex-center" style="min-width: 100vw; width: 100vw;" uk-height-viewport>
+                    <div class="uk-container"></div>
+                    <div class="uk-card uk-card-body uk-text-center uk-align-center">
+                        <a class="uk-link-reset" href="index.html"><h2 class="uk-modal-title">Home</h2></a>
+                        <a class="uk-link-reset" href="resume.html"><h2 class="uk-modal-title">Resume</h2></a>
+                        <a class="uk-link-reset" href="about_me.html"><h2 class="uk-modal-title">About Me</h2></a>
+                    </div>
+                    <div class="container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Portfolio piece begins here-->
+    <!--Section image here-->
+    <div class="uk-section uk-section-media uk-section-slarge uk-background-cover" style="background-image: url(../images/cover_photos/form_sideproject_overlay.jpg)">
+        <div class="uk-container uk-small">
+            <h1 class="uk-text-center uk-text-bold hero-text">Form Revision Sideproject</h1>
+            <h4 class="uk-text-center hero-text">Methods used: Usability heuristics, high fidelity prototyping.</h4>
+        </div>
+    </div>
+    <!--Text section begins-->
+    <div class="uk-container uk-container-small uk-margin-large-top">
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Project Overview</h3>
+        <hr class="uk-margin-remove-top"/>
+        <p class="uk-text-left">
+          One of the hot topics in the UX space has the Dribbblisation of design. Dribbblisation, <a href="https://medium.com/intercom-inside/the-dribbblisation-of-design-406422ccb026" target="_blank">as defined by Paul Adams</a> is the process of creating &quot;things that look great but don&#39;t work well. Perfect pixel executions of flat design, but they don&#39;t address real business goals, solve real problems people have every day, or take a full business ecosystem into consideration&quot;. After I read the article, I started looking at design examples with a more critical eye, and I came to the realization that while he was right. However, I also noticed another unwelcome trend where designers would comment on usability issues, but would not take the time to create mockups to show how the design could be improved. After reading this <a href="http://tympanus.net/codrops/?p=18780" target="_blank">article</a>, I thought it would be a good design exercise to not only comment on the inherent usability issues, but to also redesign the form in a way that would increase its usability.
+        </p>
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Reviewing The Prototype</h3>
+        <hr class="uk-margin-remove-top"/>
+        <p class="uk-text-left">
+          After looking at the first few examples that were given, there were a few usability issues that immediately stood out. These issues were:
+          <li>Inability to view answers</li>
+          <li>Inability to go back and revise answers</li>
+          <li>Inability to see what questions were coming up</li>
+          <br>
+          After playing with the <a href="http://tympanus.net/Development/MinimalForm/" target="_blank">demo</a>, I also noticed that after completing the final question, the form would automatically submit all of the answers, which is not a good usability practice as it assumes that the user entered the correct information for all six questions.
+        </p>
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Creating Solutions To Observed Problems</h3>
+        <hr class="uk-margin-remove-top"/>
+        <p class="uk-text-left">
+          The first issue I decided to tackle was the inability to view answers. I decided that there needed to be a dedicated area where questions could be displayed. In order to do this, I created an area below the form that shows the individual questions, the answers to the question, and a collapsible textbox that informs users as to how they could modify their answers.
+        </p>
+        <div class="uk-text-center uk-child-width-auto uk-flex uk-flex-center" uk-grid>
+          <div class="uk-card">
+            <div class="uk-card-media-top">
+              <video src="../images/form_sideproject/1s1m.mp4" poster="../images/form_sideproject/1s1m.png" controls>
+            </div>
+            <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom">
+              <p>
+                Creating an area where the user can see their answers to the previous question.
+              </p>
+            </div>
+          </div>
+        </div>
+        <p class="uk-text-left">
+          I then chose to focus on resolving the inability of the user to go back and edit the answers to the previous question. In order to do this, I introduced logic into the prototype so that if the user clicked on a previously answered question, the form would display the submitted answer for that question, and the question number and title would also update. I also modified the progress bar so that when the user edits a question, the top layer moves to the location that corresponds to the selected question while the bottom layer indicates how far in the form the user has progressed. I also made sure that the user would have a smooth transition if they wanted to change an answer before submitting their answers.
+        </p>
+        <div class="uk-text-center uk-child-width-1-1 uk-child-width-1-2@s" uk-grid>
+          <div class="uk-card">
+            <div class="uk-card-media-top">
+              <video src="../images/form_sideproject/2s1m.mp4" poster="../images/form_sideproject/2s1m.png" controls>
+            </div>
+            <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom">
+              <p>
+                Editing a previously filled out answer.
+              </p>
+            </div>
+          </div>
+          <div class="uk-card">
+            <div class="uk-card-media-top">
+              <video src="../images/form_sideproject/2s2m.mp4" poster="../images/form_sideproject/2s2m.png" controls>
+            </div>
+            <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom">
+              <p>
+                Going to a previously filled out answer right before the submit button is pressed.
+              </p>
+            </div>
+          </div>
+        </div>
+        <p class="uk-text-left">
+          I also implemented the ability for users to skip forward to an unanswered question. This was an issue that I hadn&#39;t foreseen initially, but when testing my prototypes I found that without that functionality, it was a hassle to go through questions all over again just to get to a question that you haven&#39;t answered. I also made sure to remove the auto-submit feature, and instead added a submit button that would allow the user to preview and revise their answers before submitting them.
+        </p>
+        <div class="uk-text-center uk-child-width-1-1 uk-child-width-1-2@s" uk-grid>
+          <div class="uk-card">
+            <div class="uk-card-media-top">
+              <video src="../images/form_sideproject/3s1m.mp4" poster="../images/form_sideproject/3s1m.png" controls>
+            </div>
+            <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom">
+              <p>
+                Skipping forward to an unlocked question after going back to edit a previous answer.
+              </p>
+            </div>
+          </div>
+          <div class="uk-card">
+            <div class="uk-card-media-top">
+              <video src="../images/form_sideproject/3s2m.mp4" poster="../images/form_sideproject/3s2m.png" controls>
+            </div>
+            <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom">
+              <p>
+                Submitting the survey.
+              </p>
+            </div>
+          </div>
+        </div>
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Conclusion</h3>
+        <hr class="uk-margin-remove-top"/>
+        <p class="uk-text-left">
+          I really enjoyed doing this project, as I haven&#39;t done a redesign of an existing interface in a long time. I also liked this project because it forced me to stop giving critical feedback and instead take the time to think about constructive feedback. Going back to Axure and developing the logic that was required in order to create all of the interactions that are shown in the videos above was a challenge, but I think it was worth it as it forced me to gain experience with complicated logic sets and multiple use cases. I would definitely do a project similar to this one in the future.
+        </p>
+      </div>
+      <div class="uk-container">
+        <a class="uk-button uk-button-default uk-float-right uk-margin-medium-top uk-margin-remove-bottom uk-width-1-1 uk-width-auto@s article-button" id="next" href="ge_coop.html">GE AMSTC Co-op</a>
+        <a class="uk-button uk-button-default uk-float-left uk-margin-medium-top uk-text-middle uk-width-1-1 uk-width-auto@s article-button" id="prev" href="pixate.html">Pixate Project</a>
+      </div>
+      <div uk-grid>
+          <div class="uk-width-auto uk-align-center uk-margin-top">
+              <div class="uk-card uk-margin-top">
+                  <a class="uk-link-reset" href="skype:jdeheus?call">
+                      <i class="fa fa-skype fa-2x uk-margin-small-right"></i>
+                  </a>
+                  <a class="uk-link-reset" href="https://twitter.com/jdeheus">
+                      <i class="fa fa-twitter fa-2x uk-margin-small-right"></i>
+                  </a>
+                  <a class="uk-link-reset" href="mailto:someone@example.com">
+                      <i class="fa fa-envelope fa-2x uk-margin-small-right"></i>
+                  </a>
+                  <a class="uk-link-reset" href="https://www.linkedin.com/in/jdeheus">
+                      <i class="fa fa-linkedin fa-2x uk-margin-small-right"></i>
+                  </a>
+                  <a class="uk-link-reset" href="https://github.com/jdeheus">
+                      <i class="fa fa-github fa-2x"></i>
+                  </a>
+                  <hr />
+                  <p class="uk-margin-small-top uk-text-center">
+                      &copy; 2017 Jonathan De Heus
+                  </p>
+              </div>
+          </div>
+      </div>
+    </body>
+    </html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Steam Revision Project</title>
+    <link rel="stylesheet" href="../css/uikit.min.css" />
+    <link rel="stylesheet" href="../css/customcss.css" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Hind:light,regular,semi-bold,bold">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/uikit.min.js"></script>
+    <script src="../js/customjs.js"></script>
+</head>
+
+<body>
+    <!--Navbar-->
+    <div class="navbar-container" uk-sticky="show-on-up: true; animation: uk-animation-slide-top; bottom: #bottom">
+        <nav class="uk-navbar-container custom-navbar" uk-navbar>
+            <div class="uk-navbar-left">
+                <div class="uk-logo uk-margin-small-left">
+                    <a class="uk-link-reset" href="index.html">Jon De Heus</a>
+                </div>
+            </div>
+            <!--Shows on screens 640px & up-->
+            <div class="uk-visible@s uk-navbar-right">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-parent"><a href="resume.html">Resume</a></li>
+                    <li class="uk-parent"><a href="about_me.html">About Me</a></li>
+                </ul>
+            </div>
+            <!--Shows on screens 640px & down-->
+            <div class="uk-hidden@s uk-navbar-right">
+                <a class="uk-navbar-toggle" href="#" uk-toggle="target: #modal">
+                    <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+    <!--Modal shows on clicking the menu button-->
+    <div id="modal" class="uk-modal-full" uk-modal>
+        <div class="uk-modal-dialog uk-background-muted">
+            <button class="uk-modal-close-full uk-background-muted" type="button" uk-close></button>
+            <div class="uk-grid-match uk-grid-collapse" uk-grid>
+                <div class="uk-flex-middle uk-flex-center" style="min-width: 100vw; width: 100vw;" uk-height-viewport>
+                    <div class="uk-container"></div>
+                    <div class="uk-card uk-card-body uk-text-center uk-align-center">
+                        <a class="uk-link-reset" href="index.html"><h2 class="uk-modal-title">Home</h2></a>
+                        <a class="uk-link-reset" href="resume.html"><h2 class="uk-modal-title">Resume</h2></a>
+                        <a class="uk-link-reset" href="about_me.html"><h2 class="uk-modal-title">About Me</h2></a>
+                    </div>
+                    <div class="container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Portfolio piece begins here-->
+    <!--Section image here-->
+    <div class="uk-section uk-section-media uk-section-slarge uk-background-cover" style="background-image: url(../images/cover_photos/steam_overlay.jpg)">
+        <div class="uk-container uk-small">
+            <h1 class="uk-text-center uk-text-bold hero-text">Steam Revision Project</h1>
+            <h4 class="uk-text-center hero-text">Methods used: High fidelity prototypes, sketches.</h4>
+        </div>
+    </div>
+    <!--Text section begins-->
+    <div class="uk-container uk-container-small uk-margin-large-top">
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Project Overview</h3>
+        <hr class="uk-margin-remove-top"/>
+        <p class="uk-text-left">
+          While I spend the majority of my time as a UX designer working on projects at work, I try to occasionally work on sideprojects as well. Not only does this give me more creative freedom, but it lets me use tools of my choosing that I either can't use, or don't get the chance to use at my day job. For this sideproject, I decided to work on something that I've been thinking about for a long time, but never did anything with. I predominantly play games using Steam, and when I downloaded their mobile app, I felt that it could be redesigned to be better. As their mobile app is quite large and allows the user to do a wide variety of activities such as buying games, viewing their library, and viewing the player run marketplace, I decided to focus on only one aspect of the app. I decided to focus primarily on the chat aspect of the application, as that is one area of the app that I thought could use some work.
+        </p>
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Part 1</h3>
+        <hr class="uk-margin-remove-top"/>
+        <p class="uk-text-left">
+          The first aspect of the chat app that I worked on was the chat list overview. The chat page in the existing Steam app is very barebones and only shows who's online, their status, and what game they're playing, if any. The user is not able to set their status, create chats that contain multiple groups, receive an indication that their message was read, have unread messages stand out, preview unread messages, see a count of unread messages, or delete existing conversations. In this screen I set out to rectify these issues and add additional functionality that users would appreciate. Upon clicking on the first entry, the chat with this user will come into view from the right. There is an indicator that lets the user know what messages have been unread, and the message is scrollable. Once the user is done looking at the message, they can press the back button to go back to the chat overview. Now that the message has been read, its text has been changed from bold to regular, and a checkmark has been added in the lower right hand corner that indicates that everyone in the chat is up to date.
+          <br /><br />
+          Along with the aforementioned interaction, there are also other elements in this interactive mockup that deserve to be mentioned. In the first entry, the user's profile picture has a green border as well as a network icon. This indicates that they are in a game, and are broadcasting it live. In the second entry, there is a count of unread messages in the lower right hand corner, as well as a preview that shows the content of the most recent message received. The third entry has a hollowed out checkmark to indicate that the recipient of the message has not yet looked at it. The fourth entry has a blue border around the profile picture, and an icon in the upper left hand corner indicating that they're playing a game. If the icon is not immediately clear, their current activity takes the place of the message preview. In the fifth entry, groups are indicated by stacking the 2  profile pictures of the users who sent the most recent messages. If the user swipes left on the last entry, they're able to show 3 tabs. These tabs are the More tab, the Watch tab, and the Delete tab. The Watch tab is greyed out since the user is not online and not broadcasting a game. When the delete button is selected, the chat disappears. Since the delete option is not immediatly evident, I felt that it wasn't necessary to have a confirmation dialog since anyone who undertakes the swiping action to bring the options to the forefront is clearly intent upon selecting one of those three options.
+        </p>
+        <div class="uk-text-center uk-child-width-1-1 uk-child-width-1-2@s" uk-grid>
+          <div class="uk-card">
+            <div class="uk-card-media-top">
+              <video src="../images/steam_project/1s1m.mp4" poster="../images/steam_project/1s1m.png" controls>
+            </div>
+            <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom">
+              <p>
+                Selecting a conversation from the friend list.
+              </p>
+            </div>
+          </div>
+          <div class="uk-card">
+            <div class="uk-card-media-top">
+              <video src="../images/steam_project/1s2m.mp4" poster="../images/steam_project/1s2m.png" controls>
+            </div>
+            <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom">
+              <p>
+                Showing additional options when swiping left on a conversation.
+              </p>
+            </div>
+          </div>
+        </div>
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Part 2</h3>
+        <hr class="uk-margin-remove-top"/>
+        <p class="uk-text-left">
+          The second aspect of the chat app that I worked on was the broadcasts screen. In the current chat app, the user has to go into each friends profile to see if they're playing a game that can be broadcast. I decided to take a different tack and make this aspect of the app much more accessible. I decided to create a brand new broadcast button in the navigation footer of the app so that users could access it quickly from anywhere in the app. This has the nice effect of reducing the number of clicks needed to view available broadcasts. Since broadcasts is now its own page, this also expands the functionality of the page. Instead of just being able to view broadcasts from only players, users can now sort broadcasts by individual games.
+          <br /><br />
+          In this prototype, users can scroll through the list of games. They can also utilize the sidebar selector on the right to quickly move through the list of games by alphabetical order. I made sure to create a large indicator that could be used in conjunction with the sticky header to help the user know what letter they are on. I added this indicator as I have been frustrated in the past by having my finger move over the sidebar selector, but the only indicator that your finger movements are having any effect is watching the headers change. The Contacts app on iOS is a perfect example of this. The user can then click on a game (whose image expands in order to provide an indication that the game was clicked), and the next screen shows a list of the players who are currently broadcasting that game, along with how many people are watching each player. Here, the user can click on a game in order go in and view the live thread and comment on the gameplay with other users.
+          <br /><br />
+          The user can also choose to view a list of players who are broadcasting. This can be accomplished by clicking the "By Player" button in the top of the prototype. The layout of this view resembles the user selection layout in the "By Game" section, except the name of the game that users are playing is in the lower left hand corner. Users can also search for a player by clicking the search icon in the bottom navbar area, and then either sorting the list using the filter dropdown, or by typing in a player's name. If the user doesn't want to use the search, they can press the cancel button to hide the search view. Users can also scroll upwards on the player list to access the search bar. When a user clicks on a players game, they're taken directly to the live thread.
+        </p>
+        <div class="uk-text-center uk-child-width-1-1 uk-child-width-1-3@s" uk-grid>
+          <div class="uk-card">
+            <div class="uk-card-media-top">
+              <video src="../images/steam_project/2s1m.mp4" poster="../images/steam_project/2s1m.png" controls>
+            </div>
+            <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom">
+              <p>
+                Scrolling through the list of games.
+              </p>
+            </div>
+          </div>
+          <div class="uk-card">
+            <div class="uk-card-media-top">
+              <video src="../images/steam_project/2s2m.mp4" poster="../images/steam_project/2s2m.png" controls>
+            </div>
+            <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom">
+              <p>
+                Viewing a specific player's stream.
+              </p>
+            </div>
+          </div>
+          <div class="uk-card">
+            <div class="uk-card-media-top">
+              <video src="../images/steam_project/2s3m.mp4" poster="../images/steam_project/2s3m.png" controls>
+            </div>
+            <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom">
+              <p>
+                Showing search options while the broadcasts are sorted "By Player".
+              </p>
+            </div>
+          </div>
+        </div>
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Part 3</h3>
+        <hr class="uk-margin-remove-top"/>
+        <p class="uk-text-left">
+          The third aspect of the chat app that I worked on was the settings tab. The settings area in the existing Steam application is buried at the bottom of an extensive hamburger menu. I aimed to make it more accessible as well as show more relevant information. I decided to add basic user profile information such as the user's profile picture, their name, their Steam level, how much more XP they need until their next level, and a progress bar that attempts to provide a visual indicator of how much XP is needed until they level up. Below this profile section is a scrollable list of actions that users can take. This list is split up into 3 different sections. The first section is dedicated to the users profile, the second part is dedicated to app behavior, and the third part is a catch all section.
+          <br /><br />
+          When the user clicks on the Badges element, it will change color, and the screen will slide to the right to show a pictoral representation of all the badges that the user has received up to this point. The badges are divided up into sections, where each section represents a different game or event. When the user clicks on a badge, it will come to the forefront of the screen into a container that will list the name of the badge, how much XP it is worth, and when it was unlocked. The user can then click on the X to close it, and when they do, the X will change color in order to indicate to the user that it was pressed. Also, when the X is pressed the container will fade away, and the badge will return to its original place.
+        </p>
+        <div class="uk-text-center uk-child-width-auto uk-flex uk-flex-center" uk-grid>
+          <div class="uk-card">
+            <div class="uk-card-media-top">
+              <video src="../images/steam_project/3s1m.mp4" poster="../images/steam_project/3s1m.png" controls>
+            </div>
+            <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom">
+              <p>
+                Detail about above item goes here.
+              </p>
+            </div>
+          </div>
+        </div>
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Conclusion</h3>
+        <hr class="uk-margin-remove-top"/>
+        <p class="uk-text-left">
+           While I&#39;m pleased with the final result, after looking back on what I did, there are a few things I would change. One of the first things I would change is the way the upload indicator for the photo would work. Instead of having a dropdown bar, I would have reuses the submit button space as the loading indicator. Secondly, I would have changed how I used the animation logic. Looking back on some of the logic that I created, it was quite sloppy, however I managed to improve the logic usage throughout the prototype. I also would have changed the interaction when clicking on the post in the first part of the app. Instead of going to the person&#39;s profile page, I would have simply transitioned to a page that would have shown only the post. The last thing I would have changed is the tool being used. During various videos, you can see certain elements stutter, or freeze. This is because the Pixate recording tool would sometimes act up, and not capture the interactions correctly. Unfortunately, Pixate is no longer under active development, so these problems will remain unfixed. Overall, this was a great experience, and I'm glad that I took the time to learn how to use another prototyping system.
+        </p>
+      </div>
+      <div class="uk-container">
+        <a class="uk-button uk-button-default uk-float-right uk-margin-medium-top uk-margin-remove-bottom uk-width-1-1 uk-width-auto@s article-button" id="next" href="ge_bently.html">GE Bently Nevada</a>
+        <a class="uk-button uk-button-default uk-float-left uk-margin-medium-top uk-text-middle uk-width-1-1 uk-width-auto@s article-button" id="prev" href="greenlancer_research.html">Greenlancer Research</a>
+      </div>
+      <div uk-grid>
+          <div class="uk-width-auto uk-align-center uk-margin-top">
+              <div class="uk-card uk-margin-top">
+                  <a class="uk-link-reset" href="skype:jdeheus?call">
+                      <i class="fa fa-skype fa-2x uk-margin-small-right"></i>
+                  </a>
+                  <a class="uk-link-reset" href="https://twitter.com/jdeheus">
+                      <i class="fa fa-twitter fa-2x uk-margin-small-right"></i>
+                  </a>
+                  <a class="uk-link-reset" href="mailto:someone@example.com">
+                      <i class="fa fa-envelope fa-2x uk-margin-small-right"></i>
+                  </a>
+                  <a class="uk-link-reset" href="https://www.linkedin.com/in/jdeheus">
+                      <i class="fa fa-linkedin fa-2x uk-margin-small-right"></i>
+                  </a>
+                  <a class="uk-link-reset" href="https://github.com/jdeheus">
+                      <i class="fa fa-github fa-2x"></i>
+                  </a>
+                  <hr />
+                  <p class="uk-margin-small-top uk-text-center">
+                      &copy; 2017 Jonathan De Heus
+                  </p>
+              </div>
+          </div>
+      </div>
+    </body>
+    </html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GE Bently Nevada Research Trip</title>
+    <link rel="stylesheet" href="../css/uikit.min.css" />
+    <link rel="stylesheet" href="../css/customcss.css" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Hind:light,regular,semi-bold,bold">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/uikit.min.js"></script>
+    <script src="../js/customjs.js"></script>
+</head>
+
+<body>
+    <!--Navbar-->
+    <div class="navbar-container" uk-sticky="show-on-up: true; animation: uk-animation-slide-top; bottom: #bottom">
+        <nav class="uk-navbar-container custom-navbar" uk-navbar>
+            <div class="uk-navbar-left">
+                <div class="uk-logo uk-margin-small-left">
+                    <a class="uk-link-reset" href="index.html">Jon De Heus</a>
+                </div>
+            </div>
+            <!--Shows on screens 640px & up-->
+            <div class="uk-visible@s uk-navbar-right">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-parent"><a href="resume.html">Resume</a></li>
+                    <li class="uk-parent"><a href="about_me.html">About Me</a></li>
+                </ul>
+            </div>
+            <!--Shows on screens 640px & down-->
+            <div class="uk-hidden@s uk-navbar-right">
+                <a class="uk-navbar-toggle" href="#" uk-toggle="target: #modal">
+                    <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+    <!--Modal shows on clicking the menu button-->
+    <div id="modal" class="uk-modal-full" uk-modal>
+        <div class="uk-modal-dialog uk-background-muted">
+            <button class="uk-modal-close-full uk-background-muted" type="button" uk-close></button>
+            <div class="uk-grid-match uk-grid-collapse" uk-grid>
+                <div class="uk-flex-middle uk-flex-center" style="min-width: 100vw; width: 100vw;" uk-height-viewport>
+                    <div class="uk-container"></div>
+                    <div class="uk-card uk-card-body uk-text-center uk-align-center">
+                        <a class="uk-link-reset" href="index.html"><h2 class="uk-modal-title">Home</h2></a>
+                        <a class="uk-link-reset" href="resume.html"><h2 class="uk-modal-title">Resume</h2></a>
+                        <a class="uk-link-reset" href="about_me.html"><h2 class="uk-modal-title">About Me</h2></a>
+                    </div>
+                    <div class="container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Portfolio piece begins here-->
+    <!--Section image here-->
+    <div class="uk-section uk-section-media uk-section-slarge uk-background-cover" style="background-image: url(../images/cover_photos/bently_research_overlay.jpg)">
+        <div class="uk-container uk-small">
+            <h1 class="uk-text-center uk-text-bold hero-text">Bently Research Trip</h1>
+            <h4 class="uk-text-center hero-text">Methods used: High fidelity prototypes, contextual inquiry, card sorting &#38 user interviews.</h4>
+        </div>
+    </div>
+    <!--Text section begins-->
+    <div class="uk-container uk-container-small uk-margin-large-top">
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Project Overview</h3>
+        <hr class="uk-margin-remove-top"/>
+        <p class="uk-text-left">
+          First, I sat down with the SME and received a brief tutorial about what reciprocating compressors were, as I did not have any domain knowledge about reciprocating compressors prior to this project. After the lesson, we identified what we wanted to accomplish
+          during our research sessions. After we identified our goals, I then began identifying the activities that I wanted to use. I decided to start each session off with an interview for the purpose of gathering information about our
+          users that could be used to build personas. The next activity would be an hour to two hours of contextual inquiry where we would shadow the users as they went through their day to day tasks. After the contextual inquiry would be
+          a lunch break followed by card sorting, task analysis, user centered design using paper prototypes, and then interactive prototypes coupled with a verbal walkthrough in order to demonstrate potential features and get feedback.
+          <br><br> After deciding on what activities to use, I began developing the specific plan for each activity. Throughout the development stage, I made sure to have the other UX members of my team review it as much as possible. Due
+          to this reviewing process, I decided to remove the paper prototypes, as it was pointed out that the intended audience (oil refinery workers) might feel that working with paper cutouts might not be a good use of their time.
+          <br><br> In March 2015, we went to our user sites. The first site was in Memphis, Tennessee. The primary user here was someone who had over 30 years of experience working with reciprocating compressors. This made him a perfect
+          example of a power user who would be able to tell us what he would want to see in a reciprocating compressor software solution. At the second site in Whiting, Indiana, we had multiple users. One user previously worked for our company
+          and was an expert with System 1 Classic, while other users were not as skilled with System 1. This provided a good mix between those who had very little experience and those with a lot of experience.
+        </p>
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Execution &#38 Results</h3>
+        <hr class="uk-margin-remove-top"/>
+        <p class="uk-text-left">
+          The users response to all activities (card sorting, prototypes, and contextual inquiry) was quite positive. The contextual inquiry was probably one of the most helpful exercises since it helped us to understand the users process. At the Memphis site,
+          we were able to observe the user working in our competitor&#39;s software, and he also allowed us to use the software for about 10 minutes. While this is not a particularly long time, it was long enough to see how a major competitor&#39;s
+          software differed from ours, as well as enough time to perform some competitive analysis. While the user admitted that he only used a few features of the software package, he used them quite often and was quite vocal about what
+          worked and did not work.
+          <br><br> At the second site, we were able to observe the experienced user push our old software to its limits which helped us understand what features more advanced users would like to see in our software. One feature that he stressed
+          was the importance of customization. For their reciprocating compressors, he had built a custom screen filled with datapoints that the site had deemed essential for condition monitoring, and he was worried that upgrading to our
+          newer software would limit his ability to display the points. A second feature that the other users mentioned was a way to tune the built in alarms. The software would throw a false positive so frequently that the users did not
+          trust the system, and in fact we were fortunate to see a live example happen while we were interviewing the user. This confirmed our hypothesis that informing the user with certainty as to what was wrong was the incorrect path,
+          and that we needed to take a more conservative approach, and merely inform the user that an event may have occurred.
+          <br><br> At both sites, the card sorting exercise helped us identify what features users wanted immediately, within a year, and were willing to wait more than a year for. Despite the fact that the results from both sessions differed
+          between the two sites, it was still useful to see what features were valued by different users. The prototypes became a catalyst for additional conversation regarding what users wanted to see, and also provided a way to gather
+          feedback about the ideas that were expressed in the prototype. This further cemented my belief that high fidelity prototypes are a great tool to gather feedback from the user, since users enjoy seeing something that looks like
+          a final product even if it is only in the feedback stages.
+        </p>
+        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Improvements &#38 Conclusion</h3>
+        <hr class="uk-margin-remove-top"/>
+        <p class="uk-text-left">
+          There were some aspects of the research project that could have been improved. I felt that two of the interactive prototypes that we displayed were very similar to each other, with only one or two screens being different. While I wanted to make an entirely
+          different prototype to highlight other potential ideas, the SME felt that they were substantially different enough that another prototype did not have to be made. I did push back somewhat, but in the end we did not change the prototypes.
+          We also did not do the task analysis. While I wanted to do it, the SME felt that the contextual inquiry was helpful enough that the questions we wanted to ask would not have have yielded us any additional information. While I thought
+          that it would have been helpful, I did not have enough domain expertise to make a solid argument for doing it, and in the end the contextual inquiry helped us get the relevant information we needed.
+          <br><br> Overall, this was an informative and helpful learning experience for me. I&#39;m not able to do research projects on this scope very often, and it was nice to be able to go out and talk to users in the field rather than just
+          talking with internal users. The information we were able to gather was instrumental in deciding what features we needed to focus on and will help us in the future. Hopefully I will have the chance to do more projects like this
+          going forward.
+        </p>
+      </div>
+      <div class="uk-container">
+        <a class="uk-button uk-button-default uk-float-right uk-margin-medium-top uk-margin-remove-bottom uk-width-1-1 uk-width-auto@s article-button" id="next" href="pixate.html">Pixate Project</a>
+        <a class="uk-button uk-button-default uk-float-left uk-margin-medium-top uk-text-middle uk-width-1-1 uk-width-auto@s article-button" id="prev" href="ge_bently.html">GE Bently Nevada</a>
+      </div>
+      <div uk-grid>
+          <div class="uk-width-auto uk-align-center uk-margin-top">
+              <div class="uk-card uk-margin-top">
+                  <a class="uk-link-reset" href="skype:jdeheus?call">
+                      <i class="fa fa-skype fa-2x uk-margin-small-right"></i>
+                  </a>
+                  <a class="uk-link-reset" href="https://twitter.com/jdeheus">
+                      <i class="fa fa-twitter fa-2x uk-margin-small-right"></i>
+                  </a>
+                  <a class="uk-link-reset" href="mailto:someone@example.com">
+                      <i class="fa fa-envelope fa-2x uk-margin-small-right"></i>
+                  </a>
+                  <a class="uk-link-reset" href="https://www.linkedin.com/in/jdeheus">
+                      <i class="fa fa-linkedin fa-2x uk-margin-small-right"></i>
+                  </a>
+                  <a class="uk-link-reset" href="https://github.com/jdeheus">
+                      <i class="fa fa-github fa-2x"></i>
+                  </a>
+                  <hr />
+                  <p class="uk-margin-small-top uk-text-center">
+                      &copy; 2017 Jonathan De Heus
+                  </p>
+              </div>
+          </div>
+      </div>
+    </body>
+    </html>
