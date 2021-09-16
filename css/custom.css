@@ -1,0 +1,397 @@
+/*Header CSS*/
+.uk-logo {
+  padding-left: 0px;
+}
+
+.header-links>li>a{
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  color: #FFFFFF;
+  text-transform: capitalize;
+}
+
+.header-links>li>a:hover{
+  font-family: Open Sans;
+  font-style: underline;
+  font-weight: normal;
+  font-size: 20px;
+  color: #FFFFFF;
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+
+.custom-navbar {
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Area behind navbar*/
+.text-block {
+  width: 100%;
+  max-width:1000px;
+  /*background-color:#000;*/
+  margin-top:84px;
+  margin-left:auto;
+  margin-right:auto;
+  padding-left:10px;
+}
+
+.text-block .p1 {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  color: #FFFFFF;
+  padding-bottom: 23px;
+  line-height: 29px;
+}
+
+.text-block .p2 {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  color: #FFFFFF;
+  max-width:670px;
+  line-height:70px;
+  padding-bottom: 23px;
+}
+
+.text-block .p3 {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #FFFFFF;
+  max-width:560px;
+}
+
+.homepage-background {
+  width: 100%;
+  height: 400px;
+  left: 0px;
+  top: 0px;
+  background: linear-gradient(93.68deg, #379CF8 0%, #4140F0 50.52%, #A037F8 100%)
+}
+
+/*Homepage portfolio*/
+.portfolio-overview {
+  padding-top:60px;
+  width:100%;
+  max-width:1000px;
+  margin-left: auto;
+  margin-right:auto;
+}
+
+#portfolio-title {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #3C3C3C;
+  padding-bottom:30px;
+}
+
+.portfolio-piece {
+  max-width: 430px;
+  margin-bottom: 10px;
+}
+
+.portfolio-piece img {
+  border-radius: 5px;
+}
+
+.portfolio-description {
+  margin-top: 10px;
+}
+
+.portfolio-description .company {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #3C3C3C;
+}
+
+.portfolio-description .read-link {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  color: #4140F0;
+}
+
+.portfolio-description .read-link svg {
+  margin-left:4px;
+}
+
+/*Navbar in portfolio pieces*/
+.custom-navbar-shadow {
+  background:#FFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.custom-navbar-portfolio {
+  width:100%;
+  max-width:1000px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.custom-navbar-portfolio .uk-navbar-right .header-links>li>a{
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  color: #3C3C3C;
+  text-transform: capitalize;
+}
+
+.custom-navbar-portfolio .uk-navbar-right .header-links>li>a:hover{
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  color: #4140F0;
+  text-transform: capitalize;
+}
+
+.uk-navbar-toggle-icon svg{
+  color: #3C3C3C;
+}
+
+.transparent svg{
+  color: #FFF;
+}
+
+/*Portfolio company & description*/
+.grid-height {
+  height:492px;
+}
+
+.portfolio-company {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 73px;
+  color: #FFFFFF;
+}
+
+.portfolio-description {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  color: #FFFFFF;
+}
+
+.section-title {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 58px;
+  color: #000000;
+}
+
+.section-body {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px;
+  color: #696969;
+}
+
+.previous-next-button {
+  background: #FFFFFF;
+  border: 1px solid #4140F0;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  color: #4140F0;
+}
+
+.previous-next-button:hover {
+  background: #4140F0;
+  border: 1px solid #4140F0;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  color: #FFF;
+}
+
+/*Footer*/
+.footer {
+  border-top-style:solid;
+  border-color:#e5e5e5;
+  border-width:1px;
+  margin-top:40px;
+}
+
+.footer-text {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #000000;
+  margin-top:25px;
+  margin-bottom:25px;
+}
+
+/*Bullet point list modifier*/
+.uk-list-disc>li{
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  color: #696969;
+}
+
+/*Outside URL link color modifier*/
+
+.uk-link, a {
+  color: #4140F0;
+}
+
+p a:hover {
+  color: #FFF;
+  background-color: #4140F0
+}
+
+/*Media Queries*/
+
+/*Adjusts height of colored area on About Me page*/
+@media (max-width:640px) {
+  .homepage-background {
+    height:320px;
+  }
+}
+
+/*Adjusts buttons on about me page*/
+@media (min-width:641px) {
+  .contact-button-left {
+    margin-right: 15px;
+  }
+}
+
+@media (min-width:641px) {
+  .contact-button-right {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width:640px) {
+  .contact-button-left {
+    margin-right: 0px ;
+  }
+}
+
+@media (max-width:640px) {
+  .contact-button-right {
+    margin-left: 0px;
+  }
+}
+
+/*Adjusts homepage text block on About Me page*/
+@media (max-width:640px) {
+  .about-text {
+    padding-top: 40px;
+  }
+}
+
+
+/*Adjusts homepage text block margin in CTA*/
+@media (max-width:640px) {
+  .text-block {
+    margin-top: 30px;
+  }
+}
+
+/*Adjusts text in CTA for mobile*/
+@media (max-width:640px) {
+  .p1 {
+    margin-bottom:10px;
+  }
+  .text-block .p2 {
+    font-size: 2.8em;
+    margin-right: 20px;
+    max-width: fit-content;
+    line-height: normal;
+    margin-top: 10px;
+    padding-bottom: 10px;
+  }
+  .p3 {
+    margin-top: 10px;
+    margin-right: 20px;
+  }
+}
+
+/*Centers the portfolio piece on mobile screens*/
+@media (max-width:640px){
+  .portfolio-piece{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*Centering the icon & description on the portfolio CTA*/
+@media (min-width: 943px) {
+  .portfolio-grid {
+    max-width:1200px;
+    margin-left: auto;
+    margin-right:auto;
+  }
+}
+
+/*Resizing the portfolio CTA*/
+@media (min-width: 561px) and (max-width: 959px){
+  .uk-card-body {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*Changing portfolio CTA text*/
+@media (max-width: 639px){
+  .portfolio-company {
+    line-height: normal;
+    font-size:3em;
+  }
+  .portfolio-description {
+    line-height: normal;
+    font-size: 1.3em
+  }
+}
+
+/*Portfolio piece CTA*/
+@media (max-width: 639px){
+  .grid-height {
+    height:auto;
+  }
+}
+
+/*Portfolio header & body text*/
+@media (max-width: 639px){
+  .section-title {
+    font-size: 2em;
+    line-height: normal;
+  }
+  .section-body {
+    font-size: 1.1em;
+    line-height: normal;
+  }
+}
