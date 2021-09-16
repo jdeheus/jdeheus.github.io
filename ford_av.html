@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ford AV</title>
+    <link rel="stylesheet" href="css/font_css.css" />
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav class="uk-navbar-container custom-navbar-shadow" style="background:#FFF;" uk-sticky="show-on-up: true, animation: uk-animation-slide-top">
+      <div class="custom-navbar-portfolio" uk-navbar>
+        <div class="uk-navbar-left">
+          <a href="www.jondeheus.com" class="uk-navbar-item uk-margin-small-left uk-logo" style="font-family: Inter; font-style: normal; font-weight: bold; font-size: 24px; color: #3C3C3C;">Jon De Heus</a>
+        </div>
+        <!--Shows on screens 640px & up-->
+        <div class="uk-visible@m uk-navbar-right">
+          <ul class="uk-navbar-nav header-links">
+            <li><a href="www.jondeheus.com" style="text-decoration:underline;color:#4140F0;">Work</a></li>
+            <li><a href="/Pics/Resume.pdf" target="_blank">Resume</a></li>
+            <li><a href="about_me.html" style="padding-right:0px;">About Me</a></li>
+          </ul>
+        </div>
+        <!--Shows on screens 640px & down-->
+        <div class="uk-hidden@m uk-navbar-right">
+            <a class="uk-navbar-toggle" href="#" uk-toggle="target: #modal">
+                <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left" style="color:#3C3C3C;">Menu</span>
+            </a>
+        </div>
+      </div>
+    </nav>
+    <!--Modal for mobile-->
+    <div id="modal" class="uk-modal-full" uk-modal>
+        <div class="uk-modal-dialog">
+            <button class="uk-modal-close-full" type="button" uk-close></button>
+            <div class="uk-grid-match uk-grid-collapse" uk-grid>
+                <div class="uk-flex-middle uk-flex-center" style="min-width: 100vw; width: 100vw;" uk-height-viewport>
+                    <div class="uk-card uk-card-body uk-text-center uk-align-center">
+                        <a href="www.jondeheus.com"><h2 class="uk-modal-title uk-text-bold uk-active uk-margin-medium-bottom" style="color: #4140F0; font-family: Open Sans">Work</h2></a>
+                        <a class="uk-link-reset" href="/Pics/Resume.pdf" target="_blank"><h2 class="uk-modal-title uk-margin-medium-bottom" style="color: #3C3C3C; font-family: Open Sans">Resume</h2></a>
+                        <a class="uk-link-reset" href="about_me.html"><h2 class="uk-modal-title" style="color: #3C3C3C; font-family: Open Sans">About Me</h2></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Body starts here-->
+    <div class="uk-section uk-section-media uk-section-slarge uk-background-cover" style="background: linear-gradient(180deg, #2EB5DE 0%, #47EF9F 100%);">
+        <div class="uk-grid-medium portfolio-grid" uk-grid>
+          <div class="uk-width-1-2@m uk-flex uk-flex-center uk-flex-middle">
+            <img src="/Pics/Portfolio_Pictures/Ford_AV/CTA_pic_1.png" alt="Picture of Miami Experience mobile app." style="padding-left: 15px; padding-right: 15px; max-height:300px;">
+            <img src="/Pics/Portfolio_Pictures/Ford_AV/CTA_pic_2.png" alt="Picture of Miami Experience mobile app." style="padding-left: 15px; padding-right: 15px; max-height:300px;">
+          </div>
+          <div class="uk-width-1-2@m uk-flex uk-flex-middle">
+            <div class="uk-card uk-card-body uk-text-left">
+              <p class="portfolio-company">Ford AV</p>
+              <p class="portfolio-description"><b>Role: </b>Product Designer</p>
+              <p class="portfolio-description"><b>Tools: </b>Sketch, sketching</p>
+              <p class="portfolio-description"><b>Methods: </b>Usability testing, screen flows</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="uk-container uk-container-small" style="max-width:1000px;margin-left:auto;margin-right:auto;padding-top:60px;">
+      <p class="section-title">Work Overview</p>
+      <p class="section-body uk-margin-medium-bottom">The Miami Expeirence was Ford AV's first major event where Argo AI (an autonomous vehicle company acquired by Ford) was showing off the progress that they had made with their autonomous vehicles. As the first product designer in Ford AV, I was tapped to create the app that would allow those invited to the event to call an AV and use it to trave to pre-selected locations. This was the first time that I had worked with a purely mobile application, and this proved to be a fun and somewhat challengeing experience.</p>
+      <p class="section-title">Starting The Project</p>
+      <p class="section-body">Initially, there weren’t many requirements given to me. I did know that there was a fixed list of locations that users could be picked up to and dropped off at, and that users needed to see their current location whenever possible. I initially based this ridehailing app on an internal shuttle app, but scrapped my initial effort due to the fact that I wanted to try creating a UI that would be a significant departure from an existing ridehailing app. I ended up coming up with a system that defaulted to the destination selection screen. On this screen, I let the user select a dropoff location by either clicking on a pin on the map, or by tapping a card at the bottom of the screen.</p>
+      <p class="section-body uk-margin-medium-bottom">Once the location was selected, the card carousel would immediately scroll so that the selected card was at the center of the screen, and then expand upwards so that it covered the carousel, but would show additional details like the initial address, distance from the current location, as well as the closest attraction (a restaurant, public park, etc) to the dropoff location. Once the user selected the destination, they were taken to a screen where they could edit both their pickup and dropoff location, as well as view their estimated arrival time.</p>
+      <p class="section-title">Starting The Project</p>
+      <p class="section-body">After showing stakeholders the initial wireframes in order to get their buy in, I redid them in higher fidelity, uploaded the screens into Invision, and started wiring up some basic interactions. Originally there were more tasks that we wanted to test for, however they had to be descoped due to time constraints. I had 3 goals for these user testing sessions:</p>
+      <ul class="uk-list uk-list-disc">
+        <li>Determine if users were able to edit their pickup and dropoff locations before they hailed the AV.</li>
+        <li>Identify how long it would take for them to get to their selected destination.</li>
+        <li>Determine if users would be able to cancel the ride once they were on it.</li>
+      </ul>
+      <p class="section-body">After showing stakeholders the initial wireframes in order to get their buy in, I redid them in higher fidelity, uploaded the screens into Invision, and started wiring up some basic interactions. Originally there were more tasks that we wanted to test for, however they had to be descoped due to time constraints. I had 3 goals for these user testing sessions:</p>
+      <ul class="uk-list uk-list-disc">
+        <li>Users had issues changing the pickup location even when they were on the review ride screen. They kept going back to earlier screens in hope of finding a card that corresponded to selecting the pickup location.</li>
+        <li>Users had trouble finding the cancel button due to the fact that it was initially hidden from view, and they had to click on the bottom cards arrow to show the cancel button. However, once it was found, they were quickly able to cancel the ride.</li>
+      </ul>
+      <p class="section-body">After getting this feedback, I decided to make two major changes. The first change was to make the initial screen after loading resemble a more traditional ridehailing app, with an area that would show both the pickup and dropoff locations. This is what the internal Ford shuttle ridehailing app did, and while I wanted to move away from that interface, it turns out that it was simply a better experience for the user. The second major change was to reduce the information on the bottom card when the user was waiting for the AV to pick them up. This was done in order to show the Cancel button without requiring the user to expand the card and show the cancel option.</p>
+      <div class="uk-text-center uk-child-width-1-1 uk-child-width-1-2@s uk-grid-stack" uk-grid>
+        <div class="uk-card">
+          <div class="uk-card-media-top">
+            <a href="#"><img src="/Pics/Portfolio_Pictures/Ford_AV/CTA_pic_1.png" alt="Revised selection screen for the Miami Experience ridehailing app." uk-toggle="target: #pic1"></a>
+          </div>
+          <div class="uk-card-body uk-padding-remove-top" style="font-family: Open Sans;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #696969; padding-bottom:15px;">
+            Revised selection screen for the Miami Experience ridehailing app.
+          </div>
+        </div>
+        <div class="uk-card">
+          <div class="uk-card-media-top">
+            <a href="#"><img src="/Pics/Portfolio_Pictures/Ford_AV/CTA_pic_2.png" alt="Redone bottom card showing the cancel button in the right corner." uk-toggle="target: #pic2"></a>
+          </div>
+          <div class="uk-card-body uk-padding-remove-top" style="font-family: Open Sans;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #696969; padding-bottom:15px;">
+            Redone bottom card showing the cancel button in the right corner.
+          </div>
+        </div>
+      </div>
+      <!--Modal for Pic1-->
+      <div id="pic1" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical" uk-responsive>
+          <img class="uk-align-center" src="/Pics/Portfolio_Pictures/Ford_AV/CTA_pic_1_modal.png" alt="Initial selection screen for the Miami Experience ridehailing app."></img>
+          <p class="uk-text-center uk-margin-remove-bottom">
+            Initial selection screen for the Miami Experience ridehailing app.
+          </p>
+          <button class="uk-modal-close-default" type="button" uk-close></button>
+        </div>
+      </div>
+      <!--Modal for Pic2-->
+      <div id="pic2" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical" uk-responsive>
+          <img class="uk-align-center" src="/Pics/Portfolio_Pictures/Ford_AV/CTA_pic_2_modal.png" alt="Redone bottom card showing the cancel button in the right corner."></img>
+          <p class="uk-text-center uk-margin-remove-bottom">
+            Redone bottom card showing the cancel button in the right corner.
+          </p>
+          <button class="uk-modal-close-default" type="button" uk-close></button>
+        </div>
+      </div>
+      <p class="section-body uk-margin-medium-bottom">While I was conducting the user testing, a new requirement for adding the ability to switch languages was added to our backlog. When I worked on the mockups to resolve the issues that testing brought out, I also added a floating settings button that when pressed would bring up a small menu that allowed the user to switch between English and Spanish on the fly. For the second round of testing, I added a task that required the user to change the language settings of the app from English to Spanish. This round of testing proved not only that my changes were able to solve the users problems, but also that the language settings were easy to access.</p>
+      <div class="uk-text-center uk-child-width-1-1 uk-grid-stack" uk-grid>
+        <div class="uk-card">
+          <div class="uk-card-media-top">
+            <a href="#"><img src="/Pics/Portfolio_Pictures/Ford_AV/CTA_pic_1.png" alt="Mockup of the language selection screen." uk-toggle="target: #pic3"></a>
+          </div>
+          <div class="uk-card-body uk-padding-remove-top" style="font-family: Open Sans;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #696969; padding-bottom:15px;">
+            Mockup of the language selection screen.
+          </div>
+        </div>
+      </div>
+      <!--Modal for Pic3-->
+      <div id="pic3" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical" uk-responsive>
+          <img class="uk-align-center" src="/Pics/Portfolio_Pictures/Ford_AV/CTA_pic_1_modal.png" alt="Mockup of the language selection screen."></img>
+          <p class="uk-text-center uk-margin-remove-bottom">
+            Mockup of the language selection screen.
+          </p>
+          <button class="uk-modal-close-default" type="button" uk-close></button>
+        </div>
+      </div>
+      <p class="section-title">During The Event</p>
+      <p class="section-body">During the week of the event, multiple journalists, business people, and government officials took part in the Miami Experience. <a href="https://www.theverge.com/2018/11/15/18096338/ford-self-driving-car-miami-argo-av">The Verge</a>, <a href="https://qz.com/1464564/ready-or-not-ford-has-a-plan-for-turning-self-driving-cars-into-a-real-business/">Quartz</a>, and <a href="https://www.pcmag.com/news/364969/riding-around-miami-in-fords-self-driving-test-cars">PC Mag</a> all ran articles on the event in which they mentioned the app as being Uber-like. CNet also produced a video where the app can be seen from 1:42 to 1:52.</p>
+      <iframe class="uk-align-center" width="560" height="315" src="https://www.youtube.com/embed/vmDhLEopurI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p class="section-title">Project Summary</p>
+      <p class="section-body">Overall, I’m pleased with how this project went. It was great to see that the participants of the event were able to use the app without any issue, and that it was compared to the leading ride hailing apps in a positive light. If I could have done anything differently, I would have done additional usability testing. The one round of usability testing that I did was very helpful, and I believe that a second round could have not only identified areas of the app that could have been improved, but would have also identified features that users may have wanted it to have.</p>
+      <div class="uk-container uk-padding-remove uk-margin-large-top">
+        <a class="uk-button uk-button-default uk-button-large uk-text-capitalize uk-align-left uk-width-1-1 uk-width-auto@m previous-next-button" href="ford_credit.html"><span uk-icon="icon:arrow-left; ratio:1.45"></span> Ford Credit</a>
+        <a class="uk-button uk-button-default uk-button-large uk-text-capitalize uk-align-right uk-width-1-1 uk-width-auto@m previous-next-button" href="greenlancer.html">Bosch <span uk-icon="icon:arrow-right; ratio:1.45"></span></a>
+      </div>
+    </div>
+    <div class="footer">
+      <p class="footer-text">&copy; 2021 Jonathan De Heus</p>
+    </div>
+  </body>
+</html>

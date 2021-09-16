@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bosch</title>
+    <link rel="stylesheet" href="css/font_css.css" />
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav class="uk-navbar-container" style="background:#FFF;" uk-sticky="show-on-up: true, animation: uk-animation-slide-top">
+      <div class="custom-navbar-portfolio custom-navbar-shadow" uk-navbar>
+        <div class="uk-navbar-left">
+          <a href="www.jondeheus.com" class="uk-navbar-item uk-margin-small-left uk-logo" style="font-family: Inter; font-style: normal; font-weight: bold; font-size: 24px; color: #3C3C3C;">Jon De Heus</a>
+        </div>
+        <!--Shows on screens 640px & up-->
+        <div class="uk-visible@m uk-navbar-right">
+          <ul class="uk-navbar-nav header-links">
+            <li><a href="www.jondeheus.com" style="text-decoration:underline;color:#4140F0;">Work</a></li>
+            <li><a href="/Pics/Resume.pdf" target="_blank">Resume</a></li>
+            <li><a href="about_me.html" style="padding-right:0px;">About Me</a></li>
+          </ul>
+        </div>
+        <!--Shows on screens 640px & down-->
+        <div class="uk-hidden@m uk-navbar-right">
+            <a class="uk-navbar-toggle" href="#" uk-toggle="target: #modal">
+                <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left" style="color:#3C3C3C;">Menu</span>
+            </a>
+        </div>
+      </div>
+    </nav>
+    <!--Modal for mobile-->
+    <div id="modal" class="uk-modal-full" uk-modal>
+        <div class="uk-modal-dialog">
+            <button class="uk-modal-close-full" type="button" uk-close></button>
+            <div class="uk-grid-match uk-grid-collapse" uk-grid>
+                <div class="uk-flex-middle uk-flex-center" style="min-width: 100vw; width: 100vw;" uk-height-viewport>
+                    <div class="uk-card uk-card-body uk-text-center uk-align-center">
+                        <a href="www.jondeheus.com"><h2 class="uk-modal-title uk-text-bold uk-active uk-margin-medium-bottom" style="color: #4140F0; font-family: Open Sans">Work</h2></a>
+                        <a class="uk-link-reset" href="/Pics/Resume.pdf" target="_blank"><h2 class="uk-modal-title uk-margin-medium-bottom" style="color: #3C3C3C; font-family: Open Sans">Resume</h2></a>
+                        <a class="uk-link-reset" href="about_me.html"><h2 class="uk-modal-title" style="color: #3C3C3C; font-family: Open Sans">About Me</h2></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Body starts here-->
+    <div class="uk-section uk-section-media uk-section-slarge uk-background-cover" style="background-image: url(/Pics/Portfolio_Pictures/Bosch/Bosch_CTA.png)">
+        <div class="uk-grid-medium portfolio-grid" uk-grid>
+          <div class="uk-width-1-2@m uk-flex uk-flex-center uk-flex-middle">
+            <img src="/Pics/Portfolio_Pictures/Bosch/Bosch_CTA_Logo.png" alt="Bosch logo." style="padding-left: 15px; padding-right: 15px;">
+          </div>
+          <div class="uk-width-1-2@m uk-flex uk-flex-middle">
+            <div class="uk-card uk-card-body uk-text-left">
+              <p class="portfolio-company">Bosch</p>
+              <p class="portfolio-description"><b>Role: </b>UX Designer</p>
+              <p class="portfolio-description"><b>Tools: </b>Sketch, UX Pin</p>
+              <p class="portfolio-description"><b>Methods: </b>sketching, participatory design, & high fidelity prototypes.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="uk-container uk-container-small" style="max-width:1000px;margin-left:auto;margin-right:auto;padding-top:60px;">
+      <p class="section-title">Work Overview</p>
+      <p class="section-body uk-margin-medium-bottom">I was a user experience designer at Bosch from April 2017 to November 2017. I was hired by Bosch in order to identify personas, conduct heuristic analyses on legacy programs, make recommendations as to how existing product functionality could be combined into a next generation product, develop wireframes, and perform user testing to validate my hypotheses. After I completed those initial tasks, my contract was extended by 2 months in order for me to act as a UX reference for other groups within Bosch.</p>
+      <p class="section-title">Legacy Programs & Persona Creation</p>
+      <p class="section-body">During my first cycle, I spent the bulk of my time learning about the legacy programs, identifying personas, and creating workflow maps that would represent all possible paths that different users could take in said legacy programs. First, I worked with a subject matter expert who was able to identify all of our users and give me some background on them. Next, he walked me through Bosch's existing products so I could become familiar with their functionality, as well as point out how one program could be used in different ways by different personas.</p>
+      <p class="section-body uk-margin-medium-bottom">Afterwards, I began to work on building out the personas in connection with workflow map creation. For the workflow maps, I first created a folder for a persona, and then created a map in that folder that would correspond to an existing program. While I was reviewing the legacy systems, I also conducted heuristic analyses on them. Some of the issues that I identified were lack of verification, inconsistency, multiple databases that contain duplicate information, and two different types of tables being used in a single application.</p>
+      <p class="section-title">Analyzing New Software Platforms</p>
+      <p class="section-body">After developing the personas and conducting the heuristic analyses on the legacy programs, I began analyzing the usability of the software platform that was developed in order to combine all of the legacy software. The analysis of this new software platform revealed a number of issues across all three versions of the product. For example, many of the same errors that were committed in the legacy programs, such as lack of verification and different types of tables, were carried over.</p>
+      <p class="section-body">New usability issues were introduced as well, such as having different methods of alerting the user to errors. For example, in the customer facing version of the product, a modal was utilized in one section of the product to display errors, but then toasts were utilized in another section to alert users to their errors. Even worse, after alerting the users via toasts or modal, the offending fields weren't even highlighted after closing the toasts or modals.</p>
+      <p class="section-body uk-margin-medium-bottom">These new issues weren't just limited to the customer facing version of the application. In the admin panel, one of the most glaring usability issues was the newsletter functionality. The implementation of the newsletter functionality was that the user could type in plaintext messages, however, the user could also type in raw HTML, and have it compiled upon clicking the send button. The major issue with this is that there was no way to preview the message before sending it, so it relied on users typing in the code with zero errors. My recommendation for this was to implement a markdown editor that at the very least had preview functionality.</p>
+      <p class="section-title">Creating Screens For The New Platform</p>
+      <p class="section-body">Once I conducted the heuristic analysis on the new software platform and its three main components (customer, agent, and admin), I began modifying the look & feel of the platform. I mainly focused on improving the administrative experience as my supervisor was responsible for overseeing a group of administrators. I started by making sketches, and after I was satisfied with them, I began recreating the sketches on the computer. While I was creating the sketches, I also began to create a style guide. This was done for 2 reasons. The first reason was that I wanted to have a set of reusable components, and the second reason was that I wanted to have a place to detail the CSS properties for each item.</p>
+      <p class="section-body uk-margin-medium-bottom">After transferring all of my work from paper to the computer, I then presented it to a group of stakeholders that included the product manager, as well as individuals from sales & marketing. While I would have loved to do user testing to verify my design, there was unfortunately no chance to talk with users.There was also no chance to review the style guide with the developers as they had been pulled off onto another project.</p>
+      <p class="section-title">Additional Work</p>
+      <p class="section-body uk-margin-medium-bottom">After I finished working on the new software platform, Bosch extended my contract in order to have me act as a consultant to other areas within the company. During this period, I worked on some of Bosch’s e-commerce sites, a tablet application that helped diagnose potential issues in car entertainment systems, and a desktop application that controlled certain ECU programmers. For the e-commerce sites, I created a PowerPoint that walked through the major components of the sites, called out usability issues, and then presented 5 quick fixes that could easily be implemented by developers. For the desktop ECU application, I did a heuristic analysis, created a new interface in Sketch, and then uploaded it to UX Pin so I could solicit feedback from stakeholders.</p>
+      <p class="section-title">Lessons Learned</p>
+      <p class="section-body">This contract was very educational as to how important it is to get user feedback at multiple stages throughout the creation process. While I am proud of the work that I did, I felt that I was slightly hamstrung by the inability to talk with end users of the product who were located in physical locations other than my office. This was highlighted when one of the groups of users invited me to come out to interview them, but the company was either not able or not willing to have me go out to their location. It was also frustrating to focus only on the administrative aspect of the project instead of all 3 portions (administrative, agent, and customer) of the project. I estimate that if I was able to do proper research & design for all 3 portions, it would have taken me over a year to successfully complete. That being said, I don’t regret my time at Bosch, and would do it again if there were substantial improvements to the UX process.</p>
+      <div class="uk-container uk-padding-remove uk-margin-large-top">
+        <a class="uk-button uk-button-default uk-button-large uk-text-capitalize uk-align-left uk-width-1-1 uk-width-auto@m previous-next-button" href="ford_av.html"><span uk-icon="icon:arrow-left; ratio:1.45"></span> Ford AV</a>
+        <a class="uk-button uk-button-default uk-button-large uk-text-capitalize uk-align-right uk-width-1-1 uk-width-auto@m previous-next-button" href="greenlancer.html">Greenlancer <span uk-icon="icon:arrow-right; ratio:1.45"></span></a>
+      </div>
+    </div>
+    <div class="footer">
+      <p class="footer-text">&copy; 2021 Jonathan De Heus</p>
+    </div>
+  </body>
+</html>

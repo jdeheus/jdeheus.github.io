@@ -1,232 +1,162 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Greenlancer</title>
+    <link rel="stylesheet" href="css/font_css.css" />
     <link rel="stylesheet" href="css/uikit.min.css" />
-    <link rel="stylesheet" href="css/customcss.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Hind:light,regular,semi-bold,bold">
-    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/custom.css">
     <script src="js/uikit.min.js"></script>
-    <script src="js/customjs.js"></script>
-</head>
-
-<body>
+    <script src="js/uikit-icons.min.js"></script>
+  </head>
+  <body>
     <!--Navbar-->
-    <div class="navbar-container" uk-sticky="show-on-up: true; animation: uk-animation-slide-top; bottom: #bottom">
-        <nav class="uk-navbar-container custom-navbar" uk-navbar>
-            <div class="uk-navbar-left">
-                <div class="uk-logo uk-margin-small-left">
-                    <a class="uk-link-reset" href="/">Jon De Heus</a>
-                </div>
-            </div>
-            <!--Shows on screens 640px & up-->
-            <div class="uk-visible@s uk-navbar-right">
-                <ul class="uk-navbar-nav">
-                    <li class="uk-parent"><a href="resume.html">Resume</a></li>
-                    <li class="uk-parent"><a href="about_me.html">About Me</a></li>
-                </ul>
-            </div>
-            <!--Shows on screens 640px & down-->
-            <div class="uk-hidden@s uk-navbar-right">
-                <a class="uk-navbar-toggle" href="#" uk-toggle="target: #modal">
-                    <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
-                </a>
-            </div>
-        </nav>
-    </div>
-    <!--Modal shows on clicking the menu button-->
+    <nav class="uk-navbar-container custom-navbar-shadow" style="background:#FFF;" uk-sticky="show-on-up: true, animation: uk-animation-slide-top">
+      <div class="custom-navbar-portfolio" uk-navbar>
+        <div class="uk-navbar-left">
+          <a href="www.jondeheus.com" class="uk-navbar-item uk-margin-small-left uk-logo" style="font-family: Inter; font-style: normal; font-weight: bold; font-size: 24px; color: #3C3C3C;">Jon De Heus</a>
+        </div>
+        <!--Shows on screens 640px & up-->
+        <div class="uk-visible@m uk-navbar-right">
+          <ul class="uk-navbar-nav header-links">
+            <li><a href="www.jondeheus.com" style="text-decoration:underline;color:#4140F0;">Work</a></li>
+            <li><a href="Pics/Resume.pdf" target="_blank">Resume</a></li>
+            <li><a href="about_me.html" style="padding-right:0px;">About Me</a></li>
+          </ul>
+        </div>
+        <!--Shows on screens 640px & down-->
+        <div class="uk-hidden@m uk-navbar-right">
+            <a class="uk-navbar-toggle" href="#" uk-toggle="target: #modal">
+                <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left" style="color:#3C3C3C;">Menu</span>
+            </a>
+        </div>
+      </div>
+    </nav>
+    <!--Modal for mobile-->
     <div id="modal" class="uk-modal-full" uk-modal>
-        <div class="uk-modal-dialog uk-background-muted">
-            <button class="uk-modal-close-full uk-background-muted" type="button" uk-close></button>
+        <div class="uk-modal-dialog">
+            <button class="uk-modal-close-full" type="button" uk-close></button>
             <div class="uk-grid-match uk-grid-collapse" uk-grid>
                 <div class="uk-flex-middle uk-flex-center" style="min-width: 100vw; width: 100vw;" uk-height-viewport>
-                    <div class="uk-container"></div>
                     <div class="uk-card uk-card-body uk-text-center uk-align-center">
-                        <a class="uk-link-reset" href="www.jondeheus.com"><h2 class="uk-modal-title">Home</h2></a>
-                        <a class="uk-link-reset" href="resume.html"><h2 class="uk-modal-title">Resume</h2></a>
-                        <a class="uk-link-reset" href="about_me.html"><h2 class="uk-modal-title">About Me</h2></a>
+                        <a href="www.jondeheus.com"><h2 class="uk-modal-title uk-text-bold uk-active uk-margin-medium-bottom" style="color: #4140F0; font-family: Open Sans">Work</h2></a>
+                        <a class="uk-link-reset" href="/Pics/Resume.pdf" target="_blank"><h2 class="uk-modal-title uk-margin-medium-bottom" style="color: #3C3C3C; font-family: Open Sans">Resume</h2></a>
+                        <a class="uk-link-reset" href="about_me.html"><h2 class="uk-modal-title" style="color: #3C3C3C; font-family: Open Sans">About Me</h2></a>
                     </div>
-                    <div class="container"></div>
                 </div>
             </div>
         </div>
     </div>
-    <!--Portfolio piece begins here-->
-    <!--Section image here-->
-    <div class="uk-section uk-section-media uk-section-slarge uk-background-cover" style="background-image: url(images/cover_photos/greenlancer_overlay.jpg)">
-        <div class="uk-container uk-small">
-            <h1 class="uk-text-center uk-text-bold hero-text">Greenlancer</h1>
-            <h4 class="uk-text-center hero-text">Methods used: sketching, participatory design, &#38; high fidelity prototypes.</h4>
+    <div class="uk-section uk-section-media uk-section-slarge" style="background-color: #0DB14B">
+        <div class="uk-grid-medium portfolio-grid" uk-grid>
+          <div class="uk-width-1-2@m uk-flex uk-flex-center uk-flex-middle">
+            <img src="/Pics/Portfolio_Pictures/Greenlancer/logo.png" alt="Greenlancer logo." style="padding-left: 15px; padding-right: 15px;">
+          </div>
+          <div class="uk-width-1-2@m uk-flex uk-flex-middle">
+            <div class="uk-card uk-card-body uk-text-left">
+              <p class="portfolio-company">Greenlancer</p>
+              <p class="portfolio-description"><b>Role: </b>Lead UX Designer</p>
+              <p class="portfolio-description"><b>Tools: </b>Sketch</p>
+              <p class="portfolio-description"><b>Methods: </b>Sketching, participatory design, & high fidelity prototypes</p>
+            </div>
+          </div>
         </div>
     </div>
-    <!--Text section begins-->
-    <div class="uk-container uk-container-small uk-margin-large-top">
-        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Work Overview</h3>
-        <hr class="uk-margin-remove-top"/>
-        <p class="uk-text-left">
-          I am currently a user experience architect at GreenLancer. <a class="animated-underline" href="http://www.greenlancer.com" target="_blank">GreenLancer</a> is a startup that is focused on providing a platform that leverages standardization, automated workflow, and
-          a large network of solar professionals. As Greenlancers sole UX employee, I am responsible for creating and maintaining all aspects
-          of GreenLancer's user experience. My duties include developing the new UI, creating and maintaining the digital style guide, identifying what aspect of the UI needs to be worked on next, setting up participatory design sessions
-          with stakeholders, identifying and monitoring KPI's, and developing interactive prototypes.
-        </p>
-        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">My Design Process</h3>
-        <hr class="uk-margin-remove-top"/>
-        <p class="uk-text-left">
-          My design process at GreenLancer slightly differs from my design process at GE. When I start working on a new feature, I sketch out wireframes in order to come up with a basic idea of what I think the feature should look like. Along with the sketches,
-          I come up with a list of questions that I have regarding potential interactions. After this, I hold a half hour or hour long session participatory design session with our CTO. By holding a participatory design session so early
-          in the process, we're both able to see how the other person envisioned the development of the feature, and are then able to come together around a unified design. This solved a problem that we had early on where I would create
-          a design for a feature, and he had a different vision as to how that feature would be designed.
-          <br /><br /> After this meeting, I go back and redo my sketches based around the outcome of the meeting. Then I begin to transfer my designs into Sketch where I turn them into higher fidelity mockups. After this, I hold another
-          meeting with the CTO and any other interested stakeholders in order to get feedback. I make changes if necessary, and then I create a page in our internal Wiki for this feature. This is a great way to share with the rest of the
-          company what I'm working on, and when writing out the description for the feature, I'm able to catch any interactions that I either missed, or implemented incorrectly. At this time, I will also make interactive prototypes if necessary.
-        </p>
-        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Features &#38; Benefits</h3>
-        <hr class="uk-margin-remove-top"/>
-        <p class="uk-text-left">
-          Upon arriving at GreenLancer, I was tasked with redesigning the entire UI. This was a major undertaking, but I was excited to do it as I knew that I could drastically improve the existing UI. I conducted a heuristic analysis during my first few days at
-          the job, and the biggest issue with the existing UI was that it was very hard to tell where you were. While there was a breadcrumb, it was located at the bottom of the application, which is a very unintuitive place to put it. The
-          second issue was the fact that many of the pages that users had to navigate out were cumbersome and would display information that was wholly unnecessary to the task at hand. One example of this is how a page that consisted of
-          around 10 text fields stretched about 2-3 printed pages down due to the fact that the page insisted on showing multiple read only fields that consisted of installation information that was not pertinent to the form that the user
-          had to fill out.
-          <br /><br /> The first feature I worked on after the heuristic analysis was the overall look of the project page. Users spend most of their time on our site working on individual projects, so increasing the usability of the project
-          page was my number one priority. The first (and most major) change I made was to make the project page look more like a dashboard. The benefits of this are twofold. The first benefit is that by having a static list of high level
-          options in the sidebar, the amount of time it takes for users to get to their desired page is drastically decreased. The second benefit is that it simplifies the schema that users have to learn, which will reduce their cognitive
-          load. The old UI divided items such as attachments and discussion tabs up by services, even though the services were all in one project. This caused customers and internal users alike issues when it came to remembering what service
-          a specific file or discussion was located in. The third benefit is that I was able to move or remove unnecessary and rarely used elements, such as the archive and edit buttons as well as a block of text that was dedicated to four
-          project parameters that were not needed. In their place I was able to add in features that had been requested by users, such as a service status and an activity feed. I also added a map that would link to Google Maps and display
-          a satellite image of the address where the project was taking place.
-        </p>
-        <!--Content section. Use uk-flex, uk-flex-center & uk-child-width-auto only if you have one media element.-->
-        <div class="uk-text-center uk-child-width-1-1 uk-child-width-1-2@s" uk-grid>
-          <div class="uk-card">
-            <div class="uk-card-media-top">
-              <a href="#"><img src="images/GreenLancer/Old_Overview.png" alt="" uk-toggle="target: #1"/></a>
-            </div>
-            <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom">
-              <p>
-                Wireframe mockup of the old project overview.
-              </p>
-            </div>
+    <div class="uk-container uk-container-small" style="max-width:1000px;margin-left:auto;margin-right:auto;padding-top:60px;">
+      <p class="section-title">Work Overview</p>
+      <p class="section-body uk-margin-medium-bottom">GreenLancer is a startup that is focused on providing a platform that leverages standardization, automated workflow, and a large network of solar professionals. As Greenlancers sole UX employee, I was responsible for creating and maintaining all aspects of GreenLancer's user experience. My duties included developing the new UI, creating and maintaining the digital style guide, identifying what aspect of the UI needs to be worked on next, setting up participatory design sessions with stakeholders, identifying and monitoring KPI's, and developing interactive prototypes.</p>
+      <p class="section-title">My Design Process</p>
+      <p class="section-body">My design process at GreenLancer slightly differed from my design process at GE. When I started working on a new feature, I sketched out wireframes in order to come up with a basic idea of what I think the feature should look like. Along with the sketches, I came up with a list of questions that I had regarding potential interactions. After this, I held a half hour or hour long session participatory design session with our CTO. By holding a participatory design session so early in the process, we were both able to see how the other person envisioned the development of the feature, and were then able to come together around a unified design. This solved a problem that we had early on where I would create a design for a feature, and he had a different vision as to how that feature would be designed.
+      <p class="section-body uk-margin-medium-bottom">After this meeting, I went back and redid my sketches based around the outcome of the meeting. Then I began to transfer my designs into Sketch where I turned them into higher fidelity mockups. After this, I held another meeting with the CTO and any other interested stakeholders in order to get feedback. I made changes if necessary, and then I created a page in our internal Wiki for this feature. This was a great way to share with the rest of the company what I was working on, and when writing out the description for the feature, I was able to catch any interactions that I either missed, or implemented incorrectly. I also made interactive prototypes if necessary.</p>
+      <p class="section-title">Features & Benefits</p>
+      <p class="section-body">Upon arriving at GreenLancer, I was tasked with redesigning the entire UI. This was a major undertaking, but I was excited to do it as I knew that I could drastically improve the existing UI. I conducted a heuristic analysis during my first few days at the job, and the biggest issue with the existing UI was that it was very hard to tell where you were. While there was a breadcrumb, it was located at the bottom of the application, which is a very unintuitive place to put it. The second issue was the fact that many of the pages that users had to navigate out were cumbersome and would display information that was wholly unnecessary to the task at hand. One example of this is how a page that consisted of around 10 text fields stretched about 2-3 printed pages down due to the fact that the page insisted on showing multiple read only fields that consisted of installation information that was not pertinent to the form that the user had to fill out.</p>
+      <p class="section-body uk-margin-medium-bottom">The first feature I worked on after the heuristic analysis was the overall look of the project page. Users spend most of their time on our site working on individual projects, so increasing the usability of the project page was my number one priority. The first (and most major) change I made was to make the project page look more like a dashboard. The benefits of this are twofold. The first benefit is that by having a static list of high level options in the sidebar, the amount of time it takes for users to get to their desired page is drastically decreased. The second benefit is that it simplifies the schema that users have to learn, which will reduce their cognitive load. The old UI divided items such as attachments and discussion tabs up by services, even though the services were all in one project. This caused customers and internal users alike issues when it came to remembering what service a specific file or discussion was located in. The third benefit is that I was able to move or remove unnecessary and rarely used elements, such as the archive and edit buttons as well as a block of text that was dedicated to four project parameters that were not needed. In their place I was able to add in features that had been requested by users, such as a service status and an activity feed. I also added a map that would link to Google Maps and display a satellite image of the address where the project was taking place.</p>
+      <div class="uk-text-center uk-child-width-1-1 uk-child-width-1-2@s uk-grid-stack" uk-grid>
+        <div class="uk-card">
+          <div class="uk-card-media-top">
+            <a href="#"><img src="/Pics/Portfolio_Pictures/Greenlancer/Old_Overview.png" alt="Wireframe mockup of the old project overview" uk-toggle="target: #old-overview"></a>
           </div>
-          <div class="uk-card">
-            <div class="uk-card-media-top" >
-              <a href="#"><img src="images/GreenLancer/New_Overview.png" alt="" uk-toggle="target: #2"/></a>
-            </div>
-            <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom">
-              <p>
-                Wireframe mockup of the new project overview.
-              </p>
-            </div>
-          </div>
-          <!--Modals for items above-->
-          <div id="1" uk-modal="center: true">
-              <div class="uk-modal-dialog uk-modal-body" uk-responsive>
-                <img class="uk-align-center" src="images/GreenLancer/Old_Overview.png" alt="" />
-                <p class="uk-text-center uk-margin-remove-bottom">
-                  Wireframe mockup of the old project overview.
-                </p>
-                <button class="uk-modal-close-default" type="button" uk-close></button>
-              </div>
-          </div>
-          <div id="2" uk-modal="center: true">
-              <div class="uk-modal-dialog uk-modal-body" uk-responsive>
-                <img class="uk-align-center" src="images/GreenLancer/New_Overview.png" alt="" />
-                <p class="uk-text-center uk-margin-remove-bottom">
-                  Wireframe mockup of the new project overview.
-                </p>
-                <button class="uk-modal-close-default" type="button" uk-close></button>
-              </div>
+          <div class="uk-card-body uk-padding-remove-top" style="font-family: Open Sans;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #696969; padding-bottom:15px;">
+            Wireframe mockup of the old project overview.
           </div>
         </div>
-        <!--Text continuation below-->
-        <p class="uk-text-left">
-          The second feature I worked on was changing how our users communicated with us. Our users primarily communicate with us through the discussion tab that is located within an individual service. The primary issue is that one project can have multiple services,
-          and if we have to fix a mistake, a change order service needs to be created. This leads to mistakes being made on our end, and unhappy customers inquiring as to why we didn't follow their instructions. My solution was to create
-          a Tickets tab that would allow internal and external users to quickly and efficiently send messages back and forth while minimizing the chance that our internal team will make mistakes.
-          <br /><br /> The benefits of the Tickets tab go beyond reducing user mistakes. Since it serves as a repository for all customer communication, it's trivial to switch between messages. Instead of having to go into a service, scroll
-          down to the discussion tab, then go back out to another service, users can quickly view and respond to messages. Another benefit of creating the Ticket tab was that I had the opportunity to work with our production team in order
-          to identify potential features that they wanted to see in the new UI. One such feature was the ability to send messages that were only visible to those with admin rights, while another feature was to introduce a "resolve issue"
-          button that would close out the thread and let all participants know that the issue had been taken care of.
-        </p>
-        <!--Content section. Use uk-flex, uk-flex-center & uk-child-width-auto only if you have one media element.-->
-        <div class="uk-text-center uk-child-width-1-1 uk-child-width-1-2@s" uk-grid>
-          <div class="uk-card">
-            <div class="uk-card-media-top" >
-              <a href="#"><img src="images/GreenLancer/Old_Discussion_Tab.png" alt="" uk-toggle="target: #3"/></a>
-            </div>
-            <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom">
-              <p>
-                Wireframe mockup of the old ticket overview.
-              </p>
-            </div>
+        <div class="uk-card">
+          <div class="uk-card-media-top">
+            <a href="#"><img src="/Pics/Portfolio_Pictures/Greenlancer/New_Overview.png" alt="Wireframe mockup of the new project overview." uk-toggle="target: #new-overview"></a>
           </div>
-          <div class="uk-card">
-            <div class="uk-card-media-top" >
-              <a href="#"><img src="images/GreenLancer/New_Discussion_Tab.png" alt="" uk-toggle="target: #4"/></a>
-            </div>
-            <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom">
-              <p>
-                Wireframe mockup of the new ticket overview.
-              </p>
-            </div>
-          </div>
-          <!--Modals for items above-->
-          <div id="3" uk-modal="center: true">
-              <div class="uk-modal-dialog uk-modal-body" uk-responsive>
-                <img class="uk-align-center" src="images/GreenLancer/Old_Discussion_Tab.png" alt="" />
-                <p class="uk-text-center uk-margin-remove-bottom">
-                  Wireframe mockup of the old ticket overview.
-                </p>
-                <button class="uk-modal-close-default" type="button" uk-close></button>
-              </div>
-          </div>
-          <div id="4" uk-modal="center: true">
-              <div class="uk-modal-dialog uk-modal-body" uk-responsive>
-                <img class="uk-align-center" src="images/GreenLancer/New_Discussion_Tab.png" alt="" />
-                <p class="uk-text-center uk-margin-remove-bottom">
-                  Wireframe mockup of the new ticket overview.
-                </p>
-                <button class="uk-modal-close-default" type="button" uk-close></button>
-              </div>
+          <div class="uk-card-body uk-padding-remove-top" style="font-family: Open Sans;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #696969; padding-bottom:15px;">
+            Wireframe mockup of the new project overview.
           </div>
         </div>
-        <h2 class="uk-text-left uk-margin-remove-bottom uk-text-bold">Lessons Learned</h3>
-        <hr class="uk-margin-remove-top"/>
-        <p class="uk-text-left">
-          While this has been a great learning experience so far, there are some changes I would make if I was given the chance to start over. The first change I would make is to develop the screens with a mobile first implementation in mind. While the dashboard aspect lends itself well to a mobile screen, there are still some constraints imposed by the smaller mobile screen that I wish had been resolved earlier. Some constraints include choosing what elements to hide and show and how to deal with wide tables. A second change I would make is to do more initial sketching. While the participatory design sessions that I hold always involve sketching, I've noticed that I then refine those designs in Sketch instead
-          of refining them on other whiteboards and then putting them into Sketch.
-        </p>
       </div>
-      <div class="uk-container">
-        <a class="uk-button uk-button-default uk-float-right uk-margin-medium-top uk-margin-remove-bottom uk-width-1-1 uk-width-auto@s article-button" id="next" href="greenlancer_research.html">Greenlancer Research</a>
-        <a class="uk-button uk-button-default uk-float-left uk-margin-medium-top uk-text-middle uk-width-1-1 uk-width-auto@s article-button" id="prev" href="bosch_contract.html">Bosch (contract)</a>
+      <!--Modals for old & new overview-->
+      <div id="old-overview" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical" uk-responsive>
+          <img class="uk-align-center" src="/Pics/Portfolio_Pictures/Greenlancer/Old_Overview.png" alt="Wireframe mockup of the old project overview"></img>
+          <p class="uk-text-center uk-margin-remove-bottom" style="font-family: Open Sans;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #696969;">
+            Wireframe mockup of the old project overview.
+          </p>
+          <button class="uk-modal-close-default" type="button" uk-close></button>
+        </div>
       </div>
-      <div uk-grid>
-          <div class="uk-width-auto uk-align-center uk-margin-top">
-              <div class="uk-card uk-margin-top">
-                  <a class="uk-link-reset" href="skype:jdeheus?call">
-                      <i class="fa fa-skype fa-2x uk-margin-small-right"></i>
-                  </a>
-                  <a class="uk-link-reset" href="https://twitter.com/jdeheus">
-                      <i class="fa fa-twitter fa-2x uk-margin-small-right"></i>
-                  </a>
-                  <a class="uk-link-reset" href="mailto:jdeheus2@gmail.com">
-                      <i class="fa fa-envelope fa-2x uk-margin-small-right"></i>
-                  </a>
-                  <a class="uk-link-reset" href="https://www.linkedin.com/in/jdeheus">
-                      <i class="fa fa-linkedin fa-2x uk-margin-small-right"></i>
-                  </a>
-                  <a class="uk-link-reset" href="https://github.com/jdeheus">
-                      <i class="fa fa-github fa-2x"></i>
-                  </a>
-                  <hr />
-                  <p class="uk-margin-small-top uk-text-center">
-                      &copy; 2019 Jonathan De Heus
-                  </p>
-              </div>
+      <div id="new-overview" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical" uk-responsive>
+          <img class="uk-align-center" src="/Pics/Portfolio_Pictures/Greenlancer/New_Overview.png" alt="Wireframe mockup of the new project overview."></img>
+          <p class="uk-text-center uk-margin-remove-bottom" style="font-family: Open Sans;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #696969;">
+            Wireframe mockup of the new project overview.
+          </p>
+          <button class="uk-modal-close-default" type="button" uk-close></button>
+        </div>
+      </div>
+      <p class="section-body">The second feature I worked on was changing how our users communicated with us. Our users primarily communicate with us through the discussion tab that is located within an individual service. The primary issue is that one project can have multiple services, and if we have to fix a mistake, a change order service needs to be created. This leads to mistakes being made on our end, and unhappy customers inquiring as to why we didn't follow their instructions. My solution was to create a Tickets tab that would allow internal and external users to quickly and efficiently send messages back and forth while minimizing the chance that our internal team will make mistakes.</p>
+      <p class="section-body uk-margin-medium-bottom">The benefits of the Tickets tab go beyond reducing user mistakes. Since it serves as a repository for all customer communication, it's trivial to switch between messages. Instead of having to go into a service, scroll down to the discussion tab, then go back out to another service, users can quickly view and respond to messages. Another benefit of creating the Ticket tab was that I had the opportunity to work with our production team in order to identify potential features that they wanted to see in the new UI. One such feature was the ability to send messages that were only visible to those with admin rights, while another feature was to introduce a "resolve issue" button that would close out the thread and let all participants know that the issue had been taken care of.</p>
+      <div class="uk-text-center uk-child-width-1-1 uk-child-width-1-2@s uk-grid-stack" uk-grid>
+        <div class="uk-card">
+          <div class="uk-card-media-top">
+            <img src="/Pics/Portfolio_Pictures/Greenlancer/Old_Discussion_Tab.png" alt="Wireframe mockup of the old Tickets overview." >
           </div>
+          <div class="uk-card-body uk-padding-remove-top" style="font-family: Open Sans;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #696969; padding-bottom:15px;">
+            Wireframe mockup of the old Tickets overview.
+          </div>
+        </div>
+        <div class="uk-card">
+          <div class="uk-card-media-top">
+            <img src="/Pics/Portfolio_Pictures/Greenlancer/New_Discussion_Tab.png" alt="Wireframe mockup of the new Tickets overview." >
+          </div>
+          <div class="uk-card-body uk-padding-remove-top" style="font-family: Open Sans;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #696969; padding-bottom:15px;">
+            Wireframe mockup of the new Tickets overview.
+          </div>
+        </div>
       </div>
-</body>
+      <!--Modals for old & new ticket-->
+      <div id="old-overview" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical" uk-responsive>
+          <img class="uk-align-center" src="/Pics/Portfolio_Pictures/Greenlancer/Old_Overview.png" alt="Wireframe mockup of the old project overview"></img>
+          <p class="uk-text-center uk-margin-remove-bottom" style="font-family: Open Sans;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #696969;">
+            Wireframe mockup of the old Tickets overview.
+          </p>
+          <button class="uk-modal-close-default" type="button" uk-close></button>
+        </div>
+      </div>
+      <div id="new-overview" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical" uk-responsive>
+          <img class="uk-align-center" src="/Pics/Portfolio_Pictures/Greenlancer/New_Overview.png" alt="Wireframe mockup of the new project overview."></img>
+          <p class="uk-text-center uk-margin-remove-bottom" style="font-family: Open Sans;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #696969;">
+            Wireframe mockup of the new Tickets overview.
+          </p>
+          <button class="uk-modal-close-default" type="button" uk-close></button>
+        </div>
+      </div>
+      <p class="section-title">Lessons Learned</p>
+      <p class="section-body">While Greenlancer was a great learning experience, there are some changes I would make if I was given the chance to start over. The first change I would make is to develop the screens with a mobile first implementation in mind. While the dashboard aspect lends itself well to a mobile screen, there are still some constraints imposed by the smaller mobile screen that I wish had been resolved earlier. Some constraints included choosing what elements to hide and show and how to deal with wide tables. A second change I would make is to do more initial sketching. While the participatory design sessions that I hold always involve sketching, I noticed that I would then refine those designs in Sketch instead of refining them on other whiteboards and then putting them into Sketch.</p>
+      <div class="uk-container uk-padding-remove uk-margin-large-top">
+        <a class="uk-button uk-button-default uk-button-large uk-text-capitalize uk-align-left uk-width-1-1 uk-width-auto@m previous-next-button" href="bosch.html"><span uk-icon="icon:arrow-left; ratio:1.45"></span> Bosch</a>
+        <a class="uk-button uk-button-default uk-button-large uk-text-capitalize uk-align-right uk-width-1-1 uk-width-auto@m previous-next-button" href="ge.html">GE Oil & Gas <span uk-icon="icon:arrow-right; ratio:1.45"></span></a>
+      </div>
+    </div>
+    <div class="footer">
+      <p class="footer-text">&copy; 2021 Jonathan De Heus</p>
+    </div>
+  </body>
 </html>
