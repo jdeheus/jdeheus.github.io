@@ -1,7 +1,7 @@
 // passwordProtection.js
 
 // Define the correct password
-const correctPassword = "test";
+const correctPassword = "JDH2023";
 
 // Prompt the user for a password
 const userEnteredPassword = prompt("Please enter the password:");
