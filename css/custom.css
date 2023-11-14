@@ -415,5 +415,6 @@ p a:hover {
   }
   .about_me img {
     align-self: center;
+    margin-left: 0px;
   }
 }
