@@ -406,3 +406,14 @@ p a:hover {
     line-height: normal;
   }
 }
+
+/*About Me CSS for picture & text*/
+@media (max-width: 639px) {
+  .about_me {
+    display: flex;
+    flex-direction: column;
+  }
+  .about_me img {
+    align-self: center;
+  }
+}
