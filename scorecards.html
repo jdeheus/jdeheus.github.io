@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Omnicell - Scorecards</title>
+    <link rel="stylesheet" href="css/font_css.css" />
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="js/uikit.js"></script>
+    <!--doesn't work in Github for some reason<script src="js/uikit.min.js"></script>-->
+    <script src="js/uikit-icons.min.js"></script>
+    <script src="js/password.js"></script>
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav class="uk-navbar-container custom-navbar-shadow" style="background:#FFF;" uk-sticky="show-on-up: true, animation: uk-animation-slide-top">
+      <div class="custom-navbar-portfolio" uk-navbar>
+        <div class="uk-navbar-left">
+          <a href="index.html" class="uk-navbar-item uk-margin-small-left uk-logo" style="font-family: Inter; font-style: normal; font-weight: bold; font-size: 24px; color: #3C3C3C;">Jon De Heus</a>
+        </div>
+        <!--Shows on screens 640px & up-->
+        <div class="uk-visible@m uk-navbar-right">
+          <ul class="uk-navbar-nav header-links">
+            <li><a href="index.html" style="text-decoration:underline;color:#4140F0;">Work</a></li>
+            <li><a href="/Pics/resume.pdf" target="_blank">Resume</a></li>
+            <li><a href="about_me.html" style="padding-right:0px;">About Me</a></li>
+          </ul>
+        </div>
+        <!--Shows on screens 640px & down-->
+        <div class="uk-hidden@m uk-navbar-right">
+            <a class="uk-navbar-toggle" href="#" uk-toggle="target: #modal">
+                <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left" style="color:#3C3C3C;">Menu</span>
+            </a>
+        </div>
+      </div>
+    </nav>
+    <!--Modal for mobile-->
+    <div id="modal" class="uk-modal-full" uk-modal>
+        <div class="uk-modal-dialog">
+            <button class="uk-modal-close-full" type="button" uk-close></button>
+            <div class="uk-grid-match uk-grid-collapse" uk-grid>
+                <div class="uk-flex-middle uk-flex-center" style="min-width: 100vw; width: 100vw;" uk-height-viewport>
+                    <div class="uk-card uk-card-body uk-text-center uk-align-center">
+                        <a href="index.html"><h2 class="uk-modal-title uk-text-bold uk-active uk-margin-medium-bottom" style="color: #4140F0; font-family: Open Sans">Work</h2></a>
+                        <a class="uk-link-reset" href="/Pics/resume.pdf" target="_blank"><h2 class="uk-modal-title uk-margin-medium-bottom" style="color: #3C3C3C; font-family: Open Sans">Resume</h2></a>
+                        <a class="uk-link-reset" href="about_me.html"><h2 class="uk-modal-title" style="color: #3C3C3C; font-family: Open Sans">About Me</h2></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Body starts here-->
+    <div class="uk-section uk-section-media uk-section-slarge" style="background-color: #2F3849">
+        <div class="uk-grid-medium portfolio-grid" uk-grid>
+          <div class="uk-width-1-2@m uk-flex uk-flex-center uk-flex-middle">
+            <img src="/Pics/Portfolio_Pictures/Omnicell/Omnicell_logo.png" alt="Omnicell logo." style="padding-left: 15px; padding-right: 15px;">
+          </div>
+          <div class="uk-width-1-2@m uk-flex uk-flex-middle">
+            <div class="uk-card uk-card-body uk-text-left">
+              <p class="portfolio-company">Omnicell</p>
+              <p class="portfolio-description"><b>Role: </b>Senior Product Designer</p>
+              <p class="portfolio-description"><b>Tools: </b>Figma, sketching</p>
+              <p class="portfolio-description"><b>Methods: </b>Data visualization, usability testing</p>
+              <p class="portfolio-description"><b>Soft Skills: </b>Building rapport with cross-functional teams</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="uk-container uk-container-small" style="max-width:1000px;margin-left:auto;margin-right:auto;padding-top:60px;">
+      <p class="section-title">Work Overview</p>
+      <p class="section-body">While I was working on <a href="www.jondeheus.com/omnicell.html">Benchmarking at Omnicell</a>, I also took on another project called Scorecards. Scorecards is another aspect of Inventory Optimization Services (IOS) that was in the same vertical as Benchmarking, but measures KPIs such as Total Valuation, Total Savings, and Total Purchases instead of Shortages or Overrides. The primary ask was to bring Scorecards up to date with the latest visuals within the design system, however it soon became apparent that some major changes besides updating to the latest visuals and design system patterns needed to be made.</p>
+      <p class="section-body">I first started off by doing a heuristic analysis of Scorecards. Three violations immediately stood out to me:</p>
+      <p class="section-body">
+        <ul class="uk-list uk-list-disc">
+          <li><b>Clarity:</b> Due to the amount of information (some of it in dense tables), there was the possibility for users to be affected by information overload.</li>
+          <li><b>Consistency:</b> Any entry in a table or chart was clickable, and upon being clicked would filter everything else. However, there wasn’t a lot of visual consistency in indicating what could be clicked with the exception of having the mouse arrow icon turn into the standard click icon.</li>
+          <li><b>Help & documentation:</b> Certain charts compared customers enterprises to competitor enterprises. However, there was no way for users to tell what statistics were being used for the comparison, nor was there a way to identify what sites were part of the comparison group.</li>
+          <li><b>Credibility:</b> The value for Average Days On Hand that was present in 2 scorecards differed in each of them,which could raise suspicion that other information displayed on the pages was wrong.</li>
+        </ul>
+      </p>
+      <div class="uk-text-center uk-child-width-1-1 uk-child-width-1-2@s uk-grid-stack" uk-grid>
+        <div class="uk-card">
+          <div class="uk-card-media-top">
+            <a href="/Pics/Portfolio_Pictures/Omnicell_Scorecards/Med_Visibility_Scorecard_NN.png" target="_blank" rel="noopener noreferrer"><img src="/Pics/Portfolio_Pictures/Omnicell_Scorecards/Med_Visibility_Scorecard_NN.png" alt="Medication visiblity scorecard example with dummy data."></a>
+          </div>
+          <div class="uk-card-body uk-padding-remove-top" style="font-family: Open Sans;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #696969; padding-bottom:15px;">
+            Medication visiblity scorecard example with dummy data.
+          </div>
+        </div>
+        <div class="uk-card">
+          <div class="uk-card-media-top">
+            <a href="/Pics/Portfolio_Pictures/Omnicell_Scorecards/Pharm_Metrics_Scorecard_NN.png" target="_blank" rel="noopener noreferrer"><img src="/Pics/Portfolio_Pictures/Omnicell_Scorecards/Pharm_Metrics_Scorecard_NN.png" alt="Pharmacy metrics scorecard example with dummy data."></a>
+          </div>
+          <div class="uk-card-body uk-padding-remove-top" style="font-family: Open Sans;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #696969; padding-bottom:15px;">
+            Pharmacy metrics scorecard example with dummy data.
+          </div>
+        </div>
+        <div class="uk-card">
+          <div class="uk-card-media-top">
+            <a href="/Pics/Portfolio_Pictures/Omnicell_Scorecards/Purchasing_Scorecard_NN.png" target="_blank" rel="noopener noreferrer"><img src="/Pics/Portfolio_Pictures/Omnicell_Scorecards/Purchasing_Scorecard_NN.png" alt="Purchasing scorecard example with dummy data."></a>
+          </div>
+          <div class="uk-card-body uk-padding-remove-top" style="font-family: Open Sans;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #696969; padding-bottom:15px;">
+            Purchasing scorecard example with dummy data.
+          </div>
+        </div>
+        <div class="uk-card">
+          <div class="uk-card-media-top">
+            <a href="/Pics/Portfolio_Pictures/Omnicell_Scorecards/Savings_Scorecard_NN.png" target="_blank" rel="noopener noreferrer"><img src="/Pics/Portfolio_Pictures/Omnicell_Scorecards/Savings_Scorecard_NN.png" alt="Savings scorecard example with dummy data."></a>
+          </div>
+          <div class="uk-card-body uk-padding-remove-top" style="font-family: Open Sans;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #696969; padding-bottom:15px;">
+            Savings scorecard example with dummy data.
+          </div>
+        </div>
+      </div>
+      <p class="section-title">Discussions with Subject Matter Experts</p>
+      <p class="section-body">After performing the heuristic analysis and taking notes, I then set up time with subject matter experts to get their feedback on the existing Scorecards application. Their feedback was mostly centered around elements that we could remove, existing issues,and adding additional KPIs in the future. As we only had enough developer bandwidth to remake the screens, I made a list of items that they wanted to see in the future, and another list composed of elements we could remove and fixing existing issues. I then took screenshots of the existing pages within scorecards and began marking them up based on the heuristic analysis and the feedback from the strategists.</p>
+      <div class="uk-text-center uk-child-width-1-1 uk-child-width-1-2@s uk-grid-stack" uk-grid>
+        <div class="uk-card">
+          <div class="uk-card-media-top">
+            <a href="/Pics/Portfolio_Pictures/Omnicell_Scorecards/Med_Visibility_Scorecard.png" target="_blank" rel="noopener noreferrer"><img src="/Pics/Portfolio_Pictures/Omnicell_Scorecards/Med_Visibility_Scorecard.png" alt="Medication visiblity scorecard example with notes based on heuristic evaluation and SME feedback."></a>
+          </div>
+          <div class="uk-card-body uk-padding-remove-top" style="font-family: Open Sans;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #696969; padding-bottom:15px;">
+            Medication visiblity scorecard example with notes based on heuristic evaluation and SME feedback.
+          </div>
+        </div>
+        <div class="uk-card">
+          <div class="uk-card-media-top">
+            <a href="/Pics/Portfolio_Pictures/Omnicell_Scorecards/Pharm_Metrics_Scorecard.png" target="_blank" rel="noopener noreferrer"><img src="/Pics/Portfolio_Pictures/Omnicell_Scorecards/Pharm_Metrics_Scorecard.png" alt="Pharmacy metrics scorecard example with notes based on heuristic evaluation and SME feedback."></a>
+          </div>
+          <div class="uk-card-body uk-padding-remove-top" style="font-family: Open Sans;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #696969; padding-bottom:15px;">
+            Pharmacy metrics scorecard example with notes based on heuristic evaluation and SME feedback.
+          </div>
+        </div>
+        <div class="uk-card">
+          <div class="uk-card-media-top">
+            <a href="/Pics/Portfolio_Pictures/Omnicell_Scorecards/Purchasing_Scorecard.png" target="_blank" rel="noopener noreferrer"><img src="/Pics/Portfolio_Pictures/Omnicell_Scorecards/Purchasing_Scorecard.png" alt="Purchasing scorecard example with notes based on heuristic evaluation and SME feedback."></a>
+          </div>
+          <div class="uk-card-body uk-padding-remove-top" style="font-family: Open Sans;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #696969; padding-bottom:15px;">
+            Purchasing scorecard example with notes based on heuristic evaluation and SME feedback.
+          </div>
+        </div>
+        <div class="uk-card">
+          <div class="uk-card-media-top">
+            <a href="/Pics/Portfolio_Pictures/Omnicell_Scorecards/Savings_Scorecard.png" target="_blank" rel="noopener noreferrer"><img src="/Pics/Portfolio_Pictures/Omnicell_Scorecards/Savings_Scorecard.png" alt="Savings scorecard example with notes based on heuristic evaluation and SME feedback.."></a>
+          </div>
+          <div class="uk-card-body uk-padding-remove-top" style="font-family: Open Sans;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #696969; padding-bottom:15px;">
+            Savings scorecard example with notes based on heuristic evaluation and SME feedback.
+          </div>
+        </div>
+      </div>
+      <p class="section-title">Design, Feedback, Redesign</p>
+      <p class="section-body">After designing the initial screens, I went through an ideation and prototyping cycle. Initial feedback was positive, however one subject matter experts felt strongly that the inventory value over time graph could be moved to the metrics page. When asked about this, other SMEs didn’t have any strong feelings one way or another, however when brought to the larger bi-weekly meeting of SMEs others agreed, so I moved it to the metrics page. There was some initial concern that there was too much information on the metrics page, however after talking with SMEs they thought that it was just enough information on the page and we could go forward with the page as I had it.</p>
+      <div class="uk-text-center uk-child-width-1-1 uk-child-width-1-2@s uk-grid-stack" uk-grid>
+        <div class="uk-card">
+          <div class="uk-card-media-top">
+            <a href="/Pics/Portfolio_Pictures/Omnicell_Scorecards/pharm_metrics_before.png" target="_blank" rel="noopener noreferrer"><img src="/Pics/Portfolio_Pictures/Omnicell_Scorecards/pharm_metrics_before.png" alt="Proposed pharmacy metrics page before strategist feedback."></a>
+          </div>
+          <div class="uk-card-body uk-padding-remove-top" style="font-family: Open Sans;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #696969; padding-bottom:15px;">
+            Proposed pharmacy metrics page before strategist feedback.
+          </div>
+        </div>
+        <div class="uk-card">
+          <div class="uk-card-media-top">
+            <a href="/Pics/Portfolio_Pictures/Omnicell_Scorecards/Pharm_metrics_after.png" target="_blank" rel="noopener noreferrer"><img src="/Pics/Portfolio_Pictures/Omnicell_Scorecards/Pharm_metrics_after.png" alt="Proposed pharmacy metrics page after strategist feedback."></a>
+          </div>
+          <div class="uk-card-body uk-padding-remove-top" style="font-family: Open Sans;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #696969; padding-bottom:15px;">
+            Proposed pharmacy metrics page after strategist feedback.
+          </div>
+        </div>
+      </div>
+      <p class="section-title">Challenges Faced</p>
+      <p class="section-body">While working with the subject matter experts was fairly painless, other challenges arose in their place. The main challenge was working with a PM who felt that they had the knowledge to push back on UX decisions when they really didn’t. Multiple times I thought we had agreement on what we were going to go forward with, only to join a review and be asked if we could change the designs. This kept happening despite conversations that I had with their boss, and conversations that my boss had with both the PM and their boss. This culminated when the we (PM, engineers, and myself) all agreed that we would go forward with one idea, and the PM purposely wrote up a JIRA ticket that said we decided to go forward with her idea. After this, I told the engineers that if they had any questions over whether a JIRA ticket was right, they should come to me rather than the PM. If I had to revisit this experience, I would've gone to both my boss and the PMs boss sooner than I did in order to stop this behavior.</p>
+      <p class="section-body uk-margin-medium-bottom">While the PM was the biggest issue on the product, there were also some database challenges that popped up. The largest issue was that our data wasn’t as granular across the various scorecards as we thought. For the data in Medication Visibility, we weren’t able to filter by date at all, so we had to remove the date picker. For the data in Pharmacy Metrics, we had to modify the datepicker time selections in order to match the options with the data which could only be filtered down to the month level instead of to the day.</p>
+      <p class="section-title">Final Results</p>
+      <p class="section-body">Overall, I'm happy with how the project turned out. While there were the dual issues of the PM and incomplete data, this was a good learning experience overall in terms of how to deal with unexpected roadblocks. The final screens can be seen below:</p>
+      <div class="uk-text-center uk-child-width-1-1 uk-child-width-1-2@s uk-grid-stack" uk-grid>
+        <div class="uk-card">
+          <div class="uk-card-media-top">
+            <a href="/Pics/Portfolio_Pictures/Omnicell_Scorecards/mv_final.png" target="_blank" rel="noopener noreferrer"><img src="/Pics/Portfolio_Pictures/Omnicell_Scorecards/mv_final.png" alt="Final medication visiblity screen."></a>
+          </div>
+          <div class="uk-card-body uk-padding-remove-top" style="font-family: Open Sans;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #696969; padding-bottom:15px;">
+            Final medication visiblity screen.
+          </div>
+        </div>
+        <div class="uk-card">
+          <div class="uk-card-media-top">
+            <a href="/Pics/Portfolio_Pictures/Omnicell_Scorecards/Pharm_Metrics_after.png" target="_blank" rel="noopener noreferrer"><img src="/Pics/Portfolio_Pictures/Omnicell_Scorecards/Pharm_Metrics_after.png" alt="Final pharmacy metrics screen."></a>
+          </div>
+          <div class="uk-card-body uk-padding-remove-top" style="font-family: Open Sans;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #696969; padding-bottom:15px;">
+            Final pharmacy metrics screen.
+          </div>
+        </div>
+        <div class="uk-card">
+          <div class="uk-card-media-top">
+            <a href="/Pics/Portfolio_Pictures/Omnicell_Scorecards/pch_final.png" target="_blank" rel="noopener noreferrer"><img src="/Pics/Portfolio_Pictures/Omnicell_Scorecards/pch_final.png" alt="Final purchasing screen."></a>
+          </div>
+          <div class="uk-card-body uk-padding-remove-top" style="font-family: Open Sans;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #696969; padding-bottom:15px;">
+            Final purchasing screen.
+          </div>
+        </div>
+        <div class="uk-card">
+          <div class="uk-card-media-top">
+            <a href="/Pics/Portfolio_Pictures/Omnicell_Scorecards/sv_final.png" target="_blank" rel="noopener noreferrer"><img src="/Pics/Portfolio_Pictures/Omnicell_Scorecards/sv_final.png" alt="Final savings screen."></a>
+          </div>
+          <div class="uk-card-body uk-padding-remove-top" style="font-family: Open Sans;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #696969; padding-bottom:15px;">
+            Final savings screen.
+          </div>
+        </div>
+      </div>
+      <div class="uk-container uk-padding-remove uk-margin-large-top">
+        <a class="uk-button uk-button-default uk-button-large uk-text-capitalize uk-align-left uk-width-1-1 uk-width-auto@m previous-next-button" href="omnicell.html"><span uk-icon="icon:arrow-left; ratio:1.45"></span> Omnicell</a>
+        <a class="uk-button uk-button-default uk-button-large uk-text-capitalize uk-align-right uk-width-1-1 uk-width-auto@m previous-next-button" href="ford_credit.html">Ford Credit <span uk-icon="icon:arrow-right; ratio:1.45"></span></a>
+      </div>
+    </div>
+  </body>
+</html>
