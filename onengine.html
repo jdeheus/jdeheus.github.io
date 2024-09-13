@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ONEngine</title>
+    <link rel="stylesheet" href="css/font_css.css" />
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="js/uikit.js"></script>
+    <!--doesn't work in Github for some reason<script src="js/uikit.min.js"></script>-->
+    <script src="js/uikit-icons.min.js"></script>
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav class="uk-navbar-container custom-navbar-shadow" style="background:#FFF;" uk-sticky="show-on-up: true, animation: uk-animation-slide-top">
+      <div class="custom-navbar-portfolio" uk-navbar>
+        <div class="uk-navbar-left">
+          <a href="index.html" class="uk-navbar-item uk-margin-small-left uk-logo" style="font-family: Inter; font-style: normal; font-weight: bold; font-size: 24px; color: #3C3C3C;">Jon De Heus</a>
+        </div>
+        <!--Shows on screens 640px & up-->
+        <div class="uk-visible@m uk-navbar-right">
+          <ul class="uk-navbar-nav header-links">
+            <li><a href="index.html" style="text-decoration:underline;color:#4140F0;">Work</a></li>
+            <li><a href="/Pics/resume.pdf" target="_blank">Resume</a></li>
+            <li><a href="about_me.html" style="padding-right:0px;">About Me</a></li>
+          </ul>
+        </div>
+        <!--Shows on screens 640px & down-->
+        <div class="uk-hidden@m uk-navbar-right">
+            <a class="uk-navbar-toggle" href="#" uk-toggle="target: #modal">
+                <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left" style="color:#3C3C3C;">Menu</span>
+            </a>
+        </div>
+      </div>
+    </nav>
+    <!--Modal for mobile-->
+    <div id="modal" class="uk-modal-full" uk-modal>
+        <div class="uk-modal-dialog">
+            <button class="uk-modal-close-full" type="button" uk-close></button>
+            <div class="uk-grid-match uk-grid-collapse" uk-grid>
+                <div class="uk-flex-middle uk-flex-center" style="min-width: 100vw; width: 100vw;" uk-height-viewport>
+                    <div class="uk-card uk-card-body uk-text-center uk-align-center">
+                        <a href="index.html"><h2 class="uk-modal-title uk-text-bold uk-active uk-margin-medium-bottom" style="color: #4140F0; font-family: Open Sans">Work</h2></a>
+                        <a class="uk-link-reset" href="/Pics/resume.pdf" target="_blank"><h2 class="uk-modal-title uk-margin-medium-bottom" style="color: #3C3C3C; font-family: Open Sans">Resume</h2></a>
+                        <a class="uk-link-reset" href="about_me.html"><h2 class="uk-modal-title" style="color: #3C3C3C; font-family: Open Sans">About Me</h2></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Body starts here-->
+    <div class="uk-section uk-section-media uk-section-slarge" style="background-color: #1d1b2a">
+        <div class="uk-grid-medium portfolio-grid" uk-grid>
+          <div class="uk-width-1-2@m uk-flex uk-flex-center uk-flex-middle">
+            <img src="/Pics/Portfolio_Pictures/ONEngine/onengine_port_page_logo.png" alt="ONEngine logo." style="padding-left: 15px; padding-right: 15px;">
+          </div>
+          <div class="uk-width-1-2@m uk-flex uk-flex-middle">
+            <div class="uk-card uk-card-body uk-text-left">
+              <p class="portfolio-company">ONEngine</p>
+              <p class="portfolio-description"><b>Role: </b>UX Team Lead</p>
+              <p class="portfolio-description"><b>Tools: </b>Figma, Figjam</p>
+              <p class="portfolio-description"><b>Methods: </b>Workflow creation, feature planning</p>
+              <p class="portfolio-description"><b>Soft Skills: </b>Building rapport with cross-functional teams, mentoring, presentations</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="uk-container uk-container-small" style="max-width:1000px;margin-left:auto;margin-right:auto;padding-top:60px;">
+      <p class="section-title">Work Overview</p>
+      <p class="section-body">As the UX lead at ONEngine, I’m responsible for overseeing our fledgling UX team, and designing the Work Orders component of our B2B SaaS application. Along with the challenges that come along with building a team from the ground up and attempting to institute design first principles at a company where none existed before, I also have the unique challenge of dealing with a very unique individual stakeholder. This stakeholder is simultaneously mercurial but also very attached to their way of performing certain tasks, which introduces a lot of ambiguity and complexity that inhibits our ability to explore new solutions or make suggestions that would attempt to address known problems in the existing system. He also makes performing even the most rudimentary user research difficult, as he believes that his way of doing things is the correct way and that others who may use slightly different ways to achieve the same results are incorrect.</p>
+      <p class="section-title">Introductory Design Work</p>
+      <p class="section-body">When I first started at ONEngine, I gave myself three primary design related tasks:</p>
+      <p class="section-body">
+        <ul class="uk-list uk-list-disc">
+          <li>Talk to everyone I could to better understand the business and user needs.</li>
+          <li>Read our internal Confluence documents to better understand business and user needs.</li>
+          <li>Perform a heuristic analysis on any existing systems that were in place.</li>
+        </ul>
+      </p>
+      <p class="section-body">While all of these tasks were helpful, the one that stood out to me was the heuristic analysis. It turns out that there were two systems in place, with one system being used day to day, while the other one was highlighed as what the primary stakeholder wanted to use as design inspiration. Some of the violations included:</p>
+      <p class="section-body">
+        <ul class="uk-list uk-list-disc">
+          <li><b>Aesthetic & Design:</b> Both systems had major design violations. Some pages would have an almost overwhelming amount of information that would force a user with a smaller screen to scroll horizontally, while other pages would be almost empty, if not empty. One system hid relevant information behind a dropdown menu which would then open in tabs at the bottom of the page.</li>
+          <li><b>Visibility Of System Status:</b> Pages with data have mysteriously empty fields with no indication as to whether they were optional or not.</li>
+          <li><b>Help & Documentation:</b> There were active buttons that upon being clicked would seemingly do nothing, and when I inquired about them I was told that they would only generate an outcome if certain prerequisites had been met. Said prerequisites were never mentioned anywhere in the system.</li>
+          <li><b>Flexibility & Efficiency of Use:</b> The information architecture in both systems was subpar, and accessing key information was especially hard in the second one.</li>
+        </ul>
+      </p>
+      <div class="uk-text-center uk-child-width-1-1 uk-child-width-1-2@s uk-grid-stack" uk-grid>
+        <div class="uk-card">
+          <div class="uk-card-media-top">
+            <div class="uk-card-media-top">
+              <a href="/Pics/Portfolio_Pictures/ONEngine/Elie.jpg" target="_blank" rel="noopener noreferrer"><img src="/Pics/Portfolio_Pictures/ONEngine/Elie.jpg" alt="Affinity diagram from day 1 of the future Benchmarking feature workshop."></a>
+            </div>
+            <div class="uk-card-body uk-padding-remove-top" style="font-family: Open Sans;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #696969; padding-bottom:15px;">
+              Screenshot of the first system that was in use. Information architecture was better than the other one, but lots of pages had missing information.
+            </div>
+          </div>
+        </div>
+        <div class="uk-card">
+          <div class="uk-card-media-top">
+            <div class="uk-card-media-top">
+              <a href="/Pics/Portfolio_Pictures/ONEngine/Aqua.jpg" target="_blank" rel="noopener noreferrer"><img src="/Pics/Portfolio_Pictures/ONEngine/Aqua_preview.jpg" alt="Affinity diagram from day 1 of the future Benchmarking feature workshop."></a>
+            </div>
+            <div class="uk-card-body uk-padding-remove-top" style="font-family: Open Sans;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #696969; padding-bottom:15px;">
+              Screenshot of the other system that wasn't being used. Note the tabs at the bottom of the page where the majority of relevant information is contained.
+            </div>
+        </div>
+      </div>
+    </div>
+    <p class="section-title">Starting the Redesign & Initial Complications</p>
+    <p class="section-body">The first screen I started working on was the work order list view screen. This is one of the few times where I was able to talk with actual users of the existing software in order to identify what information was important to them. After reviewing their feedback, I built out a wireframe showing the basic layout of screens going forward. After quickly running it by everyone, I then created a work order overview page. However, after showing a preview to the stakeholder, he was unhappy and wanted major changes made to it, namely expanding the list to have more than 12 columns. To make matters worse, he insisted that this should be the default for everyone, not just him. After I scheduled additional meetings to identify why these changes were needed, I was able to identify three primary reasons for change:</p>
+    <p class="section-body">
+      <ul class="uk-list uk-list-disc">
+        <li>He had an ultrawide screen and had the real estate to display all columns without scrolling, unlike the majority of the workers who would be using the system.</li>
+        <li>He viewed himself as a power user who needed all of the columns, despite not being able to clarify how often he used every single column.</li>
+        <li>He wanted new features added to the table that hadn’t been mentioned by the other existing users as being necessary or wanted.</li>
+      </ul>
+    </p>
+    <p class="section-body">As a result of this, I ended up making some changes to the table in order to satisfy his demands. Those changes included:</p>
+    <p class="section-body">
+      <ul class="uk-list uk-list-disc">
+        <li>Depending on the size of the screen, specific columns on both sides of the screen would be fixed even if the user scrolled left or right.</li>
+        <li>Adding a way to select what columns are shown in the table.</li>
+      </ul>
+    </p>
+    <p class="section-body">During this time, I was able to start working on other areas of the application. For some areas of Work Orders, I was able to create vision decks in conjunction with PMs and other stakeholders, which helped to define why we were working on the feature, ground expectations as to what would be done in the initial sprint, and describe what would be done in future sprints. Below is a vision deck that I made for the Procurement feature.</p>
+    <!--Below is where the vision deck needs to go.-->
+    <p class="section-body"><iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450" src="https://embed.figma.com/proto/qOP994ohXgOuZbRDCPinIi/Procurement-Alignment?node-id=3-156&node-type=frame&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3%3A156&embed-host=share" allowfullscreen></iframe></p>
+    <!--Above is where the vision deck needs to go.-->
+    <p class="section-title">Fleshing Out Work Orders</p>
+    <p class="section-body">The next step after building out the list view was to start working on the Work Order detail screens themselves. After reviewing the existing system and talking with the stakeholder and CTO about their goals for V0, I determined that they wanted a fixed area at the top to display key pieces of information, and then the body would contain tabs that would display relevant information. Unfortunately, while I wanted to get more feedback about the content of the work order page from the users we talked to earlier, the primary stakeholder made that very difficult, and as a result we weren’t able to talk to the users.</p>
+    <div class="uk-text-center uk-child-width-1-1 uk-child-width-1-1@s uk-grid-stack" uk-grid>
+      <div class="uk-card">
+        <div class="uk-card-media-top">
+          <a href="/Pics/Portfolio_Pictures/ONEngine/Work Orders Wireframe V1.jpg" target="_blank" rel="noopener noreferrer"><img src="/Pics/Portfolio_Pictures/ONEngine/Work Orders Wireframe V1.jpg" alt="Initial wireframe showing the layout of the Work Orders section."></a>
+        </div>
+        <div class="uk-card-body uk-padding-remove-top" style="font-family: Open Sans;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #696969; padding-bottom:15px;">
+          Initial wireframe showing the layout of the Work Orders section.
+        </div>
+      </div>
+    </div>
+    <p class="section-body">After coming up with the basic wireframe layout for the Work Orders layout, I set out to build out each tab. For each tab, I worked with the stakeholder to identify what fields on the existing flow were needed, and if there was any information that he thought could potentially benefit users of the application. For portions of the application where we would interface with back-end engineers who were working with LLMs, I spent a fair amount of time talking with them and building flows in order to ensure that what I made could actually be built.</p>
+    <div class="uk-text-center uk-child-width-1-1 uk-child-width-1-1@s uk-grid-stack" uk-grid>
+      <div class="uk-card">
+        <div class="uk-card-media-top">
+          <a href="/Pics/Portfolio_Pictures/ONEngine/DeepAI Flow.jpg" target="_blank" rel="noopener noreferrer"><img src="/Pics/Portfolio_Pictures/ONEngine/DeepAI Flow.jpg" alt="Initial wireframe showing the layout of the Work Orders section.."></a>
+        </div>
+        <div class="uk-card-body uk-padding-remove-top" style="font-family: Open Sans;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #696969; padding-bottom:15px;">
+          Quick flow made to align stakeholders around the Work Order Proposal section.
+        </div>
+      </div>    
+    </div>
+    <p class="section-body">Working with the primary stakeholder continued to be frustrating. He would frequently expand the scope of a tab to a point where it would lead to serious UX and engineering issues, would want one feature on one day but would want it removed on day two, or a combination of both. For example, the current chat tabs could handle text only messages inside the work order itself as well as emails, but he wanted to expand that to revise the entire internal chat system to more closely resemble Slack, as well as add WhatsApp-esque functionality (media attachments, single and group text messages) to the system as well. Ultimately, a combination of myself and the CTO were able to talk him out of it due to the time it would’ve taken to develop on the backend, but this wasn’t before a lot of time was spent building the interface for this expanded chat feature. Below is an up to date interactive prototype of Work Orders.</p>
+    <!--Below is where the interactive Work Order flow should go.-->
+    <p class="section-body"><iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450" src="https://embed.figma.com/proto/lBcgpOrzIP4ZROfUqatYHv/Interactive-List-View?node-id=68-32479&node-type=frame&scaling=min-zoom&content-scaling=fixed&page-id=15%3A4970&starting-point-node-id=68%3A32479&embed-host=share" allowfullscreen></iframe></p>
+    <!--Above is where the interactive Work Order flow should go.-->
+    <p class="section-title">UX Team Lead Work</p>
+    <p class="section-body">Along with design work, I was also hired to help build out the UX team and promote design throughout the company. One of the first initiatives I took on was to ensure that we had a working design system as soon as possible. I knew that if we didn’t have a design system that we could utilize, our designs would look disjoined despite our best efforts. After looking over different options, I convinced the CTO to purchase the UI Prep design system. By spending a few hundred dollars upfront, we saved tens, if not hundreds of hours building out a design system from the ground up all while accessing multiple ready to use components and color palettes that we could customize and add onto as needed. Over time, the team and I have added onto the design system, and I act as a final reviewer who has to approve new elements.</p>
+    <p class="section-body">Something that I’ve enforced for all members of the team is the creation of vision statement decks when kicking off a new feature. I’ve found that the scope of a feature has a tendency to grow if there aren’t guardrails in place beforehand, and creating these documents is a great way to limit scope growth and gather buy-in from all stakeholders. Lastly, I’m responsible for interviewing and approving new hires. Since I’ve become the lead, the size of the team has doubled which has allowed us to take on more work. I've found being a leader to be rewarding as I enjoy helping others advance in their career.</p>
+    <div class="uk-container uk-padding-remove uk-margin-large-top">
+      <a class="uk-button uk-button-default uk-button-large uk-text-capitalize uk-align-left uk-width-1-1 uk-width-auto@m previous-next-button" href="index.html"><span uk-icon="icon:arrow-left; ratio:1.45"></span> Back Home</a>
+      <a class="uk-button uk-button-default uk-button-large uk-text-capitalize uk-align-right uk-width-1-1 uk-width-auto@m previous-next-button" href="omnicell.html">Omnicell <span uk-icon="icon:arrow-right; ratio:1.45"></span></a>
+    </div>
+  </div>
+</body>
+</html>
