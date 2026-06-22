@@ -1,0 +1,90 @@
+/*Font*/
+
+:root {
+    --bulma-family-primary: Montserrat,Helvetica,Arial,sans-serif;
+    --bulma-family-secondary: Montserrat,Helvetica,Arial,sans-serif;
+    --bulma-family-code: Montserrat,Helvetica,Arial,sans-serif;
+  }
+
+body {
+    background-color: #f0ece9;
+}
+
+.divider {
+    border-radius: 9999px;
+    height: .25rem;
+    margin: 1em auto;
+    width: 4em
+}
+
+.card {
+    box-shadow: none;
+    transition: box-shadow 0.3s ease-in-out;  
+}
+
+.card:hover {
+    box-shadow: var(--bulma-card-shadow);
+}
+
+.box {
+    border-style: solid; 
+    border-color: var(--bulma-border);
+    border-width: 1px;
+}
+
+.tag {
+    border: 1px solid var(--bulma-border);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, sans-serif, System Default, serif;
+}
+
+.highlights {
+    border-style: solid;
+    border-color: var(--bulma-border);
+    border-width: 1px;
+    border-radius: var(--bulma-radius-large);
+}
+
+.page-title{
+    font-size: 64px;
+    font-weight: 500;
+}
+
+.card-title {
+    font-family: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, sans-serif, System Default, serif;
+    font-weight: 600;
+}
+
+.card-text {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, sans-serif, System Default, serif;
+}
+
+.portfolio-section-header{
+    font-weight: 400;
+}
+
+.secondary-font-family {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, sans-serif, System Default, serif;
+}
+
+.link{
+    color: var(--bulma-text-strong);
+    text-decoration: underline;
+}
+
+.link:hover{
+    color: var(--bulma-link-text);
+}
+
+a.navbar-item:hover svg path,
+a.navbar-item:hover {
+    background-color: rgba(255, 255, 255, 0) !important;
+    fill: var(--bulma-link-text);
+}
+
+a.navbar-item:hover{
+    color: var(--bulma-link-text)
+}
+
+.navbar-burger {
+    color: var(--bulma-text-strong);
+}
