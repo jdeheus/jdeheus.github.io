@@ -108,11 +108,13 @@
           </div>
           <aside class="hero-card" aria-label="Designer summary">
             <span class="corner-mark" aria-hidden="true"></span>
-            <h2>Senior product<br>designer who:</h2>
+            <h2>Senior product designer who:</h2>
             <div class="hero-card-rule"></div>
-            <p><strong>Deals with ambiguous requirements.</strong><br>Discovery, definition, and delivery handoff.</p>
-            <p><strong>Focuses on enterprise software</strong><br>Healthcare, B2B SaaS, fintech, and industrial products.</p>
-            <p><strong>Design leadership</strong><br>Mentorship, workshops, stakeholder alignment, and design-system practice.</p>
+            <p><strong>Deals with ambiguous requirements.</strong><span>Discovery, definition, and delivery handoff.</span></p>
+            <div class="hero-card-rule"></div>
+            <p><strong>Focuses on enterprise software</strong><span>Healthcare, B2B SaaS, fintech, and industrial products.</span></p>
+            <div class="hero-card-rule"></div>
+            <p><strong>Design leadership</strong><span>Mentorship, workshops, stakeholder alignment, and design-system practice.</span></p>
           </aside>
         </section>
         <section class="selected">
@@ -169,13 +171,13 @@
             <span class="corner-mark" aria-hidden="true"></span>
             <div class="contact-form-heading">
               <h2>Get in touch.</h2>
-              <p>All fields marked with <span class="required-note">*</span> are required.</p>
+              <p>All fields are required.</p>
             </div>
             <div class="contact-form-rows">
               ${contactField("contactName", "Name", "Your name", "text", "Please enter your name.")}
               ${contactField("contactEmail", "Email", "you@example.com", "email", "Add your email so I can reply back.")}
               <label class="contact-field-row contact-message-row">
-                <span>Message<sup>*</sup></span>
+                <span>Message</span>
                 <span class="field-stack">
                   <textarea id="contactMessage" name="message" placeholder="Tell me what's on your mind" aria-describedby="contactMessageError"></textarea>
                   <small id="contactMessageError" class="field-error" hidden>Please add a message.</small>
@@ -194,7 +196,7 @@
   function contactField(id, label, placeholder, type, error) {
     return `
       <label class="contact-field-row">
-        <span>${label}<sup>*</sup></span>
+        <span>${label}</span>
         <span class="field-stack">
           <input id="${id}" name="${id.replace("contact", "").toLowerCase()}" type="${type}" placeholder="${placeholder}" aria-describedby="${id}Error">
           <small id="${id}Error" class="field-error" hidden>${error}</small>
