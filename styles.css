@@ -183,7 +183,7 @@ body.has-mobile-anchor.has-visible-header .site-header {
   align-items: center;
   gap: 24px;
   border-top: 1px solid var(--line-light);
-  font: 500 13px/1 var(--mono);
+  font: 300 13px/1 var(--mono);
   letter-spacing: 0;
   color: var(--ink);
 }
@@ -677,6 +677,11 @@ body.is-mobile-menu-closing .mobile-menu-ghost-button.is-visible.is-placing {
   gap: 32px;
 }
 
+.contact-intake-copy .section-kicker {
+  color: #8e2f2f;
+  font: 400 13px/1.2 var(--mono);
+}
+
 .contact-intake-copy h1 {
   margin: 0;
   font: 600 78px/.98 var(--serif);
@@ -703,7 +708,7 @@ body.is-mobile-menu-closing .mobile-menu-ghost-button.is-visible.is-placing {
 
 .contact-reason span {
   color: var(--accent);
-  font: 600 12px/1 var(--mono);
+  font: 400 12px/1 var(--mono);
 }
 
 .contact-reason strong {
@@ -731,17 +736,6 @@ body.is-mobile-menu-closing .mobile-menu-ghost-button.is-visible.is-placing {
   font: 400 13px/1.4 var(--sans);
 }
 
-.required-note,
-.contact-field-row sup {
-  color: var(--accent);
-  font-weight: 700;
-}
-
-.contact-field-row sup {
-  vertical-align: super;
-  font-size: .72em;
-}
-
 .contact-form-rows {
   display: grid;
 }
@@ -763,7 +757,7 @@ body.is-mobile-menu-closing .mobile-menu-ghost-button.is-visible.is-placing {
 
 .contact-field-row > span:first-child {
   color: var(--soft);
-  font: 700 12px/1 var(--mono);
+  font: 400 12px/1 var(--mono);
   letter-spacing: .12em;
   text-transform: uppercase;
 }
