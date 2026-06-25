@@ -22,7 +22,7 @@
       { id: "ford-credit", number: "05", title: "Ford Credit", meta: "User research / Data analytics", href: `${ROOT}case-studies/ford-credit.html` },
     ],
     about: {
-      image: remote("/Pics/Portfolio_Pictures/About/landscape.jpg"),
+      image: `${IMG}about/jonathan-outdoors.png`,
       intro: "Hey there, I'm Jon! I'm a results driven senior product designer with over 10 years of experience in crafting intuitive, user-centric digital experiences.",
       offClock: "When I'm not designing, I enjoy spending time with my cat, trying to keep my plants alive, and exploring Tampa Bay as well as the rest of the world.",
       steps: [
@@ -32,11 +32,11 @@
         {
           label: "Companies",
           logos: [
-            { src: remote("/Pics/Homepage_Pictures/onengine.svg"), alt: "ONEngine" },
-            { src: remote("/Pics/Homepage_Pictures/omnicell.svg"), alt: "Omnicell" },
-            { src: remote("/Pics/Homepage_Pictures/ford_logo.svg"), alt: "Ford" },
-            { src: remote("/Pics/Homepage_Pictures/bosch_logo.svg"), alt: "Bosch" },
-            { src: remote("/Pics/Homepage_Pictures/ge_og_logo.svg"), alt: "GE Oil & Gas" },
+            { src: `${LOGO}onengine.svg`, alt: "ONEngine" },
+            { src: `${LOGO}omnicell.svg`, alt: "Omnicell" },
+            { src: `${LOGO}ford.svg`, alt: "Ford" },
+            { src: `${LOGO}bosch.svg`, alt: "Bosch" },
+            { src: `${LOGO}ge-oil-gas.svg`, alt: "GE Oil & Gas" },
           ],
         },
         { label: "Current Role", body: "Crafting intuitive, user-centric digital experiences at 3Cloud." },
