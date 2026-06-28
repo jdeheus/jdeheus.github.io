@@ -922,6 +922,10 @@ body.is-mobile-menu-closing .mobile-menu-ghost-button.is-visible.is-placing {
   padding: 28px 0;
 }
 
+.contact-captcha-row {
+  min-height: 106px;
+}
+
 .contact-field-row > span:first-child {
   color: var(--color-muted-label);
   font: 400 12px/1 var(--mono);
@@ -982,13 +986,34 @@ body.is-mobile-menu-closing .mobile-menu-ghost-button.is-visible.is-placing {
 
 .contact-send-row {
   display: flex;
+  align-items: center;
+  gap: 16px;
   justify-content: flex-end;
   padding-top: 28px;
+}
+
+.contact-status {
+  color: var(--color-body-copy);
+  font: 400 12px/1.35 var(--sans);
+}
+
+.contact-status[data-state="success"] {
+  color: var(--color-muted-label);
+}
+
+.contact-status[data-state="error"] {
+  color: var(--color-brick-accent);
 }
 
 .contact-send-button {
   padding: 12px 16px;
   cursor: pointer;
+}
+
+.contact-send-button:not(:disabled):hover,
+.contact-send-button:not(:disabled):focus-visible {
+  background: var(--color-brick-accent);
+  color: var(--color-surface-white);
 }
 
 .contact-send-button:disabled {

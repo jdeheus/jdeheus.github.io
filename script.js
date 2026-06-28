@@ -168,6 +168,9 @@
             </div>
           </div>
           <form id="contactForm" class="contact-card" novalidate>
+            <input type="hidden" name="access_key" value="ae2afd08-3038-483e-a66b-3294619a1caa">
+            <input type="hidden" name="from_name" value="Portfolio contact form">
+            <input class="sr-only" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
             <span class="corner-mark" aria-hidden="true"></span>
             <div class="contact-form-heading">
               <h2>Get in touch.</h2>
@@ -183,9 +186,17 @@
                   <small id="contactMessageError" class="field-error" hidden>Please add a message.</small>
                 </span>
               </label>
+              <div class="contact-field-row contact-captcha-row">
+                <span>Verify</span>
+                <span class="field-stack">
+                  <div class="h-captcha" data-captcha="true"></div>
+                  <small id="contactCaptchaError" class="field-error" hidden>Please complete the verification.</small>
+                </span>
+              </div>
             </div>
             <div class="contact-send-row">
-              <button class="contact-send-button view-link" type="submit" disabled>SEND NOTE <span aria-hidden="true">-&gt;</span></button>
+              <span id="contactStatus" class="contact-status" role="status" aria-live="polite"></span>
+              <button class="contact-send-button view-link" type="submit" disabled>SEND MESSAGE <span aria-hidden="true">-&gt;</span></button>
             </div>
           </form>
         </section>
@@ -554,8 +565,19 @@
     const email = form.querySelector("#contactEmail");
     const message = form.querySelector("#contactMessage");
     const send = form.querySelector(".contact-send-button");
+    const status = form.querySelector("#contactStatus");
+    const captchaError = form.querySelector("#contactCaptchaError");
     const fields = [name, email, message];
     const storageKey = "jondeheus-contact-draft";
+    let isSubmitting = false;
+
+    if (!document.querySelector('script[src="https://web3forms.com/client/script.js"]')) {
+      const script = document.createElement("script");
+      script.src = "https://web3forms.com/client/script.js";
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
+    }
 
     try {
       const draft = JSON.parse(localStorage.getItem(storageKey) || "{}");
@@ -569,24 +591,67 @@
       toggleError(name, validName, showErrors);
       toggleError(email, validEmail, showErrors);
       toggleError(message, validMessage, showErrors);
-      send.disabled = !(validName && validEmail && validMessage);
+      send.disabled = isSubmitting || !(validName && validEmail && validMessage);
       return !send.disabled;
+    };
+
+    const setStatus = (text = "", type = "") => {
+      status.textContent = text;
+      status.dataset.state = type;
+    };
+
+    const setCaptchaError = (visible) => {
+      if (captchaError) captchaError.hidden = !visible;
     };
 
     fields.forEach((field) => {
       field.addEventListener("input", () => {
         localStorage.setItem(storageKey, JSON.stringify(Object.fromEntries(fields.map((f) => [f.name, f.value]))));
+        setStatus();
         validate(false);
       });
       field.addEventListener("blur", () => validate(true));
     });
 
-    form.addEventListener("submit", (event) => {
+    form.addEventListener("submit", async (event) => {
       event.preventDefault();
       if (!validate(true)) return;
-      const subject = encodeURIComponent(`Portfolio inquiry from ${name.value.trim()}`);
-      const body = encodeURIComponent(`Name: ${name.value.trim()}\nEmail: ${email.value.trim()}\n\n${message.value.trim()}`);
-      window.location.href = `mailto:${data.contact.mailto}?subject=${subject}&body=${body}`;
+      const captchaResponse = form.querySelector('[name="h-captcha-response"]')?.value || "";
+      if (!captchaResponse.trim()) {
+        setCaptchaError(true);
+        setStatus("Please complete the verification.", "error");
+        return;
+      }
+      setCaptchaError(false);
+      isSubmitting = true;
+      send.disabled = true;
+      setStatus("Sending...", "pending");
+
+      const formData = new FormData(form);
+      formData.append("subject", `New portfolio message from ${name.value.trim()}`);
+
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify(Object.fromEntries(formData))
+        });
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok || !result.success) {
+          throw new Error(result.message || "Message could not be sent.");
+        }
+        form.reset();
+        localStorage.removeItem(storageKey);
+        setStatus("Message sent.", "success");
+      } catch (_) {
+        setStatus("Message failed. Please try again.", "error");
+      } finally {
+        isSubmitting = false;
+        validate(false);
+      }
     });
 
     validate(false);
