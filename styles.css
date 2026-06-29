@@ -758,6 +758,14 @@ body.is-mobile-menu-closing .mobile-menu-ghost-button.is-visible.is-placing {
   gap: 32px;
 }
 
+.about-intro > .section-kicker,
+.contact-intake-copy .section-kicker {
+  color: var(--color-brick-accent);
+  font: 500 13px/1.2 var(--mono);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
 .about-portrait {
   margin: 0;
   overflow: hidden;
@@ -846,11 +854,6 @@ body.is-mobile-menu-closing .mobile-menu-ghost-button.is-visible.is-placing {
   gap: 32px;
 }
 
-.contact-intake-copy .section-kicker {
-  color: var(--color-brick-accent);
-  font: 400 13px/1.2 var(--mono);
-}
-
 .contact-intake-copy h1 {
   margin: 0;
   font: 600 78px/.98 var(--serif);
@@ -889,6 +892,83 @@ body.is-mobile-menu-closing .mobile-menu-ghost-button.is-visible.is-placing {
   padding: 34px;
 }
 
+.contact-card .corner-mark {
+  top: -21px;
+  right: -21px;
+  width: 26px;
+  height: 26px;
+}
+
+.contact-panel-content {
+  outline: 0;
+  transform-origin: 50% 44%;
+  transition:
+    opacity 260ms cubic-bezier(.22, 1, .36, 1),
+    transform 260ms cubic-bezier(.22, 1, .36, 1),
+    filter 260ms cubic-bezier(.22, 1, .36, 1);
+  will-change: opacity, transform, filter;
+}
+
+.contact-card.is-contact-panel-transitioning {
+  overflow: hidden;
+}
+
+.contact-card.is-contact-panel-transitioning .contact-panel-content {
+  pointer-events: none;
+}
+
+.contact-panel-content.is-contact-panel-exiting {
+  opacity: 0;
+  filter: blur(2px);
+  transform: translateY(-10px) scale(.985);
+}
+
+.contact-panel-content.is-contact-panel-entering {
+  opacity: 0;
+  filter: blur(1.5px);
+  transform: translateY(14px) scale(.985);
+}
+
+.contact-result-main {
+  transition:
+    opacity 220ms cubic-bezier(.22, 1, .36, 1),
+    transform 220ms cubic-bezier(.22, 1, .36, 1),
+    filter 220ms cubic-bezier(.22, 1, .36, 1);
+}
+
+.contact-result-main.is-contact-result-morph-exiting {
+  opacity: 0;
+  filter: blur(1px);
+  transform: translateY(4px) scale(.99);
+}
+
+.contact-result-main.is-contact-result-morph-entering {
+  opacity: 0;
+  filter: blur(1px);
+  transform: translateY(8px) scale(.99);
+}
+
+.contact-panel-content[data-contact-panel="success"] .contact-result-icon {
+  animation: contact-result-icon-pop 420ms cubic-bezier(.22, 1, .36, 1) both;
+}
+
+@keyframes contact-result-icon-pop {
+  0% {
+    opacity: 0;
+    transform: scale(.8);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .contact-form-heading {
   padding-bottom: 30px;
   border-bottom: 1px solid var(--color-field-border);
@@ -919,13 +999,14 @@ body.is-mobile-menu-closing .mobile-menu-ghost-button.is-visible.is-placing {
 }
 
 .contact-message-row {
-  min-height: 250px;
+  min-height: 0;
   align-items: start;
-  padding: 28px 0;
+  padding: 24px 0;
 }
 
 .contact-captcha-row {
-  min-height: 106px;
+  min-height: 0;
+  padding: 24px 0;
 }
 
 .contact-field-row > span:first-child {
@@ -957,15 +1038,9 @@ body.is-mobile-menu-closing .mobile-menu-ghost-button.is-visible.is-placing {
 }
 
 .contact-field-row textarea {
-  min-height: 220px;
+  min-height: 160px;
   padding: 12px;
   resize: vertical;
-}
-
-.contact-field-row input::placeholder,
-.contact-field-row textarea::placeholder {
-  color: var(--color-secondary-copy);
-  opacity: 1;
 }
 
 .contact-field-row input:focus,
@@ -1108,18 +1183,18 @@ body.is-mobile-menu-closing .mobile-menu-ghost-button.is-visible.is-placing {
 
 .contact-result-footer {
   position: absolute;
-  right: 34px;
-  bottom: 30px;
-  left: 34px;
-  height: 52px;
+  right: 0;
+  bottom: -99px;
+  left: 0;
+  height: 64px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: flex-end;
   border-top: 1px solid var(--color-field-border);
 }
 
 .contact-result-link {
-  padding: 12px 0 12px 16px;
+  padding: 12px 16px;
   border: 0;
   background: transparent;
   color: var(--color-brick-accent);
@@ -1166,7 +1241,9 @@ body.is-mobile-menu-closing .mobile-menu-ghost-button.is-visible.is-placing {
 }
 
 .contact-send-button:not(:disabled):hover,
-.contact-send-button:not(:disabled):focus-visible {
+.contact-send-button:not(:disabled):focus-visible,
+.contact-result-link:not(:disabled):hover,
+.contact-result-link:not(:disabled):focus-visible {
   background: var(--color-brick-accent);
   color: var(--color-surface-white);
 }

@@ -175,80 +175,86 @@
 
   function contactFormPanelMarkup() {
     return `
-      <input type="hidden" name="access_key" value="ae2afd08-3038-483e-a66b-3294619a1caa">
-      <input type="hidden" name="from_name" value="Portfolio contact form">
-      <input class="sr-only" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <span class="corner-mark" aria-hidden="true"></span>
-      <div class="contact-form-heading">
-        <h2>Get in touch.</h2>
-        <p>All fields are required.</p>
-      </div>
-      <div class="contact-form-rows">
-        ${contactField("contactName", "Name", "text", "Please enter your name.")}
-        ${contactField("contactEmail", "Email", "email", "Add your email so I can reply back.")}
-        <label class="contact-field-row contact-message-row">
-          <span>Message</span>
-          <span class="field-stack">
-            <textarea id="contactMessage" name="message" aria-describedby="contactMessageError"></textarea>
-            <small id="contactMessageError" class="field-error" hidden>Please add a message.</small>
-          </span>
-        </label>
-        <div class="contact-field-row contact-captcha-row">
-          <span>Verify</span>
-          <span class="field-stack">
-            <div class="h-captcha" data-captcha="true"></div>
-            <small id="contactCaptchaError" class="field-error" hidden>Please complete the verification.</small>
-          </span>
+      <div class="contact-panel-content" data-contact-panel="form" tabindex="-1">
+        <input type="hidden" name="access_key" value="ae2afd08-3038-483e-a66b-3294619a1caa">
+        <input type="hidden" name="from_name" value="Portfolio contact form">
+        <input class="sr-only" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <span class="corner-mark" aria-hidden="true"></span>
+        <div class="contact-form-heading">
+          <h2>Get in touch.</h2>
+          <p>All fields are required.</p>
         </div>
-      </div>
-      <div class="contact-send-row">
-        <span id="contactStatus" class="contact-status" role="status" aria-live="polite"></span>
-        <button class="contact-send-button view-link" type="submit" disabled>SEND MESSAGE <span aria-hidden="true">-&gt;</span></button>
+        <div class="contact-form-rows">
+          ${contactField("contactName", "Name", "text", "Please enter your name.")}
+          ${contactField("contactEmail", "Email", "email", "Add your email so I can reply back.")}
+          <label class="contact-field-row contact-message-row">
+            <span>Message</span>
+            <span class="field-stack">
+              <textarea id="contactMessage" name="message" aria-describedby="contactMessageError"></textarea>
+              <small id="contactMessageError" class="field-error" hidden>Please add a message.</small>
+            </span>
+          </label>
+          <div class="contact-field-row contact-captcha-row">
+            <span>Verify</span>
+            <span class="field-stack">
+              <div class="h-captcha" data-captcha="true"></div>
+              <small id="contactCaptchaError" class="field-error" hidden>Please complete the verification.</small>
+            </span>
+          </div>
+        </div>
+        <div class="contact-send-row">
+          <span id="contactStatus" class="contact-status" role="status" aria-live="polite"></span>
+          <button class="contact-send-button view-link" type="submit" disabled>SEND MESSAGE <span aria-hidden="true">-&gt;</span></button>
+        </div>
       </div>`;
   }
 
   function contactSuccessPanelMarkup() {
     return `
-      <span class="corner-mark" aria-hidden="true"></span>
-      <div class="contact-result contact-result-success">
-        <div class="contact-result-main">
-          <span class="contact-result-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" focusable="false">
-              <path d="M5 12.5l4.2 4.2L19 7" />
-            </svg>
-          </span>
-          <div class="contact-result-copy">
-            <p class="contact-result-kicker">Message sent</p>
-            <h2>You’re all set.</h2>
-            <p>Thanks for the message! I appreciate you reaching out, and will get back to you ASAP.</p>
+      <div class="contact-panel-content" data-contact-panel="success" tabindex="-1">
+        <span class="corner-mark" aria-hidden="true"></span>
+        <div class="contact-result contact-result-success">
+          <div class="contact-result-main">
+            <span class="contact-result-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M5 12.5l4.2 4.2L19 7" />
+              </svg>
+            </span>
+            <div class="contact-result-copy">
+              <p class="contact-result-kicker">Message sent</p>
+              <h2>You’re all set.</h2>
+              <p>Thanks for the message! I appreciate you reaching out, and will get back to you ASAP.</p>
+            </div>
           </div>
-        </div>
-        <div class="contact-result-footer">
-          <button class="contact-result-link view-link" type="button" data-contact-reset>WRITE ANOTHER MESSAGE <span aria-hidden="true">-&gt;</span></button>
+          <div class="contact-result-footer">
+            <button class="contact-result-link view-link" type="button" data-contact-reset>WRITE ANOTHER MESSAGE <span aria-hidden="true">-&gt;</span></button>
+          </div>
         </div>
       </div>`;
   }
 
   function contactErrorPanelMarkup(_, linkedinUrl) {
     return `
-      <span class="corner-mark" aria-hidden="true"></span>
-      <div class="contact-result contact-result-error">
-        <div class="contact-result-main">
-          <span class="contact-result-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" focusable="false">
-              <path d="M7 7l10 10M17 7L7 17" />
-            </svg>
-          </span>
-          <div class="contact-result-copy">
-            <p class="contact-result-kicker">Message failed</p>
-            <h2>Couldn’t send.</h2>
-            <p>Something went wrong and your message couldn't be sent. Please try again, or message me on LinkedIn if it continues to fail.</p>
+      <div class="contact-panel-content" data-contact-panel="error" tabindex="-1">
+        <span class="corner-mark" aria-hidden="true"></span>
+        <div class="contact-result contact-result-error">
+          <div class="contact-result-main">
+            <span class="contact-result-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M7 7l10 10M17 7L7 17" />
+              </svg>
+            </span>
+            <div class="contact-result-copy">
+              <p class="contact-result-kicker">Message failed</p>
+              <h2>Couldn’t send.</h2>
+              <p>Something went wrong and your message couldn't be sent. Please try again, or message me on LinkedIn if it continues to fail.</p>
+            </div>
+            <div class="contact-result-actions">
+              <button class="contact-result-pill contact-result-pill-primary" type="button" data-contact-retry>TRY AGAIN</button>
+              <a class="contact-result-pill contact-result-pill-secondary" href="${linkedinUrl}" target="_blank" rel="noreferrer">MESSAGE ON LINKEDIN</a>
+            </div>
+            <span class="contact-status" data-contact-retry-status role="status" aria-live="polite"></span>
           </div>
-          <div class="contact-result-actions">
-            <button class="contact-result-pill contact-result-pill-primary" type="button" data-contact-retry>TRY AGAIN</button>
-            <a class="contact-result-pill contact-result-pill-secondary" href="${linkedinUrl}" target="_blank" rel="noreferrer">MESSAGE ON LINKEDIN</a>
-          </div>
-          <span class="contact-status" data-contact-retry-status role="status" aria-live="polite"></span>
         </div>
       </div>`;
   }
@@ -610,11 +616,17 @@
   function initContactForm() {
     const form = document.getElementById("contactForm");
     if (!form) return;
-    const storageKey = "jondeheus-contact-draft";
     const linkedinUrl = data.nav.find((item) => item.icon === "linkedin")?.href || "https://www.linkedin.com/in/jdeheus";
     let lastSubmission = null;
+    let isPanelTransitioning = false;
+    const localHosts = new Set(["localhost", "127.0.0.1", "::1"]);
+    const isLocalContactPage = window.location.protocol === "file:" || localHosts.has(window.location.hostname);
+    const contactMockMode = isLocalContactPage
+      ? new URLSearchParams(window.location.search).get("contactMock")
+      : "";
+    const shouldMockContact = contactMockMode === "success" || contactMockMode === "error";
 
-    if (!document.querySelector('script[src="https://web3forms.com/client/script.js"]')) {
+    if (!shouldMockContact && !document.querySelector('script[src="https://web3forms.com/client/script.js"]')) {
       const script = document.createElement("script");
       script.src = "https://web3forms.com/client/script.js";
       script.async = true;
@@ -622,21 +634,168 @@
       document.body.appendChild(script);
     }
 
-    const showFormPanel = () => {
-      form.innerHTML = contactFormPanelMarkup();
-      bindFormPanel();
+    const prefersReducedPanelMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const waitForPanelMotion = (element, duration = 260) => new Promise((resolve) => {
+      let done = false;
+      const finish = () => {
+        if (done) return;
+        done = true;
+        element?.removeEventListener("transitionend", finish);
+        resolve();
+      };
+      element?.addEventListener("transitionend", finish, { once: true });
+      window.setTimeout(finish, duration + 80);
+    });
+
+    const setPanelControlsDisabled = (disabled) => {
+      form.querySelectorAll("button, input, textarea").forEach((control) => {
+        control.disabled = disabled;
+      });
+      form.querySelectorAll("a").forEach((link) => {
+        link.toggleAttribute("aria-disabled", disabled);
+        if (disabled) {
+          link.dataset.previousTabIndex = link.getAttribute("tabindex") || "";
+          link.setAttribute("tabindex", "-1");
+        } else if (link.dataset.previousTabIndex) {
+          link.setAttribute("tabindex", link.dataset.previousTabIndex);
+          delete link.dataset.previousTabIndex;
+        } else {
+          link.removeAttribute("tabindex");
+          delete link.dataset.previousTabIndex;
+        }
+      });
     };
 
-    const showSuccessPanel = () => {
+    const focusCurrentPanel = () => {
+      form.querySelector("[data-contact-panel]")?.focus({ preventScroll: true });
+    };
+
+    const prepareCaptchaMount = () => {
+      const captcha = form.querySelector("[data-captcha]");
+      if (!captcha || captcha.querySelector("iframe")) return;
+      if (window.hcaptcha?.render) {
+        try {
+          window.hcaptcha.render(captcha);
+        } catch (_) {}
+      }
+    };
+
+    const replaceContactPanel = async (markup, afterSwap, options = {}) => {
+      const currentPanel = form.querySelector("[data-contact-panel]");
+      const shouldAnimate = !prefersReducedPanelMotion() && currentPanel;
+      const shouldFocus = options.focus !== false;
+      const persistShellHeight = options.persistShellHeight === true;
+
+      if (isPanelTransitioning) return false;
+      isPanelTransitioning = true;
+      form.setAttribute("aria-busy", "true");
+      setPanelControlsDisabled(true);
+
+      const currentHeight = Math.ceil(form.getBoundingClientRect().height);
+      form.style.minHeight = `${currentHeight}px`;
+
+      if (!shouldAnimate) {
+        form.innerHTML = markup;
+        afterSwap?.();
+        form.removeAttribute("aria-busy");
+        form.style.minHeight = persistShellHeight ? `${currentHeight}px` : "";
+        isPanelTransitioning = false;
+        if (shouldFocus) focusCurrentPanel();
+        return true;
+      }
+
+      form.classList.add("is-contact-panel-transitioning");
+      currentPanel.inert = true;
+      currentPanel.classList.add("is-contact-panel-exiting");
+      await waitForPanelMotion(currentPanel, 260);
+
+      form.innerHTML = markup;
+      afterSwap?.();
+      const nextPanel = form.querySelector("[data-contact-panel]");
+      if (nextPanel) nextPanel.inert = true;
+      nextPanel?.classList.add("is-contact-panel-entering");
+      nextPanel?.getBoundingClientRect();
+      requestAnimationFrame(() => {
+        nextPanel?.classList.remove("is-contact-panel-entering");
+      });
+      await waitForPanelMotion(nextPanel, 320);
+
+      form.classList.remove("is-contact-panel-transitioning");
+      form.removeAttribute("aria-busy");
+      form.style.minHeight = persistShellHeight ? `${currentHeight}px` : "";
+      if (nextPanel) nextPanel.inert = false;
+      isPanelTransitioning = false;
+      if (shouldFocus) focusCurrentPanel();
+      return true;
+    };
+
+    const morphResultToSuccess = async () => {
+      const currentResult = form.querySelector(".contact-result-main");
+      const shouldAnimate = !prefersReducedPanelMotion() && currentResult;
+
+      if (isPanelTransitioning) return false;
+      isPanelTransitioning = true;
+      form.setAttribute("aria-busy", "true");
+      setPanelControlsDisabled(true);
+      currentResult.inert = true;
+
+      if (!shouldAnimate) {
+        form.innerHTML = contactSuccessPanelMarkup();
+        bindSuccessPanel();
+        form.removeAttribute("aria-busy");
+        isPanelTransitioning = false;
+        focusCurrentPanel();
+        return true;
+      }
+
+      currentResult.classList.add("is-contact-result-morph-exiting");
+      await waitForPanelMotion(currentResult, 180);
+
       form.innerHTML = contactSuccessPanelMarkup();
+      bindSuccessPanel();
+      const nextResult = form.querySelector(".contact-result-main");
+      if (nextResult) nextResult.inert = true;
+      nextResult?.classList.add("is-contact-result-morph-entering");
+      nextResult?.getBoundingClientRect();
+      requestAnimationFrame(() => {
+        nextResult?.classList.remove("is-contact-result-morph-entering");
+      });
+      await waitForPanelMotion(nextResult, 240);
+
+      form.removeAttribute("aria-busy");
+      if (nextResult) nextResult.inert = false;
+      isPanelTransitioning = false;
+      focusCurrentPanel();
+      return true;
+    };
+
+    const bindSuccessPanel = () => {
+      form.onsubmit = null;
       form.querySelector("[data-contact-reset]")?.addEventListener("click", showFormPanel);
     };
 
-    const showErrorPanel = (message) => {
-      form.innerHTML = contactErrorPanelMarkup(message, linkedinUrl);
+    const bindErrorPanel = () => {
+      form.onsubmit = null;
       form.querySelector("[data-contact-retry]")?.addEventListener("click", () => {
-        if (lastSubmission) submitPayload(lastSubmission, true);
+        if (!lastSubmission || isPanelTransitioning) return;
+        submitPayload(lastSubmission, true);
       });
+    };
+
+    const showFormPanel = () => {
+      return replaceContactPanel(contactFormPanelMarkup(), () => {
+        bindFormPanel();
+        prepareCaptchaMount();
+      });
+    };
+
+    const showSuccessPanel = () => {
+      return replaceContactPanel(contactSuccessPanelMarkup(), bindSuccessPanel, { persistShellHeight: true });
+    };
+
+    const showErrorPanel = (message) => {
+      return replaceContactPanel(contactErrorPanelMarkup(message, linkedinUrl), bindErrorPanel, { persistShellHeight: true });
     };
 
     const submitPayload = async (payload, isRetry = false) => {
@@ -646,6 +805,20 @@
       if (retryStatus && isRetry) retryStatus.textContent = "Trying again...";
 
       try {
+        if (contactMockMode === "success") {
+          await new Promise((resolve) => window.setTimeout(resolve, 350));
+          lastSubmission = null;
+          if (isRetry) {
+            await morphResultToSuccess();
+          } else {
+            await showSuccessPanel();
+          }
+          return;
+        }
+        if (contactMockMode === "error") {
+          await new Promise((resolve) => window.setTimeout(resolve, 350));
+          throw new Error("Local mock failure. Try again, or message me on LinkedIn.");
+        }
         const response = await fetch("https://api.web3forms.com/submit", {
           method: "POST",
           headers: {
@@ -658,11 +831,14 @@
         if (!response.ok || !result.success) {
           throw new Error(result.message || "Your message did not send. Try again, or message me on LinkedIn.");
         }
-        localStorage.removeItem(storageKey);
         lastSubmission = null;
-        showSuccessPanel();
+        if (isRetry) {
+          await morphResultToSuccess();
+        } else {
+          await showSuccessPanel();
+        }
       } catch (error) {
-        showErrorPanel(error.message || "Your message did not send. Try again, or message me on LinkedIn.");
+        await showErrorPanel(error.message || "Your message did not send. Try again, or message me on LinkedIn.");
       }
     };
 
@@ -675,11 +851,6 @@
       const captchaError = form.querySelector("#contactCaptchaError");
       const fields = [name, email, message];
       let isSubmitting = false;
-
-      try {
-        const draft = JSON.parse(localStorage.getItem(storageKey) || "{}");
-        fields.forEach((field) => { if (draft[field.name]) field.value = draft[field.name]; });
-      } catch (_) {}
 
       const validate = (showErrors = false) => {
         const validName = name.value.trim().length > 0;
@@ -703,7 +874,6 @@
 
       fields.forEach((field) => {
         field.addEventListener("input", () => {
-          localStorage.setItem(storageKey, JSON.stringify(Object.fromEntries(fields.map((f) => [f.name, f.value]))));
           setStatus();
           validate(false);
         });
@@ -712,9 +882,10 @@
 
       form.onsubmit = async (event) => {
         event.preventDefault();
+        if (isPanelTransitioning || isSubmitting) return;
         if (!validate(true)) return;
         const captchaResponse = form.querySelector('[name="h-captcha-response"]')?.value || "";
-        if (!captchaResponse.trim()) {
+        if (!shouldMockContact && !captchaResponse.trim()) {
           setCaptchaError(true);
           setStatus("Please complete the verification.", "error");
           return;
