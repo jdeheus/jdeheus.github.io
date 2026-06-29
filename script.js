@@ -167,41 +167,90 @@
               ${data.contact.reasons.map((reason, index) => `<div class="contact-reason"><span>${String(index + 1).padStart(2, "0")}</span><strong>${escapeHtml(reason)}</strong></div>`).join("")}
             </div>
           </div>
-          <form id="contactForm" class="contact-card" novalidate>
-            <input type="hidden" name="access_key" value="ae2afd08-3038-483e-a66b-3294619a1caa">
-            <input type="hidden" name="from_name" value="Portfolio contact form">
-            <input class="sr-only" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <span class="corner-mark" aria-hidden="true"></span>
-            <div class="contact-form-heading">
-              <h2>Get in touch.</h2>
-              <p>All fields are required.</p>
-            </div>
-            <div class="contact-form-rows">
-              ${contactField("contactName", "Name", "text", "Please enter your name.")}
-              ${contactField("contactEmail", "Email", "email", "Add your email so I can reply back.")}
-              <label class="contact-field-row contact-message-row">
-                <span>Message</span>
-                <span class="field-stack">
-                  <textarea id="contactMessage" name="message" aria-describedby="contactMessageError"></textarea>
-                  <small id="contactMessageError" class="field-error" hidden>Please add a message.</small>
-                </span>
-              </label>
-              <div class="contact-field-row contact-captcha-row">
-                <span>Verify</span>
-                <span class="field-stack">
-                  <div class="h-captcha" data-captcha="true"></div>
-                  <small id="contactCaptchaError" class="field-error" hidden>Please complete the verification.</small>
-                </span>
-              </div>
-            </div>
-            <div class="contact-send-row">
-              <span id="contactStatus" class="contact-status" role="status" aria-live="polite"></span>
-              <button class="contact-send-button view-link" type="submit" disabled>SEND MESSAGE <span aria-hidden="true">-&gt;</span></button>
-            </div>
-          </form>
+          <form id="contactForm" class="contact-card" novalidate>${contactFormPanelMarkup()}</form>
         </section>
       </main>`, "contact");
     initContactForm();
+  }
+
+  function contactFormPanelMarkup() {
+    return `
+      <input type="hidden" name="access_key" value="ae2afd08-3038-483e-a66b-3294619a1caa">
+      <input type="hidden" name="from_name" value="Portfolio contact form">
+      <input class="sr-only" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <span class="corner-mark" aria-hidden="true"></span>
+      <div class="contact-form-heading">
+        <h2>Get in touch.</h2>
+        <p>All fields are required.</p>
+      </div>
+      <div class="contact-form-rows">
+        ${contactField("contactName", "Name", "text", "Please enter your name.")}
+        ${contactField("contactEmail", "Email", "email", "Add your email so I can reply back.")}
+        <label class="contact-field-row contact-message-row">
+          <span>Message</span>
+          <span class="field-stack">
+            <textarea id="contactMessage" name="message" aria-describedby="contactMessageError"></textarea>
+            <small id="contactMessageError" class="field-error" hidden>Please add a message.</small>
+          </span>
+        </label>
+        <div class="contact-field-row contact-captcha-row">
+          <span>Verify</span>
+          <span class="field-stack">
+            <div class="h-captcha" data-captcha="true"></div>
+            <small id="contactCaptchaError" class="field-error" hidden>Please complete the verification.</small>
+          </span>
+        </div>
+      </div>
+      <div class="contact-send-row">
+        <span id="contactStatus" class="contact-status" role="status" aria-live="polite"></span>
+        <button class="contact-send-button view-link" type="submit" disabled>SEND MESSAGE <span aria-hidden="true">-&gt;</span></button>
+      </div>`;
+  }
+
+  function contactSuccessPanelMarkup() {
+    return `
+      <span class="corner-mark" aria-hidden="true"></span>
+      <div class="contact-result contact-result-success">
+        <div class="contact-result-main">
+          <span class="contact-result-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M5 12.5l4.2 4.2L19 7" />
+            </svg>
+          </span>
+          <div class="contact-result-copy">
+            <p class="contact-result-kicker">Message sent</p>
+            <h2>You’re all set.</h2>
+            <p>Thanks for the message! I appreciate you reaching out, and will get back to you ASAP.</p>
+          </div>
+        </div>
+        <div class="contact-result-footer">
+          <button class="contact-result-link view-link" type="button" data-contact-reset>WRITE ANOTHER MESSAGE <span aria-hidden="true">-&gt;</span></button>
+        </div>
+      </div>`;
+  }
+
+  function contactErrorPanelMarkup(_, linkedinUrl) {
+    return `
+      <span class="corner-mark" aria-hidden="true"></span>
+      <div class="contact-result contact-result-error">
+        <div class="contact-result-main">
+          <span class="contact-result-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M7 7l10 10M17 7L7 17" />
+            </svg>
+          </span>
+          <div class="contact-result-copy">
+            <p class="contact-result-kicker">Message failed</p>
+            <h2>Couldn’t send.</h2>
+            <p>Something went wrong and your message couldn't be sent. Please try again, or message me on LinkedIn if it continues to fail.</p>
+          </div>
+          <div class="contact-result-actions">
+            <button class="contact-result-pill contact-result-pill-primary" type="button" data-contact-retry>TRY AGAIN</button>
+            <a class="contact-result-pill contact-result-pill-secondary" href="${linkedinUrl}" target="_blank" rel="noreferrer">MESSAGE ON LINKEDIN</a>
+          </div>
+          <span class="contact-status" data-contact-retry-status role="status" aria-live="polite"></span>
+        </div>
+      </div>`;
   }
 
   function contactField(id, label, type, error) {
@@ -561,15 +610,9 @@
   function initContactForm() {
     const form = document.getElementById("contactForm");
     if (!form) return;
-    const name = form.querySelector("#contactName");
-    const email = form.querySelector("#contactEmail");
-    const message = form.querySelector("#contactMessage");
-    const send = form.querySelector(".contact-send-button");
-    const status = form.querySelector("#contactStatus");
-    const captchaError = form.querySelector("#contactCaptchaError");
-    const fields = [name, email, message];
     const storageKey = "jondeheus-contact-draft";
-    let isSubmitting = false;
+    const linkedinUrl = data.nav.find((item) => item.icon === "linkedin")?.href || "https://www.linkedin.com/in/jdeheus";
+    let lastSubmission = null;
 
     if (!document.querySelector('script[src="https://web3forms.com/client/script.js"]')) {
       const script = document.createElement("script");
@@ -579,56 +622,28 @@
       document.body.appendChild(script);
     }
 
-    try {
-      const draft = JSON.parse(localStorage.getItem(storageKey) || "{}");
-      fields.forEach((field) => { if (draft[field.name]) field.value = draft[field.name]; });
-    } catch (_) {}
-
-    const validate = (showErrors = false) => {
-      const validName = name.value.trim().length > 0;
-      const validEmail = email.validity.valid && email.value.trim().length > 0;
-      const validMessage = message.value.trim().length > 0;
-      toggleError(name, validName, showErrors);
-      toggleError(email, validEmail, showErrors);
-      toggleError(message, validMessage, showErrors);
-      send.disabled = isSubmitting || !(validName && validEmail && validMessage);
-      return !send.disabled;
+    const showFormPanel = () => {
+      form.innerHTML = contactFormPanelMarkup();
+      bindFormPanel();
     };
 
-    const setStatus = (text = "", type = "") => {
-      status.textContent = text;
-      status.dataset.state = type;
+    const showSuccessPanel = () => {
+      form.innerHTML = contactSuccessPanelMarkup();
+      form.querySelector("[data-contact-reset]")?.addEventListener("click", showFormPanel);
     };
 
-    const setCaptchaError = (visible) => {
-      if (captchaError) captchaError.hidden = !visible;
-    };
-
-    fields.forEach((field) => {
-      field.addEventListener("input", () => {
-        localStorage.setItem(storageKey, JSON.stringify(Object.fromEntries(fields.map((f) => [f.name, f.value]))));
-        setStatus();
-        validate(false);
+    const showErrorPanel = (message) => {
+      form.innerHTML = contactErrorPanelMarkup(message, linkedinUrl);
+      form.querySelector("[data-contact-retry]")?.addEventListener("click", () => {
+        if (lastSubmission) submitPayload(lastSubmission, true);
       });
-      field.addEventListener("blur", () => validate(true));
-    });
+    };
 
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      if (!validate(true)) return;
-      const captchaResponse = form.querySelector('[name="h-captcha-response"]')?.value || "";
-      if (!captchaResponse.trim()) {
-        setCaptchaError(true);
-        setStatus("Please complete the verification.", "error");
-        return;
-      }
-      setCaptchaError(false);
-      isSubmitting = true;
-      send.disabled = true;
-      setStatus("Sending...", "pending");
-
-      const formData = new FormData(form);
-      formData.append("subject", `New portfolio message from ${name.value.trim()}`);
+    const submitPayload = async (payload, isRetry = false) => {
+      const retryButton = form.querySelector("[data-contact-retry]");
+      const retryStatus = form.querySelector("[data-contact-retry-status]");
+      if (retryButton) retryButton.disabled = true;
+      if (retryStatus && isRetry) retryStatus.textContent = "Trying again...";
 
       try {
         const response = await fetch("https://api.web3forms.com/submit", {
@@ -637,24 +652,89 @@
             "Content-Type": "application/json",
             "Accept": "application/json"
           },
-          body: JSON.stringify(Object.fromEntries(formData))
+          body: JSON.stringify(payload)
         });
         const result = await response.json().catch(() => ({}));
         if (!response.ok || !result.success) {
-          throw new Error(result.message || "Message could not be sent.");
+          throw new Error(result.message || "Your message did not send. Try again, or message me on LinkedIn.");
         }
-        form.reset();
         localStorage.removeItem(storageKey);
-        setStatus("Message sent.", "success");
-      } catch (_) {
-        setStatus("Message failed. Please try again.", "error");
-      } finally {
-        isSubmitting = false;
-        validate(false);
+        lastSubmission = null;
+        showSuccessPanel();
+      } catch (error) {
+        showErrorPanel(error.message || "Your message did not send. Try again, or message me on LinkedIn.");
       }
-    });
+    };
 
-    validate(false);
+    const bindFormPanel = () => {
+      const name = form.querySelector("#contactName");
+      const email = form.querySelector("#contactEmail");
+      const message = form.querySelector("#contactMessage");
+      const send = form.querySelector(".contact-send-button");
+      const status = form.querySelector("#contactStatus");
+      const captchaError = form.querySelector("#contactCaptchaError");
+      const fields = [name, email, message];
+      let isSubmitting = false;
+
+      try {
+        const draft = JSON.parse(localStorage.getItem(storageKey) || "{}");
+        fields.forEach((field) => { if (draft[field.name]) field.value = draft[field.name]; });
+      } catch (_) {}
+
+      const validate = (showErrors = false) => {
+        const validName = name.value.trim().length > 0;
+        const validEmail = email.validity.valid && email.value.trim().length > 0;
+        const validMessage = message.value.trim().length > 0;
+        toggleError(name, validName, showErrors);
+        toggleError(email, validEmail, showErrors);
+        toggleError(message, validMessage, showErrors);
+        send.disabled = isSubmitting || !(validName && validEmail && validMessage);
+        return !send.disabled;
+      };
+
+      const setStatus = (text = "", type = "") => {
+        status.textContent = text;
+        status.dataset.state = type;
+      };
+
+      const setCaptchaError = (visible) => {
+        if (captchaError) captchaError.hidden = !visible;
+      };
+
+      fields.forEach((field) => {
+        field.addEventListener("input", () => {
+          localStorage.setItem(storageKey, JSON.stringify(Object.fromEntries(fields.map((f) => [f.name, f.value]))));
+          setStatus();
+          validate(false);
+        });
+        field.addEventListener("blur", () => validate(true));
+      });
+
+      form.onsubmit = async (event) => {
+        event.preventDefault();
+        if (!validate(true)) return;
+        const captchaResponse = form.querySelector('[name="h-captcha-response"]')?.value || "";
+        if (!captchaResponse.trim()) {
+          setCaptchaError(true);
+          setStatus("Please complete the verification.", "error");
+          return;
+        }
+        setCaptchaError(false);
+        isSubmitting = true;
+        send.disabled = true;
+        setStatus("Sending...", "pending");
+
+        const formData = new FormData(form);
+        formData.append("subject", `New portfolio message from ${name.value.trim()}`);
+        lastSubmission = Object.fromEntries(formData);
+        await submitPayload(lastSubmission);
+        isSubmitting = false;
+      };
+
+      validate(false);
+    };
+
+    bindFormPanel();
   }
 
   function toggleError(field, valid, show) {

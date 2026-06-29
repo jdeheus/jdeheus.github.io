@@ -728,7 +728,9 @@ body.is-mobile-menu-closing .mobile-menu-ghost-button.is-visible.is-placing {
 .case-row:hover .view-link span,
 .case-row:focus-visible .view-link span,
 .contact-send-button:not(:disabled):hover span,
-.contact-send-button:not(:disabled):focus-visible span {
+.contact-send-button:not(:disabled):focus-visible span,
+.contact-result-link:not(:disabled):hover span,
+.contact-result-link:not(:disabled):focus-visible span {
   transform: translateX(3px);
 }
 
@@ -1003,6 +1005,159 @@ body.is-mobile-menu-closing .mobile-menu-ghost-button.is-visible.is-placing {
 
 .contact-status[data-state="error"] {
   color: var(--color-brick-accent);
+}
+
+.contact-result {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 32px 34px 30px;
+  text-align: center;
+}
+
+.contact-result-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.contact-result-error .contact-result-main {
+  gap: 24px;
+}
+
+.contact-result-icon {
+  width: 86px;
+  height: 86px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: var(--radius-pill);
+  background: var(--color-brick-accent);
+}
+
+.contact-result-icon svg {
+  width: 42px;
+  height: 42px;
+  display: block;
+}
+
+.contact-result-icon path {
+  fill: none;
+  stroke: var(--color-surface-white);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contact-result-copy {
+  max-width: 462px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-result-error .contact-result-copy {
+  max-width: 390px;
+}
+
+.contact-result-kicker {
+  margin: 0;
+  color: var(--color-brick-accent);
+  font: 500 13px/18px var(--mono);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.contact-result h2 {
+  margin: 0;
+  color: var(--color-ink);
+  font: 600 58px/62px var(--serif);
+}
+
+.contact-result-error h2 {
+  font-size: 55px;
+  line-height: 60px;
+}
+
+.contact-result-copy > p:not(.contact-result-kicker) {
+  margin: 0;
+  color: var(--color-body-copy);
+  font: 400 17px/27px var(--sans);
+}
+
+.contact-result-error .contact-result-copy > p:not(.contact-result-kicker) {
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.contact-result-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding-top: 2px;
+}
+
+.contact-result-footer {
+  position: absolute;
+  right: 34px;
+  bottom: 30px;
+  left: 34px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-top: 1px solid var(--color-field-border);
+}
+
+.contact-result-link {
+  padding: 12px 0 12px 16px;
+  border: 0;
+  background: transparent;
+  color: var(--color-brick-accent);
+  cursor: pointer;
+  font: 600 13px/18px var(--mono);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.contact-result-pill {
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  font: 600 12px/16px var(--mono);
+  letter-spacing: .08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.contact-result-pill-primary {
+  border: 1px solid var(--color-brick-accent);
+  background: var(--color-brick-accent);
+  color: var(--color-surface-white);
+}
+
+.contact-result-pill-secondary {
+  border: 1px solid var(--color-field-border);
+  background: var(--color-surface-white);
+  color: var(--color-brick-accent);
+}
+
+.contact-result-pill:disabled {
+  cursor: wait;
+  opacity: .6;
 }
 
 .contact-send-button {
@@ -1859,6 +2014,40 @@ body.has-visible-header .process-card {
 
   .contact-field-row textarea {
     min-height: 220px;
+  }
+
+  .contact-result {
+    min-height: 500px;
+    padding: 38px 0 28px;
+  }
+
+  .contact-result h2 {
+    font-size: 44px;
+    line-height: 48px;
+  }
+
+  .contact-result-error h2 {
+    font-size: 42px;
+    line-height: 46px;
+  }
+
+  .contact-result-copy,
+  .contact-result-error .contact-result-copy {
+    max-width: 100%;
+  }
+
+  .contact-result-actions {
+    width: 100%;
+  }
+
+  .contact-result-pill {
+    max-width: 100%;
+  }
+
+  .contact-result-footer {
+    right: 0;
+    left: 0;
+    bottom: 20px;
   }
 
   .mobile-anchor-dropdown {
