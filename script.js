@@ -351,6 +351,13 @@
       </section>`;
   }
 
+  function getMediaDimensions(src) {
+    const marker = "assets/images/";
+    const index = src.indexOf(marker);
+    const key = index >= 0 ? src.slice(index + marker.length) : src;
+    return window.MEDIA_DIMENSIONS?.[key] || null;
+  }
+
   function renderMedia(item) {
     if (item.type === "embed") {
       return `
@@ -362,9 +369,13 @@
 
     const src = item.src || item.fallback;
     const fallbackAttr = item.fallback ? ` onerror="this.onerror=null;this.src='${item.fallback}'"` : "";
+    const dimensions = getMediaDimensions(src);
+    const dimensionAttrs = dimensions
+      ? ` data-pswp-width="${dimensions.width}" data-pswp-height="${dimensions.height}"`
+      : "";
     return `
       <figure class="media-card ${item.wide ? "wide" : ""} ${item.squareOnTablet ? "square-tablet" : ""}">
-        <a class="media-link pswp-gallery__item" href="${src}" data-caption="${escapeHtml(item.caption)}">
+        <a class="media-link pswp-gallery__item" href="${src}"${dimensionAttrs} data-caption="${escapeHtml(item.caption)}">
           <img src="${src}" alt="${escapeHtml(item.caption)}"${fallbackAttr} loading="lazy">
         </a>
         <figcaption class="media-caption">${escapeHtml(item.caption)}</figcaption>

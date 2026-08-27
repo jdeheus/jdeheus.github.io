@@ -6,6 +6,35 @@
 
   const remote = (path) => `${LIVE}${path}`;
 
+  const MEDIA_DIMENSIONS = {
+    "PWC/pwc-current-link-reference.png": { width: 2618, height: 806 },
+    "PWC/pwc-proposed-link-reference.png": { width: 1882, height: 608 },
+    "PWC/pwc-activity-screen.png": { width: 2160, height: 1536 },
+    "PWC/pwc-figma-make-1.jpg": { width: 1711, height: 944 },
+    "PWC/pwc-initial-flow.jpg": { width: 6216, height: 1228 },
+    "PWC/pwc-old-work-order-list.png": { width: 3440, height: 1814 },
+    "PWC/pwc-proposed-overview.png": { width: 1440, height: 1024 },
+    "benchmarking/clinical-automation-hero.png": { width: 1672, height: 941 },
+    "benchmarking/flow.png": { width: 3495, height: 2872 },
+    "benchmarking/sc-day1.png": { width: 6919, height: 3432 },
+    "benchmarking/sc-day2.png": { width: 6644, height: 3374 },
+    "ford/desktop.png": { width: 2192, height: 1516 },
+    "ford/final-wireframe.jpg": { width: 1440, height: 1024 },
+    "ford/mobile.png": { width: 3132, height: 1800 },
+    "onengine/aqua-preview.jpg": { width: 1729, height: 997 },
+    "onengine/deepai-flow.jpg": { width: 6216, height: 1167 },
+    "onengine/elie.jpg": { width: 1849, height: 1080 },
+    "onengine/work-orders-wireframe.jpg": { width: 1440, height: 1024 },
+    "scorecards/med-visibility-nn.png": { width: 1777, height: 1331 },
+    "scorecards/pharm-metrics-after.png": { width: 1280, height: 2527 },
+    "scorecards/pharm-metrics-before.png": { width: 1280, height: 2151 },
+    "scorecards/pharm-metrics-nn.png": { width: 1815, height: 1366 },
+    "scorecards/purchasing-nn.png": { width: 1791, height: 1667 },
+    "scorecards/savings-nn.png": { width: 1813, height: 1328 }
+  };
+
+  window.MEDIA_DIMENSIONS = MEDIA_DIMENSIONS;
+
   window.PORTFOLIO_DATA = {
     root: ROOT,
     nav: [
@@ -91,9 +120,9 @@
               "Information overload presented another challenge. Many of the platform's tables contained columns and data points that were not relevant to the user's immediate task, creating visual clutter and increasing cognitive load. Taken together, these findings revealed a common pattern: the platform had gradually evolved to support experienced power users, but at the expense of discoverability, clarity, and efficiency. By documenting these issues early, I was able to establish a clearer set of priorities for future design improvements and create alignment around where the experience needed the most attention.",
             ],
             media: [
-              { type: "image", src: `${IMG}pwc-current-link-reference.png`, fallback: remote("/Pics/Portfolio_Pictures/Omnicell/sc_day1.png"), caption: "Link references - Old version", squareOnTablet: true },
-              { type: "image", src: `${IMG}pwc-proposed-link-reference.png`, fallback: remote("/Pics/Portfolio_Pictures/Omnicell/sc_day2.png"), caption: "Link Reference - Proposed", squareOnTablet: true },
-              { type: "image", wide: true, src: `${IMG}pwc-activity-screen.png`, fallback: remote("/Pics/Portfolio_Pictures/Omnicell/sc_day1.png"), caption: "Initial design for Audit." },
+              { type: "image", src: `${IMG}PWC/pwc-current-link-reference.png`, fallback: remote("/Pics/Portfolio_Pictures/Omnicell/sc_day1.png"), caption: "Link references - Old version", squareOnTablet: true },
+              { type: "image", src: `${IMG}PWC/pwc-proposed-link-reference.png`, fallback: remote("/Pics/Portfolio_Pictures/Omnicell/sc_day2.png"), caption: "Link Reference - Proposed", squareOnTablet: true },
+              { type: "image", wide: true, src: `${IMG}PWC/pwc-activity-screen.png`, fallback: remote("/Pics/Portfolio_Pictures/Omnicell/sc_day1.png"), caption: "Initial design for Audit." },
             ],
           },
           {
@@ -112,7 +141,7 @@
               "I took it upon myself to get a Cursor subscription, and spent some time attempting to build out a functional prototype of what I was working on. This was when the Figma MCP server was in its infancy, and between recurring Cursor errors and corporate restrictions that prevented direct access to my file, I was only able to get a rudimentary version running on my machine. Despite the setbacks, this was an achievement and good practice for working with these tools in the future.",
             ],
             media: [
-              { type: "image", wide: true, src: `${IMG}pwc-figma-make-1.jpg`, fallback: remote("/Pics/Portfolio_Pictures/Omnicell/sc_day1.png"), caption: "Utilizing Figma Make to quickly iterate on Audit screens" },
+              { type: "image", wide: true, src: `${IMG}PWC/pwc-figma-make-1.jpg`, fallback: remote("/Pics/Portfolio_Pictures/Omnicell/sc_day1.png"), caption: "Utilizing Figma Make to quickly iterate on Audit screens" },
             ],
           },
         ],
@@ -146,8 +175,8 @@
               "Those findings helped me identify where workflows could be unified and where design documentation was needed before larger product changes could move forward. Instead of treating the redesign as a surface-level cleanup, the audit gave the team a clearer view of which legacy behaviors needed to be preserved, which patterns were causing confusion, and which decisions needed to be made before the experience could become more coherent.",
             ],
             media: [
-              { type: "image", src: remote("/Pics/Portfolio_Pictures/ONEngine/Elie.jpg"), caption: "Screenshot of the first system that was in use." },
-              { type: "image", src: remote("/Pics/Portfolio_Pictures/ONEngine/Aqua_preview.jpg"), caption: "Screenshot of the other system that wasn't being used." },
+              { type: "image", src: `${IMG}onengine/elie.jpg`, fallback: remote("/Pics/Portfolio_Pictures/ONEngine/Elie.jpg"), caption: "Screenshot of the first system that was in use." },
+              { type: "image", src: `${IMG}onengine/aqua-preview.jpg`, fallback: remote("/Pics/Portfolio_Pictures/ONEngine/Aqua_preview.jpg"), caption: "Screenshot of the other system that wasn't being used." },
             ],
           },
           {
@@ -171,8 +200,8 @@
               "Working with the primary stakeholder continued to be frustrating. He would frequently expand the scope of a tab to a point where it created serious UX and engineering issues, want one feature one day and remove it the next, or combine both patterns at once. For example, the chat tabs originally needed to support text-only messages inside the work order and email, but he wanted to expand them into a replacement for the internal chat system with Slack-like behavior and WhatsApp-style media attachments, individual messages, and group messages. The CTO and I were eventually able to limit that scope because of the backend effort required, but only after significant time had already been spent building through the expanded interface.",
             ],
             media: [
-              { type: "image", src: remote("/Pics/Portfolio_Pictures/ONEngine/Work%20Orders%20Wireframe%20V1.jpg"), caption: "Initial wireframe showing the layout of the Work Orders section." },
-              { type: "image", src: remote("/Pics/Portfolio_Pictures/ONEngine/DeepAI%20Flow.jpg"), caption: "Quick flow made to align stakeholders around the Work Order Proposal section." },
+              { type: "image", src: `${IMG}onengine/work-orders-wireframe.jpg`, fallback: remote("/Pics/Portfolio_Pictures/ONEngine/Work%20Orders%20Wireframe%20V1.jpg"), caption: "Initial wireframe showing the layout of the Work Orders section." },
+              { type: "image", src: `${IMG}onengine/deepai-flow.jpg`, fallback: remote("/Pics/Portfolio_Pictures/ONEngine/DeepAI%20Flow.jpg"), caption: "Quick flow made to align stakeholders around the Work Order Proposal section." },
               { type: "embed", wide: true, src: "https://embed.figma.com/proto/lBcgpOrzIP4ZROfUqatYHv/Interactive-List-View?node-id=68-32479&node-type=frame&scaling=min-zoom&content-scaling=fixed&page-id=15%3A4970&starting-point-node-id=68%3A32479&embed-host=share", caption: "Interactive work orders prototype." },
             ],
           },
@@ -225,7 +254,7 @@
               "A workshop setback became a spark for change. One strategist pointed out that previous advice had gone unanswered, and that the current meeting felt like a waste of time if the product direction was not going to change. We used the remainder of the time to discuss prior efforts, understand what had stalled, and map a more realistic path for future design work.",
             ],
             media: [
-              { type: "image", wide: true, src: remote("/Pics/Portfolio_Pictures/Omnicell/Flow.png"), caption: "Initial flow and structure used to chart a path forward." },
+              { type: "image", wide: true, src: `${IMG}benchmarking/flow.png`, fallback: remote("/Pics/Portfolio_Pictures/Omnicell/Flow.png"), caption: "Initial flow and structure used to chart a path forward." },
             ],
           },
           {
@@ -259,8 +288,8 @@
               "After working with the developers to ensure that the actual product adhered as close to the mockups as possible, I then turned my attention to the future Benchmarking roadmap. I hosted a workshop with the rest of my UX team in order to identify features that they felt should be included in future versions of IOS, and afterwards I hosted a second workshop with the PO and PM of Benchmarking in order to narrow down the results from the first workshop so that only features relevant to Benchmarking remained. This helped move roadmap planning from a loose set of ideas into a more focused set of opportunities the Benchmarking team could act on.",
             ],
             media: [
-              { type: "image", src: remote("/Pics/Portfolio_Pictures/Omnicell/sc_day1.png"), caption: "Affinity diagram from day 1 of the future Benchmarking feature workshop." },
-              { type: "image", src: remote("/Pics/Portfolio_Pictures/Omnicell/sc_day2.png"), caption: "Affinity diagram from day 2 of the future Benchmarking feature workshop." },
+              { type: "image", src: `${IMG}benchmarking/sc-day1.png`, fallback: remote("/Pics/Portfolio_Pictures/Omnicell/sc_day1.png"), caption: "Affinity diagram from day 1 of the future Benchmarking feature workshop." },
+              { type: "image", src: `${IMG}benchmarking/sc-day2.png`, fallback: remote("/Pics/Portfolio_Pictures/Omnicell/sc_day2.png"), caption: "Affinity diagram from day 2 of the future Benchmarking feature workshop." },
             ],
           },
           {
@@ -290,10 +319,10 @@
             subtitle: "Clarifying the KPIs",
             body: ["I met with strategists and subject matter experts to understand which metrics mattered most and which existing scorecards were not giving users enough context. Their feedback helped me separate the metrics that should drive action from the information that was useful but secondary.", "The sessions also helped clarify which ideas belonged in the current version and which ones were better suited for future iterations. That distinction mattered because some proposed metrics were valuable, but adding them too early would have made the first release harder to understand.", "Those conversations reshaped the scorecard hierarchy and made it easier to distinguish actionable information from supporting detail. They also helped me understand which patterns were useful across scorecards and which screens needed more specific treatment because the underlying decision was different."],
             media: [
-              { type: "image", src: remote("/Pics/Portfolio_Pictures/Omnicell_Scorecards/Med_Visibility_Scorecard.png"), caption: "Medication visibility scorecard example with notes based on heuristic evaluation and SME feedback." },
-              { type: "image", src: remote("/Pics/Portfolio_Pictures/Omnicell_Scorecards/Pharm_Metrics_Scorecard.png"), caption: "Pharmacy metrics scorecard example with notes based on heuristic evaluation and SME feedback." },
-              { type: "image", src: remote("/Pics/Portfolio_Pictures/Omnicell_Scorecards/Purchasing_Scorecard.png"), caption: "Purchasing scorecard example with notes based on heuristic evaluation and SME feedback." },
-              { type: "image", src: remote("/Pics/Portfolio_Pictures/Omnicell_Scorecards/Savings_Scorecard.png"), caption: "Savings scorecard example with notes based on heuristic evaluation and SME feedback." },
+              { type: "image", src: `${IMG}scorecards/med-visibility-nn.png`, fallback: remote("/Pics/Portfolio_Pictures/Omnicell_Scorecards/Med_Visibility_Scorecard.png"), caption: "Medication visibility scorecard example with notes based on heuristic evaluation and SME feedback." },
+              { type: "image", src: `${IMG}scorecards/pharm-metrics-nn.png`, fallback: remote("/Pics/Portfolio_Pictures/Omnicell_Scorecards/Pharm_Metrics_Scorecard.png"), caption: "Pharmacy metrics scorecard example with notes based on heuristic evaluation and SME feedback." },
+              { type: "image", src: `${IMG}scorecards/purchasing-nn.png`, fallback: remote("/Pics/Portfolio_Pictures/Omnicell_Scorecards/Purchasing_Scorecard.png"), caption: "Purchasing scorecard example with notes based on heuristic evaluation and SME feedback." },
+              { type: "image", src: `${IMG}scorecards/savings-nn.png`, fallback: remote("/Pics/Portfolio_Pictures/Omnicell_Scorecards/Savings_Scorecard.png"), caption: "Savings scorecard example with notes based on heuristic evaluation and SME feedback." },
             ],
           },
           {
@@ -301,8 +330,8 @@
             subtitle: "Feedback changed the hierarchy",
             body: ["Feedback from strategists helped change the hierarchy of the screens. I used that input to simplify the scorecard structure, reduce the amount of competing information, and focus the experience around clearer comparisons between the most important KPIs.", "Initial feedback was positive, but it also exposed places where the screen still felt too dense or where a chart was not answering the question users cared about most. I used that feedback to reorganize content so the scorecards led with clearer summary information before asking users to interpret supporting detail.", "The redesign work was iterative. I adjusted chart placement, supporting data, and page structure based on what strategists said users needed to understand first, then kept refining the screens so the hierarchy worked within the product's existing design system constraints."],
             media: [
-              { type: "image", src: remote("/Pics/Portfolio_Pictures/Omnicell_Scorecards/pharm_metrics_before.png"), caption: "Pharmacy metrics scorecard before strategist feedback." },
-              { type: "image", src: remote("/Pics/Portfolio_Pictures/Omnicell_Scorecards/Pharm_metrics_after.png"), caption: "Pharmacy metrics scorecard after strategist feedback." },
+              { type: "image", src: `${IMG}scorecards/pharm-metrics-before.png`, fallback: remote("/Pics/Portfolio_Pictures/Omnicell_Scorecards/pharm_metrics_before.png"), caption: "Pharmacy metrics scorecard before strategist feedback." },
+              { type: "image", src: `${IMG}scorecards/pharm-metrics-after.png`, fallback: remote("/Pics/Portfolio_Pictures/Omnicell_Scorecards/Pharm_metrics_after.png"), caption: "Pharmacy metrics scorecard after strategist feedback." },
             ],
           },
           { title: "Challenges Faced", subtitle: "Keeping the design practical", body: ["The biggest challenge was balancing ideal information hierarchy against implementation constraints. The best design direction was not always the easiest one to build, and some scorecards had existing data structures and technical assumptions that limited how far the layout could change.", "There were also alignment challenges because each scorecard had a slightly different audience and decision-making context. A pattern that worked well for one metric group did not always translate cleanly to another, so the design needed enough consistency to feel like a system without forcing every screen into the exact same structure.", "I worked with partners to preserve the most important improvements while keeping the experience feasible. That meant prioritizing clearer hierarchy, better KPI framing, and consistent patterns where they would have the most impact, while avoiding redesign choices that would create unnecessary development risk."] },
@@ -311,7 +340,7 @@
             subtitle: "A clearer scorecard system",
             body: ["The final direction used clearer hierarchy, updated KPI framing, and more consistent design system patterns to make scorecards easier to scan and compare. It gave the team a more practical foundation for presenting performance data while still leaving room for detailed analysis when users needed it.", "The project also reinforced the importance of pairing heuristic evaluation with subject matter expertise. The audit helped identify structural problems, while strategist feedback helped determine which changes would be most meaningful in practice."],
             media: [
-              { type: "image", wide: true, src: remote("/Pics/Portfolio_Pictures/Omnicell_Scorecards/pch_final.png"), caption: "Final purchasing screen." },
+              { type: "image", wide: true, src: `${IMG}scorecards/purchasing-nn.png`, fallback: remote("/Pics/Portfolio_Pictures/Omnicell_Scorecards/pch_final.png"), caption: "Final purchasing screen." },
             ],
           },
         ],
@@ -351,8 +380,8 @@
               "The first step was to create a survey and send it to a group of Ford employees in the United States. The survey helped identify which tasks people expected to complete first and which pieces of account information needed to be visible without forcing users to dig through the portal.",
             ],
             media: [
-              { type: "image", wide: true, src: remote("/Pics/Portfolio_Pictures/Ford_Credit/Desktop.png"), caption: "Result of a participatory design session showing a desktop version of a leasing website." },
-              { type: "image", wide: true, src: remote("/Pics/Portfolio_Pictures/Ford_Credit/Mobile.png"), caption: "Result of a participatory design session showing a mobile version of a leasing website." },
+              { type: "image", wide: true, src: `${IMG}ford/desktop.png`, fallback: remote("/Pics/Portfolio_Pictures/Ford_Credit/Desktop.png"), caption: "Result of a participatory design session showing a desktop version of a leasing website." },
+              { type: "image", wide: true, src: `${IMG}ford/mobile.png`, fallback: remote("/Pics/Portfolio_Pictures/Ford_Credit/Mobile.png"), caption: "Result of a participatory design session showing a mobile version of a leasing website." },
             ],
           },
           {
@@ -371,7 +400,7 @@
               "The wireframe brought together the most important account information, key payment actions, and vehicle details in a more scannable structure. The goal was to make the portal feel easier to orient around without losing access to the complex information customers still needed.",
             ],
             media: [
-              { type: "image", wide: true, src: remote("/Pics/Portfolio_Pictures/Ford_Credit/final_wireframe.jpg"), caption: "Wireframe showing off the initial layout for a revised Account Manager." },
+              { type: "image", wide: true, src: `${IMG}ford/final-wireframe.jpg`, fallback: remote("/Pics/Portfolio_Pictures/Ford_Credit/final_wireframe.jpg"), caption: "Wireframe showing off the initial layout for a revised Account Manager." },
             ],
           },
           {
