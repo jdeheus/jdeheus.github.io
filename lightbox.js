@@ -6,9 +6,22 @@
   const lightboxModule = new URL(`${base}assets/vendor/photoswipe/photoswipe-lightbox.esm.min.js`, window.location.href).href;
   const pswpModule = new URL(`${base}assets/vendor/photoswipe/photoswipe.esm.min.js`, window.location.href).href;
 
+  const getMediaDimensions = (src) => {
+    const marker = "assets/images/";
+    const index = src.indexOf(marker);
+    const key = index >= 0 ? src.slice(index + marker.length) : src;
+    return window.MEDIA_DIMENSIONS?.[key] || null;
+  };
+
   document.querySelectorAll("a.media-link").forEach((link) => {
-    if (!link.dataset.pswpWidth) link.dataset.pswpWidth = link.closest(".wide") ? "1920" : "1400";
-    if (!link.dataset.pswpHeight) link.dataset.pswpHeight = link.closest(".wide") ? "1080" : "1400";
+    const source = link.getAttribute("href") || link.querySelector("img")?.getAttribute("src") || "";
+    const dimensions = getMediaDimensions(source);
+    if (!link.dataset.pswpWidth) {
+      link.dataset.pswpWidth = String(dimensions?.width || (link.closest(".wide") ? 1920 : 1400));
+    }
+    if (!link.dataset.pswpHeight) {
+      link.dataset.pswpHeight = String(dimensions?.height || (link.closest(".wide") ? 1080 : 1400));
+    }
   });
 
   import(lightboxModule)
